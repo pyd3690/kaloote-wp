@@ -21,15 +21,15 @@ export default function CompanyProfile(props){
           />
         </Box>
         <VStack h='100%' spacing={0} align="stretch" justify="center">
-        <Text style={{fontSize: '16px', fontWeight: '550'}}>{props.name}</Text>
+        <Text textStyle={'profileTitle'}>{props.name}</Text>
           <Flex  align='center' justify="space-between">
             <HStack>
-              <Text style={{fontSize: '13px', fontWeight: '400'}} color='kalooteBlue.100'>{props.jobs} <span style={{color: 'black'}}> job posts</span></Text>
+              <Text textStyle={'profileContent'} color='kalooteBlue.100'>{props.jobs} <span style={{color: 'black'}}> job posts</span></Text>
             </HStack>
           </Flex>
           <Wrap>             
             <HStack align='center'>
-              <Text style={{fontSize: '13px', fontWeight: '400'}}>More jobs on </Text>
+              <Text textStyle={'profileContent'}>More jobs on </Text>
               <Box>
                 <Image src={props.source} h="20px" w="auto"></Image>
               </Box>

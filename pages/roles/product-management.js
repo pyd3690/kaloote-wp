@@ -48,7 +48,7 @@ export default function Role() {
             
             <Flex  w={['95%', "67%", "67%"]} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
               <Text textStyle="h2">Product Management</Text>
-              <Text >Industry</Text>
+              <Text textStyle="h2">Tech</Text>
             </Flex>
             
             <Grid
@@ -60,18 +60,16 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,2]} colSpan={[10, 6, 7, 7]} /* colSpan={7} */ >
                 <Card cw="100%" ch="100%" >
                   <VStack h={'100%'} align="stretch" justify="space-between">
-                    <HStack h={['60%', '60%', '50%', '80%']}  align="center" style={{fontSize: '17px'}} id="roleSummarySection">
-                      <Box w={'40%'} h={'auto'} justify="center" align="center">
+                    <HStack h={['60%', '60%', '50%', '80%']}  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
+                      <Box w={'45%'} h={'auto'} justify="center" align="center">
                         <Image 
                           id="roleImage"
                           src='https://res.cloudinary.com/ignitouch/image/upload/v1629728940/Kaloote/product_manager_oha9rv.png' 
-                          //boxSize = "40%"
-                          //height = "50%"
                           objectFit="cover"
                         />
                       </Box>
   
-                      <VStack h='100%' spacing={5} align="stretch" justify="space-around" p={["15px", "15px", "10px", "10px"]}
+                      <VStack h='100%' spacing={5} align="stretch" justify="center" p={["15px", "15px", "10px", "10px"]}
                         id="roleSummarydata">
                         <HStack spacing={4} > 
                           <Box>
@@ -109,13 +107,13 @@ export default function Role() {
 
               <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'15px'}>Events</Text>
-                  <div style={{height: '75%', padding: '10px'}} mt={'15px'} >List</div>
+                  <Text textStyle='h3' mb={'10px'}>Events</Text>
+                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >List</div>
                   <Text color='kalooteBlue.100' style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text>
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[2,2, 2,4]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
+              <GridItem rowSpan={[1,1, 2,4]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">
                   <Wrap my={'4'}>
                     <WrapItem>
@@ -140,8 +138,8 @@ export default function Role() {
                           marginBottom: "10px",
                       }}
                   />
-                  <Text textStyle='h3e' mt={3}>What does a Product Manager do?</Text>
-                  <Text textStyle='h3eb' mt={3}>
+                  <Text textStyle='h3' mt={3}>What does a Product Manager do?</Text>
+                  <Text textStyle='subContent' mt={3}>
                     As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation.
                   </Text>
                 </Card>
@@ -149,8 +147,8 @@ export default function Role() {
               
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'15px'}>Top Employers</Text>
-                  <div style={{height: '75%', padding: '10px'}} mt={'15px'} >
+                  <Text textStyle='h3' mb={'10px'}>Top Employers</Text>
+                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <CompanyProfile 
                         avatar="https://media-exp1.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1612205615891?e=2159024400&v=beta&t=J9qbDyzP2uv1lE1Xb_ieBaWwgeT-u52Mf-4ACuHP_p8"
                         source="https://logos-world.net/wp-content/uploads/2021/02/Indeed-Logo.png"
@@ -176,8 +174,8 @@ export default function Role() {
               
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'15px'}>Top Profiles</Text>
-                  <div style={{height: '75%', padding: '10px'}} mt={'20px'} >
+                  <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
+                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <PeopleProfile 
                         avatar="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"
                         name="Eddie Blue"

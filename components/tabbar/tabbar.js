@@ -1,20 +1,17 @@
 import { React } from 'react';
 import {tabsNames} from '../../data/tabs.js'
 import { Tabs, TabList, TabPanels, Tab, TabPanel, propNames } from "@chakra-ui/react"
-
+import styles from './tabbar.module.css'
 
 export default function TabsMenu(props){
     return (
-    <Tabs p={["15px", "15px", "10px", "10px"]} style={{
-        overflowX: 'auto',
-        overflowY: 'hidden',
-        whiteSpace: 'nowrap',
-        
-    }}>
+    <Tabs p={["15px", "15px", "10px", "10px"]} 
+            //fontWeight={"bold"}
+            className={styles.tabbar}>
         <TabList>
             {
                 tabsNames.map((tabName) => 
-                    <Tab key={tabName}>{tabName}</Tab>
+                    <Tab key={tabName} textStyle={'tabs'} textAlign={'left'} pl={'10px'} /* fontSize={["3.5vw", "3vw", '1.5vw', "0.9vw"]} */>{tabName}</Tab>
                 )
             }
             {/* <Tab key='About'>About</Tab>

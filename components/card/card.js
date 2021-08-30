@@ -14,7 +14,7 @@ export default function Card(props) {
     w={props.cw}
     h={props.ch}
     overflow={'hidden'}>
-      <Box h="100%">
+      <Box h="100%" fontSize={["3.8vw", "2.3vw", '1vw', "0.85vw"]}>
             { props.children }
       </Box>
     </Box>
