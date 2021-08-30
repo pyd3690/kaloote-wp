@@ -11,7 +11,7 @@ export default function TabsMenu(props){
         <TabList>
             {
                 tabsNames.map((tabName) => 
-                    <Tab key={tabName} textStyle={'tabs'} textAlign={'left'} pl={'10px'} /* fontSize={["3.5vw", "3vw", '1.5vw', "0.9vw"]} */>{tabName}</Tab>
+                    <Tab key={tabName} textStyle={'h3'} textAlign={'center'} pl={'10px'} /* fontSize={["3.5vw", "3vw", '1.5vw', "0.9vw"]} */>{tabName}</Tab>
                 )
             }
             {/* <Tab key='About'>About</Tab>
