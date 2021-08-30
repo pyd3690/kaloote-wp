@@ -5,14 +5,19 @@ import Card from '../../components/card/card.js'
 import PeopleProfile from '../../components/profile/peopleProfile.js'
 import CompanyProfile from '../../components/profile/companyProfile.js'
 import TabsMenu from '../../components/tabbar/tabbar.js'
+import SeeMoreWindow from '../../components/seemore/seeMore.js'
 import {Avatar,
         Text, 
         Image, 
         Box, 
-        Tabs, TabList, TabPanels, Tab, TabPanel,
+        //Tabs, TabList, TabPanels, Tab, TabPanel,
         Flex, 
+        Modal,
+        Center,
         Grid, GridItem, 
         WrapItem, Wrap,
+        useDisclosure,
+        Lorem,
         HStack, VStack} from '@chakra-ui/react';
 
 const skills = ['Empathy', 'Leadership', 'Curiosity', 'Problem Solving', 'Communication']
@@ -20,6 +25,7 @@ const skills = ['Empathy', 'Leadership', 'Curiosity', 'Problem Solving', 'Commun
 
 export default function Role() {
   //console.log(skills)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -108,8 +114,13 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='tabs' mb={'10px'}>Events</Text>
-                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >List</div>
-                  <Text color='kalooteBlue.100' style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text>
+                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >List</div>                        
+                  <SeeMoreWindow title='Longer Listing'>              
+                      <Center>Longer List of Elements</Center>                
+                  </SeeMoreWindow >
+                  {/* <Text color='kalooteBlue.100' 
+                    //onClick={onOpen}
+                    style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
                 </Card>
               </GridItem>
               
@@ -167,8 +178,13 @@ export default function Role() {
                         jobs="900+"
                         name="Change Healthcare"
                       />                    
-                  </div>
-                  <Text color='kalooteBlue.100' style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text>
+                  </div>                        
+                  <SeeMoreWindow title='Longer Listing'>              
+                      <Center>Longer List of Elements</Center>                
+                  </SeeMoreWindow >
+                  {/* <Text color='kalooteBlue.100' 
+                    //onClick={onOpen}
+                    style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
                 </Card>
               </GridItem>
               
@@ -194,13 +210,19 @@ export default function Role() {
                         title="Product Management Trainer, Consultant, and Author"
                         likes="8K"
                       />
-                  </div>
-                  <Text color='kalooteBlue.100' style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text>
+                  </div>                        
+                  <SeeMoreWindow title='Longer Listing'>              
+                      <Center>Longer List of Elements</Center>                
+                  </SeeMoreWindow >
+                  {/* <Text color='kalooteBlue.100' 
+                    //onClick={onOpen}
+                    style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
                 </Card>
               </GridItem>
             </Grid>
           </div>
         </Box>
+
       </main>
 
       
