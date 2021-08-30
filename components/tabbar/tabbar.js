@@ -6,7 +6,7 @@ import styles from './tabbar.module.css'
 export default function TabsMenu(props){
     return (
     <Tabs p={["15px", "15px", "10px", "10px"]} 
-            //fontWeight={"bold"}
+            fontWeight={"bold"}
             className={styles.tabbar}>
         <TabList>
             {
