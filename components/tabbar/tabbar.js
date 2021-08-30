@@ -6,12 +6,12 @@ import styles from './tabbar.module.css'
 export default function TabsMenu(props){
     return (
     <Tabs p={["15px", "15px", "10px", "10px"]} 
-            fontWeight={"bold"}
+            
             className={styles.tabbar}>
         <TabList>
             {
                 tabsNames.map((tabName) => 
-                    <Tab key={tabName} /* textStyle={'tabs'} */ textAlign={'center'} fontSize={["3.5vw", "3vw", '1.5vw', "0.88vw"]} >{tabName}</Tab>
+                    <Tab key={tabName} /* textStyle={'tabs'} */ fontWeight={"bold"} textAlign={'center'} fontSize={["3.5vw", "3vw", '1.5vw', "0.88vw"]} >{tabName}</Tab>
                 )
             }
             {/* <Tab key='About'>About</Tab>
