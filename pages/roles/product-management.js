@@ -5,7 +5,7 @@ import Card from '../../components/card/card.js'
 import PeopleProfile from '../../components/profile/peopleProfile.js'
 import CompanyProfile from '../../components/profile/companyProfile.js'
 import TabsMenu from '../../components/tabbar/tabbar.js'
-import SeeMoreWindow from '../../components/seemore/seeMore.js'
+import SeeMoreWindow from '../../components/seeMore/seeMore.js'
 import {Avatar,
         Text, 
         Image, 
