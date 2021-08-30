@@ -39,7 +39,7 @@ const theme = extendTheme({
       letterSpacing: "-1%",
     },
     tabs: {
-      fontSize: ["3.5vw", "3vw", '1.5vw', "0.87vw"],
+      fontSize: ["3.5vw", "3vw", '1.5vw', "0.85vw"],
       fontWeight: "bold",
       lineHeight: "110%",
       letterSpacing: "-1%",
