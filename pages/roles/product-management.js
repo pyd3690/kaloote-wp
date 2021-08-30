@@ -29,14 +29,14 @@ export default function Role() {
       </Head>
 
       <main className={styles.main} style={{minHeight: '90vh', height: 'auto', backgroundColor: '#f1f1f6'}}>
-        <Box /* className={styles.dataContainer} */ w={['100%', "75%", "75%"]} style={{
+        <Box /* className={styles.dataContainer} */ w={['100%', "95%", "85%", "75%"]} style={{
                     marginTop: '40px', 
                     height: 'auto', 
                     marginLeft: 'auto', 
                     marginRight: 'auto', 
                      }}>
           
-          <Text color='kalooteBlue.100' style={{fontWeight: 'bold'}}>&#60; <a style={{textDecoration: 'none'}}>Back</a></Text>
+          <Text color='kalooteBlue.100' style={{fontWeight: 'bold', paddingLeft: '25px', paddingRight: '25px'}}>&#60; <a style={{textDecoration: 'none'}}>Back</a></Text>
           
           <div style={{backgroundColor: '#f1f1f6',
                       borderRadius: '10px',                       
@@ -46,65 +46,68 @@ export default function Role() {
                       //height: '150vh',
                       }}>
             
-            <Flex style={{width: '67%'}} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+            <Flex  w={['95%', "67%", "67%"]} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
               <Text textStyle="h2">Product Management</Text>
               <Text >Industry</Text>
             </Flex>
             
             <Grid
               h="100%"
-              templateRows="repeat(3, 1fr)"
+              templateRows="repeat(6, 1fr)"
               templateColumns="repeat(10, 1fr)"
               gap={4}
             >
-              <GridItem rowSpan={1} colSpan={[10, 7, 7]} /* colSpan={7} */ >
+              <GridItem rowSpan={[1,1, 1,2]} colSpan={[10, 6, 7, 7]} /* colSpan={7} */ >
                 <Card cw="100%" ch="100%" >
-                  <HStack h={'80%'} style={{fontSize: '17px'}} id="roleSummarySection">
-                    <Box w={'40%'} h={'100%'}>
-                      <Image 
-                        id="roleImage"
-                        src='https://res.cloudinary.com/ignitouch/image/upload/v1629728940/Kaloote/product_manager_oha9rv.png' 
-                        //boxSize = "40%"
-                        //height = "50%"
-                        objectFit="cover"
-                      />
-                    </Box>
-
-                    <VStack h='100%' spacing={5} align="stretch" justify="center" id="roleSummarydata">
-                      <HStack spacing={4} > 
-                        <Box>
-                          <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg' h="25px" w="25px"></Image>
-                        </Box> 
-                        <Text id="roleSalary">$50k - 100k</Text>
-                      </HStack>
-                      <HStack spacing={4} > 
-                        <Box>
-                          <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731070/Kaloote/employee-workplace-5-486228_jhbe44.png' h="25px" w="25px"></Image>
-                        </Box> 
-                        <Text id="roleWorkload">60 Hrs/Week</Text>
-                      </HStack>
-                      <HStack spacing={4} > 
-                        <Box>
-                          <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731031/Kaloote/travel_qsatbn.png' h="25px" w="25px"></Image>
-                        </Box> 
-                        <Text id="roleTravel">Low Travel Requirements</Text>
-                      </HStack>
-                      <HStack spacing={4} > 
-                        <Box>
-                          <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731157/Kaloote/log_mlt2xs.png' h="25px" w="25px"></Image>
-                        </Box> 
-                        <Text id="roleSteps" color='kalooteBlue.100' style={{textDecoration: 'underline'}}>Steps to become a PM</Text>
-                      </HStack>
-                    </VStack>
-                  </HStack>
-
-                  <Box h={'30%'} mt={'5px'}>
-                    <TabsMenu />
-                  </Box> 
+                  <VStack h={'100%'} align="stretch" justify="space-between">
+                    <HStack h={['60%', '60%', '50%', '80%']}  align="center" style={{fontSize: '17px'}} id="roleSummarySection">
+                      <Box w={'40%'} h={'auto'} justify="center" align="center">
+                        <Image 
+                          id="roleImage"
+                          src='https://res.cloudinary.com/ignitouch/image/upload/v1629728940/Kaloote/product_manager_oha9rv.png' 
+                          //boxSize = "40%"
+                          //height = "50%"
+                          objectFit="cover"
+                        />
+                      </Box>
+  
+                      <VStack h='100%' spacing={5} align="stretch" justify="space-around" p={["15px", "15px", "10px", "10px"]}
+                        id="roleSummarydata">
+                        <HStack spacing={4} > 
+                          <Box>
+                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg' h="25px" w="25px"></Image>
+                          </Box> 
+                          <Text id="roleSalary">$50k - 100k</Text>
+                        </HStack>
+                        <HStack spacing={4} > 
+                          <Box>
+                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731070/Kaloote/employee-workplace-5-486228_jhbe44.png' h="25px" w="25px"></Image>
+                          </Box> 
+                          <Text id="roleWorkload">60 Hrs/Week</Text>
+                        </HStack>
+                        <HStack spacing={4} > 
+                          <Box>
+                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731031/Kaloote/travel_qsatbn.png' h="25px" w="25px"></Image>
+                          </Box> 
+                          <Text id="roleTravel">Low Travel Requirements</Text>
+                        </HStack>
+                        <HStack spacing={4} > 
+                          <Box>
+                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731157/Kaloote/log_mlt2xs.png' h="25px" w="25px"></Image>
+                          </Box> 
+                          <Text id="roleSteps" color='kalooteBlue.100' style={{textDecoration: 'underline'}}>Steps to become a PM</Text>
+                        </HStack>
+                      </VStack>
+                    </HStack>
+  
+                    <Box h={'30%'} mt={'5px'}>
+                      <TabsMenu />
+                    </Box> 
+                  </VStack>
                 </Card>
               </GridItem>
 
-              <GridItem /* colSpan={3} */ colSpan={[10, 3, 3]}  >
+              <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'15px'}>Events</Text>
                   <div style={{height: '75%', padding: '10px'}} mt={'15px'} >List</div>
@@ -112,7 +115,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={2} /* colSpan={7} */ colSpan={[10, 7, 7]}>
+              <GridItem rowSpan={[2,2, 2,4]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">
                   <Wrap my={'4'}>
                     <WrapItem>
@@ -144,7 +147,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem /* colSpan={3} */ colSpan={[10, 3, 3]} >
+              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'15px'}>Top Employers</Text>
                   <div style={{height: '75%', padding: '10px'}} mt={'15px'} >
@@ -171,7 +174,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem /* colSpan={3} */ colSpan={[10, 3, 3]} >
+              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'15px'}>Top Profiles</Text>
                   <div style={{height: '75%', padding: '10px'}} mt={'20px'} >

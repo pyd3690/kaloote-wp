@@ -5,7 +5,12 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, propNames } from "@chakra-ui/r
 
 export default function TabsMenu(props){
     return (
-    <Tabs >
+    <Tabs p={["15px", "15px", "10px", "10px"]} style={{
+        overflowX: 'auto',
+        overflowY: 'hidden',
+        whiteSpace: 'nowrap',
+        
+    }}>
         <TabList>
             {
                 tabsNames.map((tabName) => 

@@ -54,9 +54,9 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
 
-          <HStack spacing={5} alignItems={'center'} justifyContent={'space-between'} style={{paddingLeft: "10px"}}>
+          <HStack spacing={5} alignItems={'center'} justifyContent={'space-between'} style={{paddingLeft: "10px"}} w={['60%', '60%', '50%', '50%']}>
               <Image src="https://res.cloudinary.com/ignitouch/image/upload/v1629649150/Kaloote/logo_kaloote_ycrium.jpg" w="45px" h="40px" display={{ base: 'none', md: 'flex' }}></Image>
-              <Input placeholder="Search" display={{ base: '200px', md: '600px' }}/>
+              <Input placeholder="Search"  /* display={{ base: '200px', md: '600px' }} */ />
             
             {/* <Input placeholder="Search" /> */}
           </HStack>
