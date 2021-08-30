@@ -28,13 +28,13 @@ export default function Role() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main} style={{minHeight: '90vh'}}>
-        <div style={{width: '75%',
+      <main className={styles.main} style={{minHeight: '90vh', height: 'auto', backgroundColor: '#f1f1f6'}}>
+        <Box /* className={styles.dataContainer} */ w={['100%', "75%", "75%"]} style={{
                     marginTop: '40px', 
-                    //height: '90%', 
+                    height: 'auto', 
                     marginLeft: 'auto', 
                     marginRight: 'auto', 
-                    marginBottom: 'auto', }}>
+                     }}>
           
           <Text color='kalooteBlue.100' style={{fontWeight: 'bold'}}>&#60; <a style={{textDecoration: 'none'}}>Back</a></Text>
           
@@ -42,8 +42,9 @@ export default function Role() {
                       borderRadius: '10px',                       
                       padding: '25px', 
                       marginTop: '10px',
+                      height: 'auto',
                       //height: '150vh',
-                      minHeight: '70vh'}}>
+                      }}>
             
             <Flex style={{width: '67%'}} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
               <Text textStyle="h2">Product Management</Text>
@@ -51,12 +52,12 @@ export default function Role() {
             </Flex>
             
             <Grid
-              h="130vh"
+              h="100%"
               templateRows="repeat(3, 1fr)"
               templateColumns="repeat(10, 1fr)"
               gap={4}
             >
-              <GridItem rowSpan={1} colSpan={7} >
+              <GridItem rowSpan={1} colSpan={[10, 7, 7]} /* colSpan={7} */ >
                 <Card cw="100%" ch="100%" >
                   <HStack h={'80%'} style={{fontSize: '17px'}} id="roleSummarySection">
                     <Box w={'40%'} h={'100%'}>
@@ -103,7 +104,7 @@ export default function Role() {
                 </Card>
               </GridItem>
 
-              <GridItem colSpan={3}  >
+              <GridItem /* colSpan={3} */ colSpan={[10, 3, 3]}  >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'15px'}>Events</Text>
                   <div style={{height: '75%', padding: '10px'}} mt={'15px'} >List</div>
@@ -111,7 +112,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={2} colSpan={7} >
+              <GridItem rowSpan={2} /* colSpan={7} */ colSpan={[10, 7, 7]}>
                 <Card cw="100%" ch="100%">
                   <Wrap my={'4'}>
                     <WrapItem>
@@ -143,7 +144,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem colSpan={3}  >
+              <GridItem /* colSpan={3} */ colSpan={[10, 3, 3]} >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'15px'}>Top Employers</Text>
                   <div style={{height: '75%', padding: '10px'}} mt={'15px'} >
@@ -170,7 +171,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem colSpan={3}  >
+              <GridItem /* colSpan={3} */ colSpan={[10, 3, 3]} >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'15px'}>Top Profiles</Text>
                   <div style={{height: '75%', padding: '10px'}} mt={'20px'} >
@@ -198,7 +199,7 @@ export default function Role() {
               </GridItem>
             </Grid>
           </div>
-        </div>
+        </Box>
       </main>
 
       

@@ -8,6 +8,9 @@ const theme = extendTheme({
     kalooteBlue: {
       100: '#1A73E2'
     },
+    kalooteGray: {
+      100: '#f1f1f6'
+    }
   },
   textStyles: {
     h1: {
