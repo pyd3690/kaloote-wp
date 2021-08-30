@@ -28,10 +28,10 @@ export default function CompanyProfile(props){
             </HStack>
           </Flex>
           <Wrap>             
-            <HStack align='center'>
+            <HStack align='center' mt={'2px'}>
               <Text textStyle={'profileContent'}>More jobs on </Text>
-              <Box>
-                <Image src={props.source} h="20px" w="auto"></Image>
+              <Box >
+                <Image src={props.source} h="15px" w="auto"></Image>
               </Box>
             </HStack>
           </Wrap>

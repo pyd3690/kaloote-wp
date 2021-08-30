@@ -21,7 +21,7 @@ const theme = extendTheme({
       letterSpacing: "-2%",
     },
     h2: {
-      fontSize: ["5vw", "3vw", '2vw', "1.75vw"],
+      fontSize: ["5vw", "3vw", '2vw', "1.6vw"],
       fontWeight: "350",
       lineHeight: "110%",
       letterSpacing: "-1%",
@@ -33,19 +33,19 @@ const theme = extendTheme({
       letterSpacing: "-1%",
     },
     subContent: {
-      fontSize: ["3vw", "2.1vw", '1vw', "0.95vw"],
+      fontSize: ["3vw", "2.1vw", '1vw', "0.83vw"],
       fontWeight: "350",
       lineHeight: "110%",
       letterSpacing: "-1%",
     },
     tabs: {
-      fontSize: ["3.5vw", "3vw", '1.5vw', "0.85vw"],
+      fontSize: ["3.5vw", "3vw", '1.5vw', "0.95vw"],
       fontWeight: "bold",
       lineHeight: "110%",
       letterSpacing: "-1%",
     },
     profileTitle: {
-      fontSize: ["3vw", "2.1vw", '1vw', "0.95vw"],
+      fontSize: ["3vw", "2.1vw", '1vw', "0.88vw"],
       fontWeight: "570",
       lineHeight: "110%",
       letterSpacing: "-1%",

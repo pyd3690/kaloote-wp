@@ -107,7 +107,7 @@ export default function Role() {
 
               <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'10px'}>Events</Text>
+                  <Text textStyle='tabs' mb={'10px'}>Events</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >List</div>
                   <Text color='kalooteBlue.100' style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text>
                 </Card>
@@ -138,7 +138,7 @@ export default function Role() {
                           marginBottom: "10px",
                       }}
                   />
-                  <Text textStyle='h3' mt={3}>What does a Product Manager do?</Text>
+                  <Text textStyle='tabs' mt={3}>What does a Product Manager do?</Text>
                   <Text textStyle='subContent' mt={3}>
                     As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation.
                   </Text>
@@ -147,7 +147,7 @@ export default function Role() {
               
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'10px'}>Top Employers</Text>
+                  <Text textStyle='tabs' mb={'10px'}>Top Employers</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <CompanyProfile 
                         avatar="https://media-exp1.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1612205615891?e=2159024400&v=beta&t=J9qbDyzP2uv1lE1Xb_ieBaWwgeT-u52Mf-4ACuHP_p8"
@@ -174,7 +174,7 @@ export default function Role() {
               
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
+                  <Text textStyle='tabs' mb={'10px'}>Top Profiles</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <PeopleProfile 
                         avatar="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"
