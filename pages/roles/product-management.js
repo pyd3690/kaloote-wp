@@ -17,7 +17,6 @@ import {Avatar,
         Grid, GridItem, 
         WrapItem, Wrap,
         useDisclosure,
-        Lorem,
         HStack, VStack} from '@chakra-ui/react';
 
 const skills = ['Empathy', 'Leadership', 'Curiosity', 'Problem Solving', 'Communication']
