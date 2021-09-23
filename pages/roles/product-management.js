@@ -12,7 +12,7 @@ import {Avatar,
         Box, 
         //Tabs, TabList, TabPanels, Tab, TabPanel,
         Flex, 
-        Modal,
+        
         Center,
         Grid, GridItem, 
         WrapItem, Wrap,
