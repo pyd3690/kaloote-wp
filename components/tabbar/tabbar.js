@@ -13,7 +13,7 @@ export default function TabsMenu(props){
         <TabList>
             {
                 tabsNames.map((tabName) => 
-                    <Link href={base + tabName.replace(/\s/g, '').replace(/&/g, '').toLowerCase()} passHref>
+                    <Link key={"link-" + tabName} href={base + tabName.replace(/\s/g, '').replace(/&/g, '').toLowerCase()} passHref>
                         <Tab key={tabName} /* textStyle={'tabs'} */ fontWeight={"bold"} textAlign={'center'} fontSize={["3.5vw", "3vw", '1.5vw', "0.95vw"]} >{tabName}</Tab>
                     </Link>
                 )

@@ -37,8 +37,8 @@ export default function SeeMoreWindow(props){
                                   1
                             </Circle>
                             {
-                                pageNumbers.map((number) => 
-                                <Circle w="20px" h="20px" bg="#F0F0F0" color="kalooteBlue.100" fontSize="sm">
+                                pageNumbers.map((number,i) => 
+                                <Circle key={i} w="20px" h="20px" bg="#F0F0F0" color="kalooteBlue.100" fontSize="sm">
                                   {number}
                                 </Circle>)
                             }

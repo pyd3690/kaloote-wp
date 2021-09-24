@@ -18,12 +18,12 @@ import {
     Textarea,
     ModalCloseButton
   } from '@chakra-ui/react';
-  import {Editor, EditorState} from 'draft-js'
+  //import {Editor, EditorState} from 'draft-js'
   import { useState } from 'react';
 
 export default function BlogSuggestion(props){
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [editorState, setEditorState] = useState(()=> EditorState.createEmpty())
+    //const [editorState, setEditorState] = useState(()=> EditorState.createEmpty())
 
     return (        
           <VStack  mb={4} align="stretch" justify="left" w={'75%'}>
@@ -51,7 +51,7 @@ export default function BlogSuggestion(props){
                     </HStack>
                 </Wrap>
                 {(props.name !== undefined && props.name !== null) && <Text textStyle={'subContent'}>
-                    "Suggested by " <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
+                    Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
                 </Text>}      
 
                 
@@ -75,7 +75,7 @@ export default function BlogSuggestion(props){
                                             </Text>
                                             <HStack justify="left">
                                                 {(props.name !== undefined && props.name !== null) && <Text textStyle={'subContent'}>
-                                                    "Suggested by " <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
+                                                    Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
                                                 </Text>}  
                                             </HStack>
                                         </VStack>
@@ -123,7 +123,7 @@ export default function BlogSuggestion(props){
                                                     </HStack>
                                                     <Wrap >
                                                         <Text textStyle={'profileContent'}>
-                                                        That's a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
+                                                        That&apos;s a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
                                                         </Text>
                                                     </Wrap>
                                                 </VStack>
@@ -138,7 +138,7 @@ export default function BlogSuggestion(props){
                                                     </HStack>
                                                     <Wrap >
                                                         <Text textStyle={'profileContent'}>
-                                                        That's a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
+                                                        That&apos;s a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
                                                         </Text>
                                                     </Wrap>
                                                 </VStack>
@@ -152,7 +152,7 @@ export default function BlogSuggestion(props){
                                                     </HStack>
                                                     <Wrap >
                                                         <Text textStyle={'profileContent'}>
-                                                        That's a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
+                                                        That&apos;s a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
                                                         </Text>
                                                     </Wrap>
                                                 </VStack>
@@ -167,7 +167,7 @@ export default function BlogSuggestion(props){
                                                     </HStack>
                                                     <Wrap >
                                                         <Text textStyle={'profileContent'}>
-                                                        That's a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
+                                                        That&apos;s a fantastic new app feature. You and your team did an excellent job of incorporating user testing feedback
                                                         </Text>
                                                     </Wrap>
                                                 </VStack>
