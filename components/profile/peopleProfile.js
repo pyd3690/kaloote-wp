@@ -22,19 +22,19 @@ export default function PeopleProfile(props){
       </Box>
       <VStack h='100%' spacing={0} align="stretch" justify="center">
       <Flex  align='center' justify="space-between">
-          <HStack>
+          <HStack justify="space-between" w='80%' mb={1}>
             <Text textStyle={'profileTitle'}>{props.name}</Text>
-            <Box>
-              <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/linkedin_yzu9nm.png' h="15px" w="15px"></Image>
-            </Box>
-            <Box>
-              <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/twitter_xxfd1j.png' h="15px" w="15px"></Image>
-            </Box>
+            <Text textStyle={'profileSubContent'} >{props.likes} Likes </Text>
           </HStack>
         </Flex>
         <Flex  align='center' justify="space-between">
           <HStack>
-            <Text textStyle={'profileSubContent'} >{props.likes} Likes </Text>
+            <Box>
+              <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/linkedin_yzu9nm.png' h="12px" w="12px"></Image>
+            </Box>
+            <Box>
+              <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/twitter_xxfd1j.png' h="12px" w="12px"></Image>
+            </Box>
           </HStack>
         </Flex>
         <Wrap>

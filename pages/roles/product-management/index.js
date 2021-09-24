@@ -1,11 +1,11 @@
 import Head from 'next/head'
 //import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
-import Card from '../../components/card/card.js'
-import PeopleProfile from '../../components/profile/peopleProfile.js'
-import CompanyProfile from '../../components/profile/companyProfile.js'
-import TabsMenu from '../../components/tabbar/tabbar.js'
-import SeeMoreWindow from '../../components/seeMore/seeMore.js'
+import styles from '../../../styles/Home.module.css'
+import Card from '../../../components/card/card.js'
+import PeopleProfile from '../../../components/profile/peopleProfile.js'
+import CompanyProfile from '../../../components/profile/companyProfile.js'
+import TabsMenu from '../../../components/tabbar/tabbar.js'
+import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
 import {Avatar,
         Text, 
         Image, 
@@ -34,7 +34,7 @@ export default function Role() {
       </Head>
 
       <main className={styles.main} style={{minHeight: '90vh', height: 'auto', backgroundColor: '#f1f1f6'}}>
-        <Box /* className={styles.dataContainer} */ w={['100%', "95%", "85%", "75%"]} style={{
+        <Box /* className={styles.dataContainer} */ w={['100%', "95%", "85%", "80%"]} style={{
                     marginTop: '40px', 
                     height: 'auto', 
                     marginLeft: 'auto', 
@@ -80,31 +80,31 @@ export default function Role() {
                           <Box>
                             <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg' h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleSalary">$50k - 100k</Text>
+                          <Text id="roleSalary" textStyle="subContent">$50k - 100k</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
                             <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731070/Kaloote/employee-workplace-5-486228_jhbe44.png' h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleWorkload">60 Hrs/Week</Text>
+                          <Text id="roleWorkload" textStyle="subContent">60 Hrs/Week</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
                             <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731031/Kaloote/travel_qsatbn.png' h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleTravel">Low Travel Requirements</Text>
+                          <Text id="roleTravel" textStyle="subContent">Low Travel Requirements</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
                             <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731157/Kaloote/log_mlt2xs.png' h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleSteps" color='kalooteBlue.100' style={{textDecoration: 'underline'}}>Steps to become a PM</Text>
+                          <Text id="roleSteps"  textStyle="subContent" color='kalooteBlue.100' style={{textDecoration: 'underline'}}>Steps to become a PM</Text>
                         </HStack>
                       </VStack>
                     </HStack>
   
                     <Box h={'30%'} mt={'5px'}>
-                      <TabsMenu />
+                      <TabsMenu selection={0} isIndex={true} />
                     </Box> 
                   </VStack>
                 </Card>
@@ -112,7 +112,7 @@ export default function Role() {
 
               <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='tabs' mb={'10px'}>Events</Text>
+                  <Text textStyle='h3' mb={'10px'}>Events</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >List</div>                        
                   <SeeMoreWindow title='Longer Listing'>              
                       <Center>Longer List of Elements</Center>                
@@ -148,7 +148,7 @@ export default function Role() {
                           marginBottom: "10px",
                       }}
                   />
-                  <Text textStyle='tabs' mt={3}>What does a Product Manager do?</Text>
+                  <Text textStyle='h3' mt={3}>What does a Product Manager do?</Text>
                   <Text textStyle='subContent' mt={3}>
                     As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation.
                   </Text>
@@ -157,7 +157,7 @@ export default function Role() {
               
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='tabs' mb={'10px'}>Top Employers</Text>
+                  <Text textStyle='h3' mb={'10px'}>Top Employers</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <CompanyProfile 
                         avatar="https://media-exp1.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1612205615891?e=2159024400&v=beta&t=J9qbDyzP2uv1lE1Xb_ieBaWwgeT-u52Mf-4ACuHP_p8"
@@ -189,7 +189,7 @@ export default function Role() {
               
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
-                  <Text textStyle='tabs' mb={'10px'}>Top Profiles</Text>
+                  <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <PeopleProfile 
                         avatar="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"
