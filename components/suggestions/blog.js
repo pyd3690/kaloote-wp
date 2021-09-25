@@ -109,10 +109,10 @@ export default function BlogSuggestion(props){
                                             marginBottom: "10px",
                                         }}
                                     />
-                                    <Box borderRadius='md' p="10px"  h={'58vh'} mb={4} bg='#F8F8F8'>
+                                    <Box borderRadius='md' p="10px"  h={['60vh','60vh','58vh','58vh']} mb={4} bg='#F8F8F8'>
                                         <VStack align="stretch" justify="center" align-content="center" spacing={3}>
                                             <Text textStyle={'h3eb'}>Comments (2)</Text>
-                                            <VStack align="stretch" justify="center" align-content="center" maxH='32vh' spacing={2} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}}>
+                                            <VStack align="stretch" justify="center" align-content="center" maxH={['34vh','34vh','32vh','32vh']} spacing={2} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}}>
                                                 <VStack align="stretch" justify="left" align-content="center" spacing={1}>
                                                     <HStack justify='left' >                                            
                                                         <Box>
