@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
     Button,
     Avatar,
@@ -19,18 +20,37 @@ import {
     ModalCloseButton
   } from '@chakra-ui/react';
   //import {Editor, EditorState} from 'draft-js'
-  import { useState } from 'react';
+import { useState } from 'react';
+
+const videoIcon = {
+    link: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/video_qnaoxo.png", 
+    alt: "Video", 
+}
+const blogIcon = {
+    link: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/blog_sduizj.png", 
+    alt: "Blog", 
+}
+const wikihowIcon = {
+    link: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/wkihow_r2irlm.png", 
+    alt: "WikiHow", 
+}
 
 export default function BlogSuggestion(props){
     const { isOpen, onOpen, onClose } = useDisclosure()
     //const [editorState, setEditorState] = useState(()=> EditorState.createEmpty())
+    const icon = (props.type === "video")? videoIcon: ((props.type === "blog")? blogIcon: wikihowIcon)
 
     return (        
-          <VStack  mb={4} align="stretch" justify="left" w={'75%'}>
-                <Wrap justify="left" >
-                    <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={['100%','100%','70%','70%']} onClick={onOpen}>
-                        {props.title}
-                    </Text>
+          <VStack align="stretch" justify="left" w={'80%'}>
+                <Wrap justify="space-between" >
+                    <HStack justify="left" w={['100%','100%','80%','80%']}>
+                        <Box mr={2}>
+                            <Image src={icon.link} alt={icon.alt} h="15px" w="15px"></Image>
+                        </Box>
+                        <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} /* w={['100%','100%','80%','80%']} */ onClick={onOpen} >
+                            {props.title}
+                        </Text>
+                    </HStack>
                     <HStack justify='left'>
                         <HStack w={'50%'} mr={1}>
                             <Box>
@@ -52,8 +72,7 @@ export default function BlogSuggestion(props){
                 </Wrap>
                 {(props.name !== undefined && props.name !== null) && <Text textStyle={'subContent'}>
                     Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
-                </Text>}      
-
+                </Text>} 
                 
                 <Modal isOpen={isOpen} onClose={onClose} size='3xl'>
                     <ModalOverlay />
@@ -70,16 +89,23 @@ export default function BlogSuggestion(props){
                                     </HStack>
                                     <Wrap w={['100%', '100%', '90%', '90%']} justify='space-between' align='center' > 
                                         <VStack align="stretch" justify='left'  w={['78%','78%','70%','70%']}>
-                                            <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}}>
+                                            <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} >
                                                 {props.title}
                                             </Text>
+                                            <HStack justify="left">
+                                                {(props.author !== undefined && props.author !== null) && <Text textStyle={'subContent'}>
+                                                    Author:  <Text color="black" as="b" style={{cursor: 'pointer'}}>{props.author}</Text>
+                                                </Text>}
+                                            </HStack>
                                             <HStack justify="left">
                                                 {(props.name !== undefined && props.name !== null) && <Text textStyle={'subContent'}>
                                                     Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
                                                 </Text>}  
                                             </HStack>
                                         </VStack>
-                                        <Button bg="kalooteBlue.100" color='white' fontSize={["10px", "md", "md", "md" ]} w={['16%','16%','25%','25%']}>View article</Button>
+                                        <a target="_blank" href={props.link} rel="noopener noreferrer">
+                                            <Wrap borderRadius={'md'} p={2} bg="kalooteBlue.100" color='white' fontSize={["10px", "md", "md", "md" ]} ><Text >View</Text> <Text>Content</Text></Wrap>
+                                        </a>
                                     </Wrap>
                                 
                                     <HStack justify='left'>

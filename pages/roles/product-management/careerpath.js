@@ -4,6 +4,7 @@ import styles from '../../../styles/Home.module.css'
 import Card from '../../../components/card/card.js'
 import PeopleProfile from '../../../components/profile/peopleProfile.js'
 import CompanyProfile from '../../../components/profile/companyProfile.js'
+import {productManagementData} from '../../../data/productManagement.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
 import BlogSuggestion from '../../../components/suggestions/blog.js'
@@ -22,10 +23,18 @@ import {Avatar,
         HStack, VStack} from '@chakra-ui/react';
 
 const skills = ['Empathy', 'Leadership', 'Curiosity', 'Problem Solving', 'Communication']
-
+const careerPathData = {
+  name: productManagementData["name"],
+  industry: productManagementData["industry"],
+  summary: productManagementData["summary"],
+  trainings: productManagementData["careerPath"]["trainings"],
+  becoming_suggestions: productManagementData["careerPath"]["becoming_suggestions"], 
+  similar_jobs: productManagementData["careerPath"]["similar_jobs"],
+  transition_suggestions: productManagementData["careerPath"]["transition_suggestions"],
+  experience_suggestions: productManagementData["careerPath"]["experience_suggestions"],
+}
 
 export default function Role() {
-  //console.log(skills)
 
   return (
     <div className={styles.container}>
@@ -54,8 +63,8 @@ export default function Role() {
                       }}>
             
             <Flex  w={['95%', "67%", "67%"]} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
-              <Text textStyle="h2">Product Management</Text>
-              <Text textStyle="h2">Tech</Text>
+              <Text textStyle="h2">{careerPathData["name"]}</Text>
+              <Text textStyle="h2">{careerPathData['industry']}</Text>
             </Flex>
             
             <Grid
@@ -82,19 +91,19 @@ export default function Role() {
                           <Box>
                             <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg' h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleSalary" textStyle="subContent">$50k - 100k</Text>
+                          <Text id="roleSalary" textStyle="subContent">${careerPathData["summary"]["salary"][0] + " - " + careerPathData["summary"]["salary"][1]}</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
                             <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731070/Kaloote/employee-workplace-5-486228_jhbe44.png' h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleWorkload" textStyle="subContent">60 Hrs/Week</Text>
+                          <Text id="roleWorkload" textStyle="subContent">{careerPathData["summary"]["workload"]} Hrs/Week</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
                             <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731031/Kaloote/travel_qsatbn.png' h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleTravel" textStyle="subContent">Low Travel Requirements</Text>
+                          <Text id="roleTravel" textStyle="subContent">{careerPathData["summary"]["travel"]} Travel Requirements</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
@@ -115,35 +124,29 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Training</Text>
-                  <Box style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                    <TrainingSuggestion 
-                      name="Udemy"
-                      title="Master the Product Manager Interview"
-                      price="24.99"
-                      likes="2,867"
-                    />
-                    <TrainingSuggestion 
-                      name="Udemy"
-                      title="Product Management First Steps"
-                      price="24.99"
-                      likes="2,867"
-                    />
-                  </Box>                        
+                  <VStack style={{height: '83%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
+                    {careerPathData["trainings"].slice(0, 3).map((training, index) => 
+                        <TrainingSuggestion key={index}
+                          name={training.name}
+                          title={training.title}
+                          price={training.price}
+                          likes={training.likes}
+                          link= {training.link}
+                          duration ={training.duration}
+                        />
+                    )}                    
+                  </VStack>                        
                   <SeeMoreWindow title='Training'>     
-                    <Box style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <TrainingSuggestion 
-                        name="Udemy"
-                        title="Master the Product Manager Interview"
-                        price="24.99"
-                        likes="2,867"
-                      />
-                      <TrainingSuggestion 
-                        name="Udemy"
-                        title="Product Management First Steps"
-                        price="24.99"
-                        likes="2,867"
-                      />
-                    </Box>                                        
+                    {careerPathData["trainings"].map((training, index) => 
+                          <TrainingSuggestion key={index}
+                            name={training.name}
+                            title={training.title}
+                            price={training.price}
+                            likes={training.likes}
+                            link= {training.link}
+                            duration ={training.duration}
+                          />
+                      )}                                       
                   </SeeMoreWindow >
                   {/* <Text color='kalooteBlue.100' 
                     //onClick={onOpen}
@@ -154,88 +157,38 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">                  
                   <Text textStyle='h3' my={3}>Becoming a product manager after school</Text>
-                  <Box style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}>
-                    <BlogSuggestion 
-                        name="@Abla"
-                        title="Product Management job straight out of college"
-                        likes = "10K"
-                        views = "132K"
-                    />
-                    <BlogSuggestion 
-                        name="@Yannick"
-                        title="How to become a Product Manager out of college"
-                        likes = "8K"
-                        views = "99K"
-                    />
-                    <BlogSuggestion 
-                        name="@Abla"
-                        title="How to become a Product Manager out of college"
-                        likes = "7K"
-                        views = "80K"
-                    />
-                    
-                    <BlogSuggestion 
-                        name="@Abla"
-                        title="Product Management job straight out of college"
-                        likes = "10K"
-                        views = "132K"
-                    />
-                  </Box>
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                  >
+                    {
+                      careerPathData["becoming_suggestions"].slice(0, 3).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
+                  </VStack>
                                         
-                  <SeeMoreWindow title='Becoming a product manager after school'>              
-                    <Box style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["60vh", "60vh", "55vh", "50vh"]} mt={4}>
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                      
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                      
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                      
-                      <BlogSuggestion 
-                          name="@Abla"
-                          title="Product Management job straight out of college"
-                          likes = "10K"
-                          views = "132K"
-                      />
-                    </Box>                
+                  <SeeMoreWindow title='Becoming a product manager after school'>        
+                      {
+                        careerPathData["becoming_suggestions"].map((suggestion, i)=>
+                          <BlogSuggestion key={i} 
+                              name={suggestion.name} 
+                              title={suggestion.title}
+                              likes = {suggestion.likes}
+                              views = {suggestion.views}
+                              link = {suggestion.link}
+                              author = {suggestion.author}
+                              type ={suggestion.type}
+                          />
+                        )
+                      }             
                   </SeeMoreWindow >
                 </Card>
               </GridItem>
@@ -244,23 +197,33 @@ export default function Role() {
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Similar Jobs</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <VStack mb={4} align="stretch" justify="left" w={'90%'} spacing={4} >
-                        <Wrap>
-                          <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>Program Management </Text>
-                        </Wrap>
-                        <Wrap>
-                          <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>Project Management </Text>
-                        </Wrap>
+                      <VStack align="stretch" justify="left" w={'90%'} spacing={4} >
+                        {
+                          careerPathData["similar_jobs"].slice(0, 3).map((job, i) => 
+                          <Wrap key={i} >
+                            <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>
+                              <a target="_blank" href={(job.link !== "")?job.link: "https://www.google.com/search?q=" + job.name.replace(/\s/g, '+')} rel="noopener noreferrer"> 
+                                {job.name}
+                              </a> 
+                            </Text>
+                          </Wrap>
+                          )
+                        }                        
                       </VStack>        
                   </div>                        
                   <SeeMoreWindow title='Similar Jobs'>              
                       <VStack mb={4} align="stretch" justify="left" w={'90%'} spacing={4} >
-                        <Wrap>
-                          <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>Program Management </Text>
-                        </Wrap>
-                        <Wrap>
-                          <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>Project Management </Text>
-                        </Wrap>
+                      {
+                          careerPathData["similar_jobs"].map((job, i) => 
+                          <Wrap key={i} >
+                            <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>
+                              <a target="_blank" href={(job.link !== "")?job.link: "https://www.google.com/search?q=" + job.name.replace(/\s/g, '+')} rel="noopener noreferrer"> 
+                                {job.name}
+                              </a> 
+                            </Text>
+                          </Wrap>
+                          )
+                        } 
                       </VStack>                 
                   </SeeMoreWindow >
                   {/* <Text color='kalooteBlue.100' 
@@ -271,21 +234,23 @@ export default function Role() {
 
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">                  
-                  <Text textStyle='h3' mt={3}>Transitioning into Product Management</Text>
-                  
-                  <Box style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}>
-                    <BlogSuggestion 
-                        name="@Abla"
-                        title="How to get a job as a Product Manager?"
-                        likes = "10K"
-                        views = "132K"
-                    />
-                    <BlogSuggestion 
-                        name="@Yannick"
-                        title="How to get product experience without being a PM?"
-                        likes = "8K"
-                        views = "99K"
-                    />
+                  <Text textStyle='h3' mt={3}>Transitioning into Product Management</Text>                                   
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                  >
+                    {
+                      careerPathData["transition_suggestions"].slice(0, 3).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
                     <HStack justify="left" w={'75%'}>
                     <Text as="sup" color="kalooteBlue.100">AD</Text>
                       <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={['100%','100%','70%','70%']}>
@@ -293,35 +258,22 @@ export default function Role() {
                       </Text>
                     </HStack>
 
-                  </Box>
+                  </VStack>
                                         
                   <SeeMoreWindow title='Transitioning into Product Management'>              
-                    <Box style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["60vh", "60vh", "55vh", "50vh"]} mt={4}>
-                    <BlogSuggestion 
-                        name="@Abla"
-                        title="How to get a job as a Product Manager?"
-                        likes = "10K"
-                        views = "132K"
-                    />
-                    <BlogSuggestion 
-                        name="@Yannick"
-                        title="How to get product experience without being a PM?"
-                        likes = "8K"
-                        views = "99K"
-                    />
-                    <BlogSuggestion 
-                        name="@Abla"
-                        title="How to get a job as a Product Manager?"
-                        likes = "10K"
-                        views = "132K"
-                    />
-                    <BlogSuggestion 
-                        name="@Yannick"
-                        title="How to get product experience without being a PM?"
-                        likes = "8K"
-                        views = "99K"
-                    />
-                    </Box>                
+                  {
+                      careerPathData["transition_suggestions"].map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
                   </SeeMoreWindow >
                 </Card>
               </GridItem>
@@ -348,22 +300,38 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mt={3}>What do you do with PM experience?</Text>
-                  <Box style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}>
-                    <BlogSuggestion 
-                        title="Start your own business"
-                        likes = "2K"
-                        views = "80K"
-                    />
-                  </Box>
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                  >
+                    {
+                      careerPathData["experience_suggestions"].slice(0, 3).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
+                  </VStack>
                                         
                   <SeeMoreWindow title='What do you do with PM experience?'>              
-                    <Box style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["60vh", "60vh", "55vh", "50vh"]} mt={4}>
-                    <BlogSuggestion 
-                        title="Start your own business"
-                        likes = "2K"
-                        views = "80K"
-                    />
-                    </Box>                
+                  {
+                      careerPathData["experience_suggestions"].map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }                
                   </SeeMoreWindow >
                 </Card>
                   
