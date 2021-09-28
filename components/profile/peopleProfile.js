@@ -24,16 +24,16 @@ export default function PeopleProfile(props){
       </Box>
       <VStack h='100%' spacing={0} align="stretch" justify="center">
       <Flex  align='center' justify="space-between">
-          <HStack justify="space-between" w='80%' mb={1}>
+          <HStack justify="space-between" w='100%' mb={1}>
             <Text textStyle={'profileTitle'}>{props.name}</Text>
             <Text textStyle={'profileSubContent'} >{props.likes} Likes </Text>
           </HStack>
         </Flex>
-        <Wrap justify="space-between">
-            <Text textStyle={'profileContent'} noOfLines={2}>
+        <HStack justify="space-between" align='flex-end'>
+            <Text textStyle={'profileContent'} noOfLines={2} w={['100%', '100%', '80%', '80%']}>
               {props.title}
             </Text>
-          <HStack>
+          <HStack align='flex-end'> 
             <a target="_blank" href={props.linkedIn} rel="noopener noreferrer">
               <Box>
                 <Image src={icons.linkedin} h="12px" w="12px"></Image>
@@ -45,7 +45,7 @@ export default function PeopleProfile(props){
               </Box>
             </a>
           </HStack>
-        </Wrap>
+        </HStack>
 
 
         {/* <Flex  align='center' justify="space-between">
