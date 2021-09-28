@@ -40,7 +40,7 @@ export default function SeeMoreWindow(props){
             <Modal isOpen={isOpen} onClose={onClose} size='5xl'>
                 <ModalOverlay />
                 <ModalContent >
-                    <ModalHeader bg='kalooteBlue.100' color='white'><Text isTruncated w={"85%"} fontSize={["sm", "md", "md", "lg" ]}>{props.title}</Text></ModalHeader>
+                    <ModalHeader bg='kalooteBlue.100' color='white'><Text isTruncated w={"85%"} fontSize={["sm", "md", "md", "lg" ]}>{props.title} ({children.length} found)</Text></ModalHeader>
                     <ModalCloseButton color='white'/>
                     <ModalBody>
                         <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} spacing={5}
