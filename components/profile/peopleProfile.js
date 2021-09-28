@@ -29,7 +29,26 @@ export default function PeopleProfile(props){
             <Text textStyle={'profileSubContent'} >{props.likes} Likes </Text>
           </HStack>
         </Flex>
-        <Flex  align='center' justify="space-between">
+        <Wrap justify="space-between">
+            <Text textStyle={'profileContent'} noOfLines={2}>
+              {props.title}
+            </Text>
+          <HStack>
+            <a target="_blank" href={props.linkedIn} rel="noopener noreferrer">
+              <Box>
+                <Image src={icons.linkedin} h="12px" w="12px"></Image>
+              </Box>
+            </a>
+            <a target="_blank" href={props.twitter} rel="noopener noreferrer">
+              <Box>
+                <Image src={icons.twitter} h="12px" w="12px"></Image>
+              </Box>
+            </a>
+          </HStack>
+        </Wrap>
+
+
+        {/* <Flex  align='center' justify="space-between">
           <HStack>
             <a target="_blank" href={props.linkedIn} rel="noopener noreferrer">
               <Box>
@@ -47,7 +66,7 @@ export default function PeopleProfile(props){
             <Text textStyle={'profileContent'} noOfLines={2}>
               {props.title}
             </Text>
-        </Wrap>
+        </Wrap> */}
         
       </VStack>
     </HStack>
