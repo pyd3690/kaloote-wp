@@ -76,7 +76,7 @@ export default function BlogSuggestion(props){
                     Suggested by  <Text color="kalooteBlue.100" fontWeight='300' as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
                 </Text>} 
                 
-                <Modal isOpen={isOpen} onClose={onClose} size='3xl'>
+                <Modal isOpen={isOpen} onClose={onClose} size='3xl' h='auto'>
                     <ModalOverlay />
                     <ModalContent >
                         <ModalHeader bg='kalooteBlue.100' color='white'><Text isTruncated w={"85%"} fontSize={["sm", "md", "md", "md" ]}>{props.title}</Text></ModalHeader>
@@ -136,7 +136,7 @@ export default function BlogSuggestion(props){
                                             marginBottom: "10px",
                                         }}
                                     />
-                                    <Box borderRadius='md' p="10px"  h={['60vh','60vh','58vh','58vh']} mb={4} bg='#F8F8F8'>
+                                    <Box borderRadius='md' p="10px"  h="auto" mb={4} bg='#F8F8F8'>
                                         <VStack align="stretch" justify="center" align-content="center" spacing={3}>
                                             <Text textStyle={'h3eb'}>Comments (2)</Text>
                                             <VStack align="stretch" justify="center" align-content="center" maxH={['35vh','35vh','33vh','33vh']} spacing={1} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}}>
