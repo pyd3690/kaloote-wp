@@ -14,12 +14,10 @@ import {icons} from '../../data/iconLinks.js'
 export default function TrainingSuggestion(props){
     return (        
           <VStack align="stretch"  w={'90%'}>
-                <Wrap justify="left" >
-                    <Text textStyle={'subContentBold'} fontWeight='450' style={{cursor: 'pointer'}} w={'100%'} isTruncated>
+                <Wrap justify="space-between">
+                <Text textStyle={'subContentBold'} fontWeight='450' style={{cursor: 'pointer'}} isTruncated>
                         <a target="_blank" href={props.link} rel="noopener noreferrer">{props.title}</a>
                     </Text>
-                </Wrap>
-                <Wrap justify="space-between">
                     <Text textStyle={'profileSubContent'}>
                         <Text as="u" color="kalooteBlue.100" style={{cursor: 'pointer'}}>
                             <a target="_blank" href={props.link} rel="noopener noreferrer">
@@ -39,7 +37,7 @@ export default function TrainingSuggestion(props){
                             {props.likes}
                         </Text> 
                     </HStack>
-                    <HStack >
+                    <HStack justify="center">
                         <Box>
                             <Image src={icons.clock} alt='Duration' h="auto" w="25px"></Image>
                         </Box>
