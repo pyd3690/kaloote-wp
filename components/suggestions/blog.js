@@ -100,8 +100,8 @@ export default function BlogSuggestion(props){
                                                 </Text>}
                                             </HStack>
                                             <HStack justify="left">
-                                                {(props.name !== undefined && props.name !== null) && <Text textStyle={'subContent'}>
-                                                    Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
+                                                {(props.name !== undefined && props.name !== null) && <Text textStyle={'profileSubContent'}>
+                                                    Suggested by  <Text color="kalooteBlue.100" as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
                                                 </Text>}  
                                             </HStack>                                
                                             <HStack justify='left'>
