@@ -222,11 +222,10 @@ export default function Role() {
                       </VStack>        
                   </Box>                        
                   <SeeMoreWindow title='Similar Jobs'>              
-                      <VStack mb={4} align="stretch" justify="left" w={'90%'} spacing={4} >
                       {
                           roleData["similar_jobs"].map((job, i) => 
                           <Wrap key={i} >
-                            <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>
+                            <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'} mb={2} >
                               <a target="_blank" href={(job.link !== "")?job.link: "https://www.google.com/search?q=" + job.name.replace(/\s/g, '+')} rel="noopener noreferrer"> 
                                 {job.name}
                               </a> 
@@ -234,7 +233,6 @@ export default function Role() {
                           </Wrap>
                           )
                         } 
-                      </VStack>                 
                   </SeeMoreWindow >
                   {/* <Text color='kalooteBlue.100' 
                     //onClick={onOpen}
