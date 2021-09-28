@@ -221,7 +221,7 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="auto">
                   <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
-                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
+                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[2,2, 3,3]} align={'strech'}>
                     {roleData["top_profiles"].slice(0, 3).map((profile, index) => 
                         <PeopleProfile key={index}
                           avatar={icons.avatar} //to update later

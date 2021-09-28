@@ -123,9 +123,9 @@ export default function Role() {
               </GridItem>
 
               <GridItem rowSpan={[1,1, 1,1]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
-                <Card cw="100%" ch="100%">
+                <Card cw="100%" ch={["auto", "auto", "100%", "100%"]}>
                   <Text textStyle='h3' mb={'10px'}>Training</Text>
-                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
+                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[2,2, 3,3]} align={'strech'}>
                     {roleData["trainings"].slice(0, 3).map((training, index) => 
                         <TrainingSuggestion key={index}
                           name={training.name}
@@ -204,10 +204,10 @@ export default function Role() {
               </GridItem>
               
               <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
-                <Card cw="100%" ch="auto%">
+                <Card cw="100%" ch={["auto", "auto", "100%", "100%"]}>
                   <Text textStyle='h3' mb={'10px'}>Similar Jobs</Text>
-                  <div style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <VStack align="stretch" justify="left" w={'90%'} spacing={6} >
+                  <Box h={["auto", "auto", "75%", "75%"]} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
+                      <VStack align="stretch" justify="left" w={'90%'} spacing={[3,3, 6,6]} >
                         {
                           roleData["similar_jobs"].slice(0, 3).map((job, i) => 
                           <Wrap key={i} >
@@ -220,7 +220,7 @@ export default function Role() {
                           )
                         }                        
                       </VStack>        
-                  </div>                        
+                  </Box>                        
                   <SeeMoreWindow title='Similar Jobs'>              
                       <VStack mb={4} align="stretch" justify="left" w={'90%'} spacing={4} >
                       {
