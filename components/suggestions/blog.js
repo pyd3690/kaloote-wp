@@ -72,8 +72,8 @@ export default function BlogSuggestion(props){
                         </HStack>
                     </HStack>
                 </Wrap>
-                {(props.name !== undefined && props.name !== null && props.name !== '') && <Text textStyle={'subContent'}>
-                    Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
+                {(props.name !== undefined && props.name !== null && props.name !== '') && <Text textStyle={'profileSubContent'}>
+                    Suggested by  <Text color="kalooteBlue.100" fontWeight='300' as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
                 </Text>} 
                 
                 <Modal isOpen={isOpen} onClose={onClose} size='3xl'>
