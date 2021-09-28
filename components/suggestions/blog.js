@@ -124,7 +124,7 @@ export default function BlogSuggestion(props){
                                             </HStack>
                                         </VStack>
                                         <a target="_blank" href={props.link} rel="noopener noreferrer">
-                                            <Wrap borderRadius={'md'} p={2} bg="kalooteBlue.100" color='white' fontSize={["10px", "md", "md", "md" ]} ><Text >View</Text> <Text>Content</Text></Wrap>
+                                            <Wrap borderRadius={'md'} p={2} bg="kalooteBlue.100" color='white' justify="center" fontSize={["10px", "md", "md", "md" ]} ><Text >View</Text> <Text>Content</Text></Wrap>
                                         </a>
                                     </HStack>
                                     <hr
@@ -139,8 +139,8 @@ export default function BlogSuggestion(props){
                                     <Box borderRadius='md' p="10px"  h={['60vh','60vh','58vh','58vh']} mb={4} bg='#F8F8F8'>
                                         <VStack align="stretch" justify="center" align-content="center" spacing={3}>
                                             <Text textStyle={'h3eb'}>Comments (2)</Text>
-                                            <VStack align="stretch" justify="center" align-content="center" maxH={['34vh','34vh','32vh','32vh']} spacing={2} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}}>
-                                                <VStack align="stretch" justify="left" align-content="center" spacing={1}>
+                                            <VStack align="stretch" justify="center" align-content="center" maxH={['35vh','35vh','33vh','33vh']} spacing={1} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}}>
+                                                <VStack align="stretch" justify="left" align-content="center" spacing={1} mt={2}>
                                                     <HStack justify='left' >                                            
                                                         <Box>
                                                             <Image src={icons.avatarm} h="20px" w="20px"></Image>
@@ -204,7 +204,7 @@ export default function BlogSuggestion(props){
 
                                         </VStack>
                                     </Box>
-                                    <Box h="2vh"></Box>
+                                    <Box h="1vh"></Box>
                                 </VStack>
                             </Box>
                         </ModalBody>
