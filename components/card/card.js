@@ -1,5 +1,6 @@
 import {
   Box,
+  VStack,
   Center,
   useColorModeValue,
 } from '@chakra-ui/react';

@@ -29,16 +29,20 @@ export default function PeopleProfile(props){
         </Flex>
         <Flex  align='center' justify="space-between">
           <HStack>
-            <Box>
-              <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/linkedin_yzu9nm.png' h="12px" w="12px"></Image>
-            </Box>
-            <Box>
-              <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/twitter_xxfd1j.png' h="12px" w="12px"></Image>
-            </Box>
+            <a target="_blank" href={props.linkedIn} rel="noopener noreferrer">
+              <Box>
+                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/linkedin_yzu9nm.png' h="12px" w="12px"></Image>
+              </Box>
+            </a>
+            <a target="_blank" href={props.twitter} rel="noopener noreferrer">
+              <Box>
+                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/twitter_xxfd1j.png' h="12px" w="12px"></Image>
+              </Box>
+            </a>
           </HStack>
         </Flex>
         <Wrap>
-            <Text textStyle={'profileContent'}>
+            <Text textStyle={'profileContent'} noOfLines={2}>
               {props.title}
             </Text>
         </Wrap>

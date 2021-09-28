@@ -124,7 +124,7 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Training</Text>
-                  <VStack style={{height: '83%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
+                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
                     {careerPathData["trainings"].slice(0, 3).map((training, index) => 
                         <TrainingSuggestion key={index}
                           name={training.name}
@@ -157,7 +157,7 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">                  
                   <Text textStyle='h3' my={3}>Becoming a product manager after school</Text>
-                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                   >
                     {
@@ -196,7 +196,7 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Similar Jobs</Text>
-                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
+                  <div style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <VStack align="stretch" justify="left" w={'90%'} spacing={4} >
                         {
                           careerPathData["similar_jobs"].slice(0, 3).map((job, i) => 
@@ -235,7 +235,7 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">                  
                   <Text textStyle='h3' mt={3}>Transitioning into Product Management</Text>                                   
-                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                   >
                     {
@@ -300,7 +300,7 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mt={3}>What do you do with PM experience?</Text>
-                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["75%", "75%", "75%", "75%"]} mt={4}
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                   >
                     {

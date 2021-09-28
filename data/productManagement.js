@@ -6,6 +6,244 @@ export const productManagementData = {
       workload: '60',
       travel: 'Low'
     },
+    about: {
+      description_suggestions: [
+        {
+          name: "@Abla",
+          title: "What is Product Management",
+          likes: "10K",
+          views: "132K",
+          link: "https://280group.com/what-is-product-management/roles/product-manager/",
+          author: "280 group",
+          type: "blog"
+        },
+        {
+          name: "",
+          title: "What Does a Product Manager Do? [Roles & Responsibilities]",
+          likes: "10K",
+          views: "131K",
+          link: "https://joshfechter.com/product-manager/",
+          author: "JOSH FECHTER",
+          type: "blog"
+        },
+        {
+          name: "@Yannick",
+          title: "Is Product Management For You?",
+          likes: "9.5K",
+          views: "130K",
+          link: "https://productschool.com/blog/product-management-2/product-manager-transition/?utm_source=blog&utm_medium=blog&utm_campaign=WeeklyArticles",
+          author: "Product School",
+          type: "blog"
+        },
+        {
+          name: "@Elior",
+          title: "What is a Product Manager?",
+          likes: "9.3K",
+          views: "115K",
+          link: "https://productmanagerhq.com/what-is-a-product-manager/",
+          author: "Product Manager HQ",
+          type: "blog"
+        },
+        {
+          name: "",
+          title: "What Does a Product Manager Do?",
+          likes: "8K",
+          views: "125K",
+          link: "https://www.thinkful.com/blog/what-does-a-product-manager-do/",
+          author: "Thinkful",
+          type: "blog"
+        },
+        {
+          name: "@Abla",
+          title: "What Do Product Managers Do? ",
+          likes: "7.5K",
+          views: "121K",
+          link: "https://www.youtube.com/watch?v=yUOC-Y0f5ZQ",
+          author: "Agile Coach",
+          type: "video"
+        },
+        {
+          name: "@Abla",
+          title: "What Is a Product Manager?",
+          likes: "7K",
+          views: "120K",
+          link: "https://airfocus.com/glossary/what-is-a-product-manager/",
+          author: "Air Focus",
+          type: "blog"
+        },
+        {
+          name: "@Abla",
+          title: "What Does a Product Manager Do?",
+          likes: "7K",
+          views: "120K",
+          link: "https://www.codecademy.com/resources/blog/what-does-a-product-manager-do/",
+          author: "Code Academy",
+          type: "blog"
+        }
+      ],
+      top_profiles: [
+        {
+            "name": "Julie Zhuo",
+            "title": "Co-Founder @ Sundial, Author of THE MAKING OF A MANAGER",
+            "twitter": "https://twitter.com/joulee",
+            "linkedIn": "https://www.linkedin.com/in/julie-zhuo/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "4K"
+        },
+        {
+            "name": "Dan Olsen",
+            "title": "Product Management Trainer, Consultant, and Author helping executives build great products and strong product teams",
+            "twitter": "https://twitter.com/danolsen",
+            "linkedIn": "https://www.linkedin.com/in/danolsen98/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "7K"
+        },
+        {
+            "name": "Nir Eyal",
+            "title": "Wall Street Journal Bestselling Author of \"Hooked\" and \"Indistractable.\" Investor, Consultant, and Public Speaker",
+            "twitter": "https://twitter.com/nireyal",
+            "linkedIn": "https://www.linkedin.com/in/nireyal/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "7K"
+        },
+        {
+            "name": "Jason Fried",
+            "title": "Co-founder & CEO of Basecamp",
+            "twitter": "https://twitter.com/jasonfried",
+            "linkedIn": "https://www.linkedin.com/in/jason-fried/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "12K"
+        },
+        {
+            "name": "John Cutler",
+            "title": "Product Evangelist & Coach at Amplitude",
+            "twitter": "https://twitter.com/johncutlefish",
+            "linkedIn": "https://www.linkedin.com/in/johnpcutler/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "15K"
+        },
+        {
+            "name": "Ken Norton",
+            "title": "Executive Coach to Product Leaders",
+            "twitter": "https://twitter.com/kennethn",
+            "linkedIn": "https://www.linkedin.com/in/kennethnorton/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "13K"
+        },
+        {
+            "name": "Marty Cagan",
+            "title": "Partner at Silicon Valley Product Group",
+            "twitter": "https://twitter.com/cagan",
+            "linkedIn": "https://www.linkedin.com/in/cagan/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "7K"
+        },
+        {
+            "name": "Ryan Hoover",
+            "title": "Founder of Product Hunt. Investor at Weekend Fund.",
+            "twitter": "https://twitter.com/rrhoover",
+            "linkedIn": "https://www.linkedin.com/in/ryanrhoover/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "4K"
+        },
+        {
+            "name": "April Underwood",
+            "title": "Founder and CEO at Nearby",
+            "twitter": "https://twitter.com/aunder",
+            "linkedIn": "https://www.linkedin.com/in/aprilunderwood/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "10K"
+        },
+        {
+            "name": "Diana Kimball",
+            "title": "Partner at Matrix Partners",
+            "twitter": "https://twitter.com/dianakimball",
+            "linkedIn": "https://www.linkedin.com/in/dianakimball/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "2K"
+        },
+        {
+            "name": "Gibson Biddle",
+            "title": "Author of \"Ask Gib\" product newsletter",
+            "twitter": "https://twitter.com/gibsonbiddle",
+            "linkedIn": "https://www.linkedin.com/in/gibsonbiddle/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "11K"
+        },
+        {
+            "name": "Jackie Bavaro",
+            "title": "Co-Author of Cracking the PM Interview and Cracking the PM Career",
+            "twitter": "https://twitter.com/jackiebo",
+            "linkedIn": "https://www.linkedin.com/in/jackiebavaro/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "11K"
+        },
+        {
+            "name": "Lenny Rachitsky",
+            "title": "Writing, Advising, Investing, Exploring | Previously: Growth PM @ Airbnb, engineer, founder",
+            "twitter": "https://twitter.com/lennysan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+            "linkedIn": "https://www.linkedin.com/in/lennyrachitsky/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "15K"
+        },
+        {
+            "name": "Maggie Crowley",
+            "title": "Product at Drift",
+            "twitter": "https://twitter.com/maggiecrowley?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+            "linkedIn": "https://www.linkedin.com/in/maggie-crowley-42a97112/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "5K"
+        },
+        {
+            "name": "Melissa Perri",
+            "title": "Product Management Leader, Executive Product Coach, Author, and Speaker",
+            "twitter": "https://twitter.com/lissijean",
+            "linkedIn": "https://www.linkedin.com/in/melissajeanperri/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "13K"
+        },
+        {
+            "name": "Scott Belsky",
+            "title": "Executive, Author, Investor, & Product Obsessive",
+            "twitter": "https://twitter.com/scottbelsky",
+            "linkedIn": "https://www.linkedin.com/in/scottbelsky/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "4K"
+        },
+        {
+            "name": "Shreyas Doshi",
+            "title": "Product Advisor to fast-growing startups. Built products at Stripe, Twitter, Google, Yahoo.",
+            "twitter": "https://twitter.com/shreyas",
+            "linkedIn": "https://www.linkedin.com/in/shreyasdoshi/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "11K"
+        },
+        {
+            "name": "Carlos Gonzalez de Villaumbrosia",
+            "title": "CEO at Product School - We are hiring!",
+            "twitter": "https://twitter.com/villaumbrosia",
+            "linkedIn": "https://www.linkedin.com/in/villaumbrosia/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "14K"
+        },
+        {
+            "name": "David Cancel",
+            "title": "CEO of Drift, Entrepreneur-in-Residence at Harvard Business School, LatinX. Text me 212-380-1036",
+            "twitter": "https://twitter.com/dcancel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+            "linkedIn": "https://www.linkedin.com/in/dcancel/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "7K"
+        },
+        {
+            "name": "Ellen Chisa",
+            "title": "Founder In Residence at boldstart ventures",
+            "twitter": "https://twitter.com/ellenchisa",
+            "linkedIn": "https://www.linkedin.com/in/ellenchisa/",
+            "picture": "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
+            "likes": "8K"
+        }
+    ]
+    },
     careerPath: {
         trainings: [
           {

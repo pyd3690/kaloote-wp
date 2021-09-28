@@ -70,7 +70,7 @@ export default function BlogSuggestion(props){
                         </HStack>
                     </HStack>
                 </Wrap>
-                {(props.name !== undefined && props.name !== null) && <Text textStyle={'subContent'}>
+                {(props.name !== undefined && props.name !== null && props.name !== '') && <Text textStyle={'subContent'}>
                     Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
                 </Text>} 
                 

@@ -46,7 +46,7 @@ export default function SeeMoreWindow(props){
                         <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} spacing={5}
                              h={["62vh", "60vh", "55vh", "55vh"]} 
                              mt={2} w={["100%","100%","90%", "90%"]} 
-                             align={'center'}
+                             align={'strech'}
                              //justify={'center'}
                              >
                             { currentTableData /*props.children*/ }
