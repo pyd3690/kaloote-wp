@@ -19,7 +19,7 @@ export default function TrainingSuggestion(props){
                         <a target="_blank" href={props.link} rel="noopener noreferrer">{props.title}</a>
                     </Text>
                     <Text textStyle={'profileSubContent'}>
-                        <Text as="u" color="kalooteBlue.100" style={{cursor: 'pointer'}}>
+                        <Text as="i" color="kalooteBlue.100" fontWeight="300" style={{cursor: 'pointer'}}>
                             <a target="_blank" href={props.link} rel="noopener noreferrer">
                                 {props.name}
                             </a>
