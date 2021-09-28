@@ -158,6 +158,15 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">                  
                   <Text textStyle='h3' my={3}>Becoming a product manager after school</Text>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                      }}
+                  />
                   <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                   >
@@ -235,7 +244,17 @@ export default function Role() {
 
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">                  
-                  <Text textStyle='h3' mt={3}>Transitioning into Product Management</Text>                                   
+                  <Text textStyle='h3' mt={3}>Transitioning into Product Management</Text>                       
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                          width: "60%",
+                      }}
+                  />                              
                   <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                     w={["100%", "100%", "90%", "90%"]}

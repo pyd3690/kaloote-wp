@@ -2,6 +2,8 @@ import Head from 'next/head'
 //import Image from 'next/image'
 import styles from '../../../styles/Home.module.css'
 import Card from '../../../components/card/card.js'
+import {productManagementData} from '../../../data/productManagement.js'
+import {icons} from '../../../data/iconLinks.js'
 import PeopleProfile from '../../../components/profile/peopleProfile.js'
 import CompanyProfile from '../../../components/profile/companyProfile.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
@@ -20,7 +22,13 @@ import {Avatar,
         HStack, VStack} from '@chakra-ui/react';
 
 const skills = ['Empathy', 'Leadership', 'Curiosity', 'Problem Solving', 'Communication']
-
+const roleData = {
+  name: productManagementData["name"],
+  industry: productManagementData["industry"],
+  summary: productManagementData["summary"],
+  description_suggestions: productManagementData["about"]["description_suggestions"],
+  top_profiles: productManagementData["about"]["top_profiles"]
+}
 
 export default function Role() {
   //console.log(skills)
@@ -52,8 +60,8 @@ export default function Role() {
                       }}>
             
             <Flex  w={['95%', "67%", "67%"]} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
-              <Text textStyle="h2">Product Management</Text>
-              <Text textStyle="h2">Tech</Text>
+              <Text textStyle="h2">{roleData["name"]}</Text>
+              <Text textStyle="h2">{roleData["industry"]}</Text>
             </Flex>
             
             <Grid
@@ -69,7 +77,7 @@ export default function Role() {
                       <Box w={'45%'} h={'auto'} justify="center" align="center">
                         <Image 
                           id="roleImage"
-                          src='https://res.cloudinary.com/ignitouch/image/upload/v1629728940/Kaloote/product_manager_oha9rv.png' 
+                          src={icons.pmrole} 
                           objectFit="cover"
                         />
                       </Box>
@@ -78,25 +86,25 @@ export default function Role() {
                         id="roleSummarydata">
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg' h="25px" w="25px"></Image>
+                            <Image src={icons.salary} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleSalary" textStyle="subContent">$50k - 100k</Text>
+                          <Text id="roleSalary" textStyle="subContent">${roleData["summary"]["salary"][0] + " - " + roleData["summary"]["salary"][1]}</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731070/Kaloote/employee-workplace-5-486228_jhbe44.png' h="25px" w="25px"></Image>
+                            <Image src={icons.workload} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleWorkload" textStyle="subContent">60 Hrs/Week</Text>
+                          <Text id="roleWorkload" textStyle="subContent">{roleData["summary"]["workload"]} Hrs/Week</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731031/Kaloote/travel_qsatbn.png' h="25px" w="25px"></Image>
+                            <Image src={icons.travel} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleTravel" textStyle="subContent">Low Travel Requirements</Text>
+                          <Text id="roleTravel" textStyle="subContent">{roleData["summary"]["travel"]} Travel Requirements</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731157/Kaloote/log_mlt2xs.png' h="25px" w="25px"></Image>
+                            <Image src={icons.steps} h="25px" w="25px"></Image>
                           </Box> 
                           <Text id="roleSteps"  textStyle="subContent" color='kalooteBlue.100' style={{textDecoration: 'underline'}}>Steps to become a PM</Text>
                         </HStack>
@@ -190,29 +198,31 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
-                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <PeopleProfile 
-                        avatar="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"
-                        name="Eddie Blue"
-                        title="Co-Founder @ Sundial, Author of THE MAKING OF A MANAGER"
-                        likes = "10K"
-                      />
-                      <PeopleProfile 
-                        avatar="https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg"
-                        name="Lola Bay"
-                        title="Product Management Trainer, Consultant, and Author"
-                        likes="9K"
-                      />
-                      <PeopleProfile 
-                        avatar="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/83221961/original/425127947f0688643bcefba40b83c767b13e2a6a/illustrate-your-cartoon-avatar.jpg"
-                        name="John Doe"
-                        title="Product Management Trainer, Consultant, and Author"
-                        likes="8K"
-                      />
-                  </div>                        
-                  <SeeMoreWindow title='Longer Listing'>              
-                      <Center>Longer List of Elements</Center>                
+                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
+                    {roleData["top_profiles"].slice(0, 3).map((profile, index) => 
+                        <PeopleProfile key={index}
+                          avatar={icons.avatar} //to update later
+                          name={profile.name}
+                          title={profile.title}
+                          likes = {profile.likes}
+                          twitter = {profile.twitter}
+                          linkedIn = {profile.linkedIn}
+                        />
+                    )}                    
+                  </VStack>                        
+                  <SeeMoreWindow title='Top Profiles'>     
+                    {roleData["top_profiles"].map((profile, index) => 
+                        <PeopleProfile key={index}
+                          avatar={icons.avatar} // to update the avatar
+                          name={profile.name}
+                          title={profile.title}
+                          likes = {profile.likes}
+                          twitter = {profile.twitter}
+                          linkedIn = {profile.linkedIn}
+                        />
+                      )}                                       
                   </SeeMoreWindow >
+
                   {/* <Text color='kalooteBlue.100' 
                     //onClick={onOpen}
                     style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
