@@ -125,8 +125,8 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,1]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch={["auto", "auto", "100%", "100%"]}>
                   <Text textStyle='h3' mb={'10px'}>Training</Text>
-                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[2,2, 3,3]} align={'strech'}>
-                    {roleData["trainings"].slice(0, 3).map((training, index) => 
+                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[2,2, 4,4]} align={'strech'}>
+                    {roleData["trainings"].slice(0, 4).map((training, index) => 
                         <TrainingSuggestion key={index}
                           name={training.name}
                           title={training.title}

@@ -15,6 +15,7 @@ export const icons = {
     blog: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/blog_sduizj.png",
     wikihow: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/wkihow_r2irlm.png",
     report: "https://res.cloudinary.com/ignitouch/image/upload/v1632447275/Kaloote/flag_gk19r2.png",
+    clock: "https://res.cloudinary.com/ignitouch/image/upload/v1632849606/Kaloote/clock2_cewrvm.png",
 }
   
   export default {
