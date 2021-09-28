@@ -3,7 +3,7 @@ export const icons = {
     view: "https://res.cloudinary.com/ignitouch/image/upload/v1632436720/Kaloote/eyes1_sksoyx.png",
     avatar: "https://res.cloudinary.com/ignitouch/image/upload/v1632676306/Kaloote/avatar_hzxmcn.png",
     avatarm: "https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png",
-    avatarw: "'https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg'",
+    avatarw: "https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg",
     twitter: "https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/twitter_xxfd1j.png",
     linkedin: "https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/linkedin_yzu9nm.png",
     salary: "https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg",
