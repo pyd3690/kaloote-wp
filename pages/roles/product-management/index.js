@@ -131,7 +131,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 1,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
+              <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">
                   <Wrap my={'4'}>
                     <WrapItem>

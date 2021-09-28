@@ -13,7 +13,7 @@ import {icons} from '../../data/iconLinks.js'
 
 export default function PeopleProfile(props){
     return (        
-      <HStack mb={3}>
+      <HStack p={2}>
       <Box>
         <Avatar
           style={{marginRight: '10px', marginLeft: '10px'}}
