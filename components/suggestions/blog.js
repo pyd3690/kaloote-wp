@@ -21,17 +21,19 @@ import {
   } from '@chakra-ui/react';
   //import {Editor, EditorState} from 'draft-js'
 import { useState } from 'react';
+import {icons} from '../../data/iconLinks.js'
+
 
 const videoIcon = {
-    link: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/video_qnaoxo.png", 
+    link: icons.video, 
     alt: "Video", 
 }
 const blogIcon = {
-    link: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/blog_sduizj.png", 
+    link: icons.blog, 
     alt: "Blog", 
 }
 const wikihowIcon = {
-    link: "https://res.cloudinary.com/ignitouch/image/upload/v1632595070/Kaloote/wkihow_r2irlm.png", 
+    link: icons.wikihow, 
     alt: "WikiHow", 
 }
 
@@ -41,9 +43,9 @@ export default function BlogSuggestion(props){
     const icon = (props.type === "video")? videoIcon: ((props.type === "blog")? blogIcon: wikihowIcon)
 
     return (        
-          <VStack align="stretch" justify="left" w={'80%'}>
+          <VStack align="stretch" justify="left" >
                 <Wrap justify="space-between" >
-                    <HStack justify="left" w={['100%','100%','80%','80%']}>
+                    <HStack justify="left" /* w={['100%','100%','80%','80%']} */>
                         <Box mr={2}>
                             <Image src={icon.link} alt={icon.alt} h="15px" w="15px"></Image>
                         </Box>
@@ -52,9 +54,9 @@ export default function BlogSuggestion(props){
                         </Text>
                     </HStack>
                     <HStack justify='left'>
-                        <HStack w={'50%'} mr={1}>
+                        <HStack /* w={'50%'} */ mr={1}>
                             <Box>
-                                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1632436720/Kaloote/eyes1_sksoyx.png' h="15px" w="15px"></Image>
+                                <Image src={icons.view} h="15px" w="15px"></Image>
                             </Box>
                             <Text textStyle={'subContent'}>
                                 {props.views}
@@ -62,7 +64,7 @@ export default function BlogSuggestion(props){
                         </HStack>
                         <HStack >
                             <Box>
-                                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1632436720/Kaloote/likes3_r1izfq.png' h="15px" w="15px"></Image>
+                                <Image src={icons.like} h="15px" w="15px"></Image>
                             </Box>
                             <Text textStyle={'subContent'}>
                                 {props.likes}
@@ -84,7 +86,7 @@ export default function BlogSuggestion(props){
                                 <VStack align="stretch" justify="center" align-content="center" spacing={4}>
                                     <HStack justify="right">
                                         <Box>
-                                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1632447275/Kaloote/flag_gk19r2.png' alt='Report This Suggestion' h="20px" w="20px"></Image>
+                                            <Image src={icons.report} alt='Report This Suggestion' h="20px" w="20px"></Image>
                                         </Box>
                                     </HStack>
                                     <Wrap w={['100%', '100%', '90%', '90%']} justify='space-between' align='center' > 
@@ -111,7 +113,7 @@ export default function BlogSuggestion(props){
                                     <HStack justify='left'>
                                         <HStack mr={3}>
                                             <Box>
-                                                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1632436720/Kaloote/eyes1_sksoyx.png' h="15px" w="15px"></Image>
+                                                <Image src={icons.view} h="15px" w="15px"></Image>
                                             </Box>
                                             <Text textStyle={'subContent'}>
                                                 {props.views}
@@ -119,7 +121,7 @@ export default function BlogSuggestion(props){
                                         </HStack>
                                         <HStack >
                                             <Box>
-                                                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1632436720/Kaloote/likes3_r1izfq.png' h="15px" w="15px"></Image>
+                                                <Image src={icons.like} h="15px" w="15px"></Image>
                                             </Box>
                                             <Text textStyle={'subContent'}>
                                                 {props.likes}
@@ -142,7 +144,7 @@ export default function BlogSuggestion(props){
                                                 <VStack align="stretch" justify="left" align-content="center" spacing={1}>
                                                     <HStack justify='left' >                                            
                                                         <Box>
-                                                            <Image src='https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png' h="20px" w="20px"></Image>
+                                                            <Image src={icons.avatarm} h="20px" w="20px"></Image>
                                                         </Box>
                                                         <Text textStyle={'profileTitle'}>@Tony</Text>
                                                         <Text textStyle={'profileSubContent'}>14 min</Text>
@@ -157,7 +159,7 @@ export default function BlogSuggestion(props){
                                                 <VStack align="stretch" justify="left" align-content="center" spacing={1}>
                                                     <HStack justify='left' >                                            
                                                         <Box>
-                                                            <Image src='https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg' h="20px" w="20px"></Image>
+                                                            <Image src={icons.avatarw} h="20px" w="20px"></Image>
                                                         </Box>
                                                         <Text textStyle={'profileTitle'}>@Abla</Text>
                                                         <Text textStyle={'profileSubContent'}>2 Hours</Text>
@@ -171,7 +173,7 @@ export default function BlogSuggestion(props){
                                                 <VStack align="stretch" justify="left" align-content="center" spacing={1}>
                                                     <HStack justify='left' >                                            
                                                         <Box>
-                                                            <Image src='https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png' h="20px" w="20px"></Image>
+                                                            <Image src={icons.avatarm} h="20px" w="20px"></Image>
                                                         </Box>
                                                         <Text textStyle={'profileTitle'}>@Tony</Text>
                                                         <Text textStyle={'profileSubContent'}>14 min</Text>
@@ -186,7 +188,7 @@ export default function BlogSuggestion(props){
                                                 <VStack align="stretch" justify="left" align-content="center" spacing={1}>
                                                     <HStack justify='left' >                                            
                                                         <Box>
-                                                            <Image src='https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg' h="20px" w="20px"></Image>
+                                                            <Image src={icons.avatarw} h="20px" w="20px"></Image>
                                                         </Box>
                                                         <Text textStyle={'profileTitle'}>@Abla</Text>
                                                         <Text textStyle={'profileSubContent'}>2 Hours</Text>

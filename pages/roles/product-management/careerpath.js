@@ -4,6 +4,7 @@ import styles from '../../../styles/Home.module.css'
 import Card from '../../../components/card/card.js'
 import PeopleProfile from '../../../components/profile/peopleProfile.js'
 import CompanyProfile from '../../../components/profile/companyProfile.js'
+import {icons} from '../../../data/iconLinks.js'
 import {productManagementData} from '../../../data/productManagement.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
@@ -23,7 +24,7 @@ import {Avatar,
         HStack, VStack} from '@chakra-ui/react';
 
 const skills = ['Empathy', 'Leadership', 'Curiosity', 'Problem Solving', 'Communication']
-const careerPathData = {
+const roleData = {
   name: productManagementData["name"],
   industry: productManagementData["industry"],
   summary: productManagementData["summary"],
@@ -63,8 +64,8 @@ export default function Role() {
                       }}>
             
             <Flex  w={['95%', "67%", "67%"]} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
-              <Text textStyle="h2">{careerPathData["name"]}</Text>
-              <Text textStyle="h2">{careerPathData['industry']}</Text>
+              <Text textStyle="h2">{roleData["name"]}</Text>
+              <Text textStyle="h2">{roleData['industry']}</Text>
             </Flex>
             
             <Grid
@@ -80,7 +81,7 @@ export default function Role() {
                       <Box w={'45%'} h={'auto'} justify="center" align="center">
                         <Image 
                           id="roleImage"
-                          src='https://res.cloudinary.com/ignitouch/image/upload/v1629728940/Kaloote/product_manager_oha9rv.png' 
+                          src={icons.pmrole} 
                           objectFit="cover"
                         />
                       </Box>
@@ -89,25 +90,25 @@ export default function Role() {
                         id="roleSummarydata">
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg' h="25px" w="25px"></Image>
+                            <Image src={icons.salary} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleSalary" textStyle="subContent">${careerPathData["summary"]["salary"][0] + " - " + careerPathData["summary"]["salary"][1]}</Text>
+                          <Text id="roleSalary" textStyle="subContent">${roleData["summary"]["salary"][0] + " - " + roleData["summary"]["salary"][1]}</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731070/Kaloote/employee-workplace-5-486228_jhbe44.png' h="25px" w="25px"></Image>
+                            <Image src={icons.workload} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleWorkload" textStyle="subContent">{careerPathData["summary"]["workload"]} Hrs/Week</Text>
+                          <Text id="roleWorkload" textStyle="subContent">{roleData["summary"]["workload"]} Hrs/Week</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731031/Kaloote/travel_qsatbn.png' h="25px" w="25px"></Image>
+                            <Image src={icons.travel} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleTravel" textStyle="subContent">{careerPathData["summary"]["travel"]} Travel Requirements</Text>
+                          <Text id="roleTravel" textStyle="subContent">{roleData["summary"]["travel"]} Travel Requirements</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731157/Kaloote/log_mlt2xs.png' h="25px" w="25px"></Image>
+                            <Image src={icons.steps} h="25px" w="25px"></Image>
                           </Box> 
                           <Text id="roleSteps"  textStyle="subContent" color='kalooteBlue.100' style={{textDecoration: 'underline'}}>Steps to become a PM</Text>
                         </HStack>
@@ -125,7 +126,7 @@ export default function Role() {
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Training</Text>
                   <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
-                    {careerPathData["trainings"].slice(0, 3).map((training, index) => 
+                    {roleData["trainings"].slice(0, 3).map((training, index) => 
                         <TrainingSuggestion key={index}
                           name={training.name}
                           title={training.title}
@@ -137,7 +138,7 @@ export default function Role() {
                     )}                    
                   </VStack>                        
                   <SeeMoreWindow title='Training'>     
-                    {careerPathData["trainings"].map((training, index) => 
+                    {roleData["trainings"].map((training, index) => 
                           <TrainingSuggestion key={index}
                             name={training.name}
                             title={training.title}
@@ -157,11 +158,11 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">                  
                   <Text textStyle='h3' my={3}>Becoming a product manager after school</Text>
-                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                  <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                   >
                     {
-                      careerPathData["becoming_suggestions"].slice(0, 3).map((suggestion, i)=>
+                      roleData["becoming_suggestions"].slice(0, 3).map((suggestion, i)=>
                         <BlogSuggestion key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}
@@ -177,7 +178,7 @@ export default function Role() {
                                         
                   <SeeMoreWindow title='Becoming a product manager after school'>        
                       {
-                        careerPathData["becoming_suggestions"].map((suggestion, i)=>
+                        roleData["becoming_suggestions"].map((suggestion, i)=>
                           <BlogSuggestion key={i} 
                               name={suggestion.name} 
                               title={suggestion.title}
@@ -199,7 +200,7 @@ export default function Role() {
                   <div style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <VStack align="stretch" justify="left" w={'90%'} spacing={4} >
                         {
-                          careerPathData["similar_jobs"].slice(0, 3).map((job, i) => 
+                          roleData["similar_jobs"].slice(0, 3).map((job, i) => 
                           <Wrap key={i} >
                             <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>
                               <a target="_blank" href={(job.link !== "")?job.link: "https://www.google.com/search?q=" + job.name.replace(/\s/g, '+')} rel="noopener noreferrer"> 
@@ -214,7 +215,7 @@ export default function Role() {
                   <SeeMoreWindow title='Similar Jobs'>              
                       <VStack mb={4} align="stretch" justify="left" w={'90%'} spacing={4} >
                       {
-                          careerPathData["similar_jobs"].map((job, i) => 
+                          roleData["similar_jobs"].map((job, i) => 
                           <Wrap key={i} >
                             <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={'100%'}>
                               <a target="_blank" href={(job.link !== "")?job.link: "https://www.google.com/search?q=" + job.name.replace(/\s/g, '+')} rel="noopener noreferrer"> 
@@ -237,9 +238,10 @@ export default function Role() {
                   <Text textStyle='h3' mt={3}>Transitioning into Product Management</Text>                                   
                   <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
+                    w={["100%", "100%", "90%", "90%"]}
                   >
                     {
-                      careerPathData["transition_suggestions"].slice(0, 3).map((suggestion, i)=>
+                      roleData["transition_suggestions"].slice(0, 3).map((suggestion, i)=>
                         <BlogSuggestion key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}
@@ -262,7 +264,7 @@ export default function Role() {
                                         
                   <SeeMoreWindow title='Transitioning into Product Management'>              
                   {
-                      careerPathData["transition_suggestions"].map((suggestion, i)=>
+                      roleData["transition_suggestions"].map((suggestion, i)=>
                         <BlogSuggestion key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}
@@ -302,9 +304,10 @@ export default function Role() {
                   <Text textStyle='h3' mt={3}>What do you do with PM experience?</Text>
                   <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
+                    w={["100%", "100%", "90%", "90%"]}
                   >
                     {
-                      careerPathData["experience_suggestions"].slice(0, 3).map((suggestion, i)=>
+                      roleData["experience_suggestions"].slice(0, 3).map((suggestion, i)=>
                         <BlogSuggestion key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}
@@ -320,7 +323,7 @@ export default function Role() {
                                         
                   <SeeMoreWindow title='What do you do with PM experience?'>              
                   {
-                      careerPathData["experience_suggestions"].map((suggestion, i)=>
+                      roleData["experience_suggestions"].map((suggestion, i)=>
                         <BlogSuggestion key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}

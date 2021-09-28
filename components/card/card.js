@@ -11,7 +11,8 @@ export default function Card(props) {
     bg={useColorModeValue('white', 'gray.900')}
     boxShadow={'2xl'}
     rounded={'xl'}
-    p={'15px'}
+    py='15px'
+    px={(props.cPx === undefined|| props.cPx===null)?'15px': props.cPx}
     w={props.cw}
     h={props.ch}
     overflow={'hidden'}>

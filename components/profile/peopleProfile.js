@@ -8,6 +8,8 @@ import {
     Text,
     Wrap,
   } from '@chakra-ui/react';
+import {icons} from '../../data/iconLinks.js'
+
 
 export default function PeopleProfile(props){
     return (        
@@ -31,12 +33,12 @@ export default function PeopleProfile(props){
           <HStack>
             <a target="_blank" href={props.linkedIn} rel="noopener noreferrer">
               <Box>
-                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/linkedin_yzu9nm.png' h="12px" w="12px"></Image>
+                <Image src={icons.linkedin} h="12px" w="12px"></Image>
               </Box>
             </a>
             <a target="_blank" href={props.twitter} rel="noopener noreferrer">
               <Box>
-                <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/twitter_xxfd1j.png' h="12px" w="12px"></Image>
+                <Image src={icons.twitter} h="12px" w="12px"></Image>
               </Box>
             </a>
           </HStack>

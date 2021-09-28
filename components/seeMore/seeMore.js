@@ -43,10 +43,14 @@ export default function SeeMoreWindow(props){
                     <ModalHeader bg='kalooteBlue.100' color='white'><Text isTruncated w={"85%"} fontSize={["sm", "md", "md", "lg" ]}>{props.title} ({children.length} found)</Text></ModalHeader>
                     <ModalCloseButton color='white'/>
                     <ModalBody>
+                        <Text textStyle="profileSubContent" m={3}>
+                            {currentTableData.length} displayed on this page
+                        </Text>
                         <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} spacing={5}
-                             h={["62vh", "60vh", "55vh", "55vh"]} 
+                             minH = {["62vh", "60vh", "55vh", "55vh"]} 
                              mt={2} w={["100%","100%","90%", "90%"]} 
                              align={'strech'}
+                             
                              //justify={'center'}
                              >
                             { currentTableData /*props.children*/ }
