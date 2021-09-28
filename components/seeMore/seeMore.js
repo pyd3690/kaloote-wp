@@ -32,7 +32,7 @@ export default function SeeMoreWindow(props){
 
     //console.log("seemore displayed: ", currentTableData.length)
     return (
-        <div>
+        <div style={{padding: '10px'}}>
             <Text color='kalooteBlue.100' 
                     onClick={onOpen}
                     style={{textDecoration: 'underline', textAlign: 'right', cursor: 'pointer'}}>See More</Text>

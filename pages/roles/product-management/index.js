@@ -66,14 +66,14 @@ export default function Role() {
             
             <Grid
               h="100%"
-              templateRows="repeat(6, 1fr)"
+              templateRows="repeat(1, 1fr)"
               templateColumns="repeat(10, 1fr)"
               gap={4}
             >
-              <GridItem rowSpan={[1,1, 1,2]} colSpan={[10, 6, 7, 7]} /* colSpan={7} */ >
-                <Card cw="100%" ch="100%" >
-                  <VStack h={'100%'} align="stretch" justify="space-between">
-                    <HStack h={['60%', '60%', '50%', '80%']}  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
+              <GridItem rowSpan={[1,1, 1,1]} colSpan={[10, 6, 7, 7]} /* colSpan={7} */ >
+                <Card cw="100%" ch="auto" >
+                  <VStack h={'auto'} align="stretch" justify="space-between">
+                    <HStack h='auto'  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
                       <Box w={'45%'} h={'auto'} justify="center" align="center">
                         <Image 
                           id="roleImage"
@@ -82,7 +82,7 @@ export default function Role() {
                         />
                       </Box>
   
-                      <VStack h='100%' spacing={5} align="stretch" justify="center" p={["15px", "15px", "10px", "10px"]}
+                      <VStack h='auto' spacing={5} align="stretch" justify="center" p={["15px", "15px", "10px", "10px"]}
                         id="roleSummarydata">
                         <HStack spacing={4} > 
                           <Box>
@@ -111,14 +111,14 @@ export default function Role() {
                       </VStack>
                     </HStack>
   
-                    <Box h={'30%'} mt={'5px'}>
+                    <Box h={'auto'} mt={'5px'}>
                       <TabsMenu selection={0} isIndex={true} />
                     </Box> 
                   </VStack>
                 </Card>
               </GridItem>
 
-              <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
+              <GridItem rowSpan={[1,1, 1,1]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Events</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >List</div>                        
@@ -131,7 +131,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 2,4]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
+              <GridItem rowSpan={[1,1, 1,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
                 <Card cw="100%" ch="100%">
                   <Wrap my={'4'}>
                     <WrapItem>
@@ -160,11 +160,12 @@ export default function Role() {
                   <Text textStyle='subContent' mt={3}>
                     As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation.
                   </Text>
+                  <br/>   
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
-                <Card cw="100%" ch="100%">
+              <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
+                <Card cw="100%" ch="auto">
                   <Text textStyle='h3' mb={'10px'}>Top Employers</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <CompanyProfile 
@@ -195,8 +196,8 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
-                <Card cw="100%" ch="100%">
+              <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
+                <Card cw="100%" ch="auto">
                   <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
                   <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
                     {roleData["top_profiles"].slice(0, 3).map((profile, index) => 

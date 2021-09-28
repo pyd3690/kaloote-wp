@@ -70,14 +70,14 @@ export default function Role() {
             
             <Grid
               h="100%"
-              templateRows="repeat(8, 1fr)"
+              templateRows="repeat(1, 1fr)"
               templateColumns="repeat(10, 1fr)"
               gap={4}
             >
-              <GridItem rowSpan={[1,1, 1,2]} colSpan={[10, 6, 7, 7]} /* colSpan={7} */ >
-                <Card cw="100%" ch="100%" >
-                  <VStack h={'100%'} align="stretch" justify="space-between">
-                    <HStack h={['60%', '60%', '50%', '80%']}  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
+              <GridItem rowSpan={[1,1,1,1]} colSpan={[10, 6, 7, 7]} /* colSpan={7} */ >
+                <Card cw="100%" ch="auto" >
+                  <VStack h={'auto'} align="stretch" justify="space-between">
+                    <HStack h='auto'  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
                       <Box w={'45%'} h={'auto'} justify="center" align="center">
                         <Image 
                           id="roleImage"
@@ -86,7 +86,7 @@ export default function Role() {
                         />
                       </Box>
   
-                      <VStack h='100%' spacing={5} align="stretch" justify="center" p={["15px", "15px", "10px", "10px"]}
+                      <VStack h='auto' spacing={5} align="stretch" justify="center" p={["15px", "15px", "10px", "10px"]}
                         id="roleSummarydata">
                         <HStack spacing={4} > 
                           <Box>
@@ -115,14 +115,14 @@ export default function Role() {
                       </VStack>
                     </HStack>
   
-                    <Box h={'30%'} mt={'5px'}>
+                    <Box mt={'5px'}>
                       <TabsMenu selection={1} isIndex={false} />
                     </Box> 
                   </VStack>
                 </Card>
               </GridItem>
 
-              <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
+              <GridItem rowSpan={[1,1, 1,1]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Training</Text>
                   <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={3} align={'strech'}>
@@ -155,8 +155,8 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
-                <Card cw="100%" ch="100%">                  
+              <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
+                <Card cw="100%" ch="auto">                  
                   <Text textStyle='h3' my={3}>Becoming a product manager after school</Text>
                   <hr
                       style={{
@@ -203,11 +203,11 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
-                <Card cw="100%" ch="100%">
+              <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
+                <Card cw="100%" ch="auto%">
                   <Text textStyle='h3' mb={'10px'}>Similar Jobs</Text>
                   <div style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <VStack align="stretch" justify="left" w={'90%'} spacing={4} >
+                      <VStack align="stretch" justify="left" w={'90%'} spacing={6} >
                         {
                           roleData["similar_jobs"].slice(0, 3).map((job, i) => 
                           <Wrap key={i} >
@@ -242,8 +242,8 @@ export default function Role() {
                 </Card>
               </GridItem>
 
-              <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
-                <Card cw="100%" ch="100%">                  
+              <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
+                <Card cw="100%" ch="auto">                  
                   <Text textStyle='h3' mt={3}>Transitioning into Product Management</Text>                       
                   <hr
                       style={{
@@ -299,7 +299,7 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
+              <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
                 <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Sponsored</Text>
                   <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
@@ -318,8 +318,8 @@ export default function Role() {
                 </Card>
               </GridItem>
 
-              <GridItem rowSpan={[1,1, 2,2]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
-                <Card cw="100%" ch="100%">
+              <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
+                <Card cw="100%" ch="auto">
                   <Text textStyle='h3' mt={3}>What do you do with PM experience?</Text>
                   <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
