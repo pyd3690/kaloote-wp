@@ -50,7 +50,7 @@ export default function BlogSuggestion(props){
                             <Image src={icon.link} alt={icon.alt} h="15px" w="15px"></Image>
                         </Box>
                         <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} /* w={['100%','100%','80%','80%']} */ onClick={onOpen} >
-                            {props.title}
+                            <Link href={"#" + props.title.replace(/\s/g, '-')}>{props.title}</Link>
                         </Text>
                     </HStack>
                     <HStack justify='left'>
@@ -76,7 +76,7 @@ export default function BlogSuggestion(props){
                     Suggested by  <Text color="kalooteBlue.100" fontWeight='300' as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
                 </Text>} 
                 
-                <Modal isOpen={isOpen} onClose={onClose} size='3xl' h='auto'>
+                <Modal isOpen={isOpen} onClose={onClose} size='3xl' h='auto' id={props.title.replace(/\s/g, '-')}>
                     <ModalOverlay />
                     <ModalContent >
                         <ModalHeader bg='kalooteBlue.100' color='white'><Text isTruncated w={"85%"} fontSize={["sm", "md", "md", "md" ]}>{props.title}</Text></ModalHeader>
