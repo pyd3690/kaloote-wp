@@ -89,7 +89,7 @@ export default function BlogSuggestion(props){
                                             <Image src={icons.report} alt='Report This Suggestion' h="20px" w="20px"></Image>
                                         </Box>
                                     </HStack>
-                                    <Wrap w={['100%', '100%', '90%', '90%']} justify='space-between' align='center' > 
+                                    <HStack w={['100%', '100%', '100%', '100%']} justify='space-between' align='flex-end' > 
                                         <VStack align="stretch" justify='left'  w={['78%','78%','70%','70%']}>
                                             <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} >
                                                 {props.title}
@@ -103,30 +103,29 @@ export default function BlogSuggestion(props){
                                                 {(props.name !== undefined && props.name !== null) && <Text textStyle={'subContent'}>
                                                     Suggested by  <Text color="kalooteBlue.100" as="u" style={{cursor: 'pointer'}}>{props.name}</Text>
                                                 </Text>}  
+                                            </HStack>                                
+                                            <HStack justify='left'>
+                                                <HStack mr={3}>
+                                                    <Box>
+                                                        <Image src={icons.view} h="15px" w="15px"></Image>
+                                                    </Box>
+                                                    <Text textStyle={'subContent'}>
+                                                        {props.views}
+                                                    </Text>
+                                                </HStack>
+                                                <HStack >
+                                                    <Box>
+                                                        <Image src={icons.like} h="15px" w="15px"></Image>
+                                                    </Box>
+                                                    <Text textStyle={'subContent'}>
+                                                        {props.likes}
+                                                    </Text>
+                                                </HStack>
                                             </HStack>
                                         </VStack>
                                         <a target="_blank" href={props.link} rel="noopener noreferrer">
                                             <Wrap borderRadius={'md'} p={2} bg="kalooteBlue.100" color='white' fontSize={["10px", "md", "md", "md" ]} ><Text >View</Text> <Text>Content</Text></Wrap>
                                         </a>
-                                    </Wrap>
-                                
-                                    <HStack justify='left'>
-                                        <HStack mr={3}>
-                                            <Box>
-                                                <Image src={icons.view} h="15px" w="15px"></Image>
-                                            </Box>
-                                            <Text textStyle={'subContent'}>
-                                                {props.views}
-                                            </Text>
-                                        </HStack>
-                                        <HStack >
-                                            <Box>
-                                                <Image src={icons.like} h="15px" w="15px"></Image>
-                                            </Box>
-                                            <Text textStyle={'subContent'}>
-                                                {props.likes}
-                                            </Text>
-                                        </HStack>
                                     </HStack>
                                     <hr
                                         style={{
