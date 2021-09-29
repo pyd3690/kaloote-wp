@@ -5,6 +5,7 @@ import Card from '../../../components/card/card.js'
 import {productManagementData} from '../../../data/productManagement.js'
 import {icons} from '../../../data/iconLinks.js'
 import PeopleProfile from '../../../components/profile/peopleProfile.js'
+import PeopleProfileSM from '../../../components/profile/peopleProfileSeeMore.js'
 import CompanyProfile from '../../../components/profile/companyProfile.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
@@ -264,14 +265,22 @@ export default function Role() {
                   </VStack>                        
                   <SeeMoreWindow title='Top Profiles'>     
                     {roleData["top_profiles"].map((profile, index) => 
-                        <PeopleProfile key={index}
+                        <PeopleProfileSM key={index}
+                        avatar={icons.avatar} // to update the avatar
+                        name={profile.name}
+                        title={profile.title}
+                        likes = {profile.likes}
+                        twitter = {profile.twitter}
+                        linkedIn = {profile.linkedIn}
+                      />
+                        /* <PeopleProfile key={index}
                           avatar={icons.avatar} // to update the avatar
                           name={profile.name}
                           title={profile.title}
                           likes = {profile.likes}
                           twitter = {profile.twitter}
                           linkedIn = {profile.linkedIn}
-                        />
+                        /> */
                       )}                                       
                   </SeeMoreWindow >
 

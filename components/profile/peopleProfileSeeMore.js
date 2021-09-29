@@ -9,11 +9,11 @@ import {
     Wrap,
   } from '@chakra-ui/react';
 import {icons} from '../../data/iconLinks.js'
-import PeopleProfileSM from './peopleProfileSeeMore.js'
 
-export default function PeopleProfile(props){
+
+export default function PeopleProfileSM(props){
     return (        
-      <HStack p={2}> 
+      <HStack align="flex-start"> 
         <Avatar
           style={{marginRight: '10px', marginLeft: '10px'}}
           size={['md']}
@@ -21,23 +21,18 @@ export default function PeopleProfile(props){
           //src={'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'}
           src={props.avatar}
         />
-      <VStack h='auto' spacing={0} align="stretch" justify="center" >
-      <Flex  align='center' justify="space-between">
-          <Wrap justify="space-between" w='100%' mb={1} align="flex-end">
-            <Text textStyle={'profileTitle'}>{props.name}</Text>
-            <HStack justify="center" align="flex-end">
+          <Wrap justify="left" spacing={1} w='100%' mb={1} align="flex-start" h='auto' >
+            <Text textStyle={'profileTitle'} w={["aauto", "auto", "20%", "15%"]} align="flex-end" isTruncated>{props.name}</Text>
+            <HStack justify="center" align="flex-end" w={["20%", "20%", "20%", "15%"]}>
               <Box>
                   <Image src={icons.like} alt='Duration' h="auto" w="15px"></Image>
               </Box>
               <Text textStyle={'profileSubContent'} >{props.likes}  </Text>
             </HStack>
-          </Wrap>
-        </Flex>
-        <Wrap justify="space-between" align='flex-end' >
-            <Text textStyle={'profileContent'} noOfLines={[4,4,4,2]} w={["100%", "100%", "70%", "65%"]} >
+            <Text textStyle={'profileContent'}  w={["auto", "auto", "50%", "60%"]} noOfLines={[2]}>
               {props.title}
             </Text>
-          <HStack align='flex-end'> 
+          <HStack align={['flex-start']}> 
             <a target="_blank" href={props.linkedIn} rel="noopener noreferrer">
               <Box>
                 <Image src={icons.linkedin} h="12px" w="12px"></Image>
@@ -49,7 +44,7 @@ export default function PeopleProfile(props){
               </Box>
             </a>
           </HStack>
-        </Wrap>
+          </Wrap>
 
 
         {/* <Flex  align='center' justify="space-between">
@@ -72,7 +67,6 @@ export default function PeopleProfile(props){
             </Text>
         </Wrap> */}
         
-      </VStack>
     </HStack>
     )
 
