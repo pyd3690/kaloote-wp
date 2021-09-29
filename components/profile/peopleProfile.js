@@ -13,7 +13,7 @@ import {icons} from '../../data/iconLinks.js'
 
 export default function PeopleProfile(props){
     return (        
-      <HStack p={2} > 
+      <HStack p={2}> 
         <Avatar
           style={{marginRight: '10px', marginLeft: '10px'}}
           size={['md']}
@@ -28,8 +28,8 @@ export default function PeopleProfile(props){
             <Text textStyle={'profileSubContent'} >{props.likes} Likes </Text>
           </Wrap>
         </Flex>
-        <Wrap justify="space-between" align='flex-end'>
-            <Text textStyle={'profileContent'} noOfLines={[4,4,2,2]} >
+        <Wrap justify="space-between" align='flex-end' >
+            <Text textStyle={'profileContent'} noOfLines={[4,4,4,2]} w={["100%", "100%", "70%", "65%"]} >
               {props.title}
             </Text>
           <HStack align='flex-end'> 
