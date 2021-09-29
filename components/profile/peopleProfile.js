@@ -13,24 +13,23 @@ import {icons} from '../../data/iconLinks.js'
 
 export default function PeopleProfile(props){
     return (        
-      <HStack p={2}>
-      <Box>
+      <HStack p={2} > 
         <Avatar
           style={{marginRight: '10px', marginLeft: '10px'}}
           size={['md']}
+          
           //src={'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'}
           src={props.avatar}
         />
-      </Box>
-      <VStack h='100%' spacing={0} align="stretch" justify="center">
+      <VStack h='auto' spacing={0} align="stretch" justify="center" >
       <Flex  align='center' justify="space-between">
-          <HStack justify="space-between" w='100%' mb={1}>
+          <Wrap justify="space-between" w='100%' mb={1}>
             <Text textStyle={'profileTitle'}>{props.name}</Text>
             <Text textStyle={'profileSubContent'} >{props.likes} Likes </Text>
-          </HStack>
+          </Wrap>
         </Flex>
-        <HStack justify="space-between" align='flex-end'>
-            <Text textStyle={'profileContent'} noOfLines={2} w={['100%', '100%', '80%', '80%']}>
+        <Wrap justify="space-between" align='flex-end'>
+            <Text textStyle={'profileContent'} noOfLines={[4,4,2,2]} >
               {props.title}
             </Text>
           <HStack align='flex-end'> 
@@ -45,7 +44,7 @@ export default function PeopleProfile(props){
               </Box>
             </a>
           </HStack>
-        </HStack>
+        </Wrap>
 
 
         {/* <Flex  align='center' justify="space-between">

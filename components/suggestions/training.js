@@ -17,13 +17,11 @@ export default function TrainingSuggestion(props){
                 <Text textStyle={'subContentBold'} fontWeight='450' style={{cursor: 'pointer'}} noOfLines={2}>
                         <a target="_blank" href={props.link} rel="noopener noreferrer">{props.title}</a>
                     </Text>
-                <Wrap justify="space-between">
+                <Wrap justify="space-between" align="flex-end">
                     
                     <Text textStyle={'profileSubContent'}>
-                        <Text as="i" color="kalooteBlue.100" fontWeight="300" style={{cursor: 'pointer'}}>
-                            <a target="_blank" href={props.link} rel="noopener noreferrer">
-                                {props.name}
-                            </a>
+                        <Text as="i" fontWeight="300" style={{cursor: 'pointer'}}>
+                            {props.name}
                         </Text> 
                         
                     </Text>

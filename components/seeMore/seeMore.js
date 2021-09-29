@@ -47,7 +47,8 @@ export default function SeeMoreWindow(props){
                             {currentTableData.length} displayed on this page
                         </Text>
                         <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} spacing={5}
-                             minH = {["62vh", "60vh", "55vh", "55vh"]} 
+                             h="auto"
+                             //minH = {["62vh", "60vh", "55vh", "55vh"]} 
                              mt={2} w={["100%","100%","90%", "90%"]} 
                              align={'strech'}
                              

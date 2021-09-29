@@ -73,7 +73,7 @@ export default function BlogSuggestion(props){
                     </HStack>
                 </Wrap>
                 {(props.name !== undefined && props.name !== null && props.name !== '') && <Text textStyle={'profileSubContent'}>
-                    Suggested by  <Text color="kalooteBlue.100" fontWeight='300' as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
+                    Suggested by  <Text fontWeight='300' as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
                 </Text>} 
                 
                 <Modal isOpen={isOpen} onClose={onClose} size='3xl' h='auto' id={props.title.replace(/\s/g, '-')}>
@@ -101,7 +101,7 @@ export default function BlogSuggestion(props){
                                             </HStack>
                                             <HStack justify="left">
                                                 {(props.name !== undefined && props.name !== null) && <Text textStyle={'profileSubContent'}>
-                                                    Suggested by  <Text color="kalooteBlue.100" as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
+                                                    Suggested by  <Text as="i" fontWeight='300' style={{cursor: 'pointer'}}>{props.name}</Text>
                                                 </Text>}  
                                             </HStack>                                
                                             <HStack justify='left'>
