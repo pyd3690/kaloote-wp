@@ -23,9 +23,14 @@ export default function PeopleProfile(props){
         />
       <VStack h='auto' spacing={0} align="stretch" justify="center" >
       <Flex  align='center' justify="space-between">
-          <Wrap justify="space-between" w='100%' mb={1}>
+          <Wrap justify="space-between" w='100%' mb={1} align="flex-end">
             <Text textStyle={'profileTitle'}>{props.name}</Text>
-            <Text textStyle={'profileSubContent'} >{props.likes} Likes </Text>
+            <HStack justify="center" align="flex-end">
+              <Box>
+                  <Image src={icons.like} alt='Duration' h="auto" w="15px"></Image>
+              </Box>
+              <Text textStyle={'profileSubContent'} >{props.likes}  </Text>
+            </HStack>
           </Wrap>
         </Flex>
         <Wrap justify="space-between" align='flex-end' >
