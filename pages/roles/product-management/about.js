@@ -163,23 +163,52 @@ export default function Role() {
                   <br/>                  
                   <br/>
                   <Text fontSize = {["4vw", "2.5vw", '1.5vw', "1.25vw"]}
-                        fontWeight = "600"
+                        fontWeight = "620"
                         lineHeight = "120%"
-                        letterSpacing = "-1%"
+                        letterSpacing = "1.5px"
                         style={{cursor: 'pointer'}} w={'100%'}>
                       New Card title thickness <br/> <br/>
                   </Text>
-                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
-                        fontWeight = "400"
-                        lineHeight = "110%"
-                        letterSpacing = "-1%"
+                  <Text fontSize = {["4vw", "2.5vw", '1.5vw', "1.25vw"]}
+                        fontWeight = "620"
+                        lineHeight = "120%"
+                        letterSpacing = "0.5px"
                         style={{cursor: 'pointer'}} w={'100%'}>
+                      New Card title thickness #2 <br/> <br/>
+                  </Text>
+                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+                        fontWeight = "380"
+                        lineHeight = "110%"
+                        letterSpacing = "1px"
+                        style={{cursor: 'pointer'}} w={'100%'}>
+                      #1 <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+                  </Text><br/>
+                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+                        fontWeight = "470"
+                        lineHeight = "110%"
+                        letterSpacing = "1px"
+                        style={{cursor: 'pointer'}} w={'100%'}>
+                      #2 <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+                  </Text><br/>
+                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+                        fontWeight = "500"
+                        lineHeight = "110%"
+                        letterSpacing = "1px"
+                        style={{cursor: 'pointer'}} w={'100%'}>
+                      #3 <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+                  </Text><br/>
+                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+                        fontWeight = "500"
+                        lineHeight = "110%"
+                        letterSpacing = "-1px"
+                        style={{cursor: 'pointer'}} w={'100%'}>
+                      #4 <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
                       This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
                   </Text>
