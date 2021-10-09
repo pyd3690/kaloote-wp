@@ -9,7 +9,8 @@ const theme = extendTheme({
       100: '#1A73E2'
     },
     kalooteGray: {
-      100: '#f1f1f6'
+      100: '#f1f1f6',
+      200: '#787878'
     }
   },
   textStyles: {
@@ -66,6 +67,12 @@ const theme = extendTheme({
       fontSize: ["2.7vw", "1.8vw", '0.85vw', "0.8vw"],
       fontWeight: "350",
       lineHeight: "110%",
+      letterSpacing: "-1%",
+    },
+    suggested: {
+      fontSize: ["2.7vw", "1.7vw", '0.8vw', "0.73vw"],
+      fontWeight: "350",
+      lineHeight: "90%",
       letterSpacing: "-1%",
     },
     h3e: {

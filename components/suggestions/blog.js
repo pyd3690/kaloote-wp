@@ -43,8 +43,8 @@ export default function BlogSuggestion(props){
     const icon = (props.type === "video")? videoIcon: ((props.type === "blog")? blogIcon: wikihowIcon)
 
     return (        
-          <VStack align="stretch" justify="left" >
-                <Wrap justify="space-between" >
+          <VStack align="stretch" justify="left" spacing={0}>
+                <Wrap justify="space-between" mb={1}>
                     <HStack justify="left" /* w={['100%','100%','80%','80%']} */>
                         <Box mr={2}>
                             <Image src={icon.link} alt={icon.alt} h="15px" w="15px"></Image>
@@ -72,7 +72,7 @@ export default function BlogSuggestion(props){
                         </HStack>
                     </HStack>
                 </Wrap>
-                {(props.name !== undefined && props.name !== null && props.name !== '') && <Text textStyle={'profileSubContent'}>
+                {(props.name !== undefined && props.name !== null && props.name !== '') && <Text textStyle={'suggested'} color='gray' mt={0}>
                     Suggested by  <Text fontWeight='300' as="i" style={{cursor: 'pointer'}}>{props.name}</Text>
                 </Text>} 
                 
@@ -100,7 +100,7 @@ export default function BlogSuggestion(props){
                                                 </Text>}
                                             </HStack>
                                             <HStack justify="left">
-                                                {(props.name !== undefined && props.name !== null) && <Text textStyle={'profileSubContent'}>
+                                                {(props.name !== undefined && props.name !== null) && <Text textStyle={'suggested'} color='gray'>
                                                     Suggested by  <Text as="i" fontWeight='300' style={{cursor: 'pointer'}}>{props.name}</Text>
                                                 </Text>}  
                                             </HStack>                                

@@ -1,3 +1,4 @@
+//import Image from 'next/image'
 import {
     Avatar,
     Box,
@@ -13,38 +14,39 @@ import {icons} from '../../data/iconLinks.js'
 
 export default function TrainingSuggestion(props){
     return (        
-          <Wrap justify="space-between"  w={'100%'}>
+          <Wrap justify="space-between"  w={'100%'} spacing={0}>
                 <Text textStyle={'subContentBold'} fontWeight='450' style={{cursor: 'pointer'}} noOfLines={2}>
-                        <a target="_blank" href={props.link} rel="noopener noreferrer">{props.title}</a>
-                    </Text>
-                <Wrap justify="space-between" align="flex-end">
+                    <a target="_blank" href={props.link} rel="noopener noreferrer">{props.title}</a>
+                </Text>
+                <Wrap justify="space-between" align="flex-end" w={'90%'} color='KalooteGray.200'>
                     
                     <Text textStyle={'profileSubContent'}>
                         <Text as="i" fontWeight="300" style={{cursor: 'pointer'}}>
                             {props.name}
-                        </Text> 
-                        
-                    </Text>
-                    <Text textStyle={'profileContent'} fontWeight='385'>
+                        </Text>                    
+                    </Text>   
+                        &bull;  
+                    <Text textStyle={'profileSubContent'} fontWeight='300'>
                         ${props.price}
-                    </Text>
-                    <HStack >
-                        <Box>
-                            <Image src={icons.like} alt='Duration' h="auto" w="15px"></Image>
+                    </Text>   
+                        &bull;  
+                    <HStack spacing={0}>
+                        <Box mr={1}>
+                            <Image src={icons.like} alt='Duration' height="auto" width="15px"></Image>
                         </Box>
                         <Text textStyle={'profileSubContent'}>
                             {props.likes}
                         </Text> 
-                    </HStack>
-                    <HStack justify="center">
+                    </HStack>   
+                        &bull;  
+                    <HStack justify="center" spacing={0}>
                         <Box>
-                            <Image src={icons.clock} alt='Duration' h="auto" w="25px"></Image>
+                            <Image src={icons.clock} alt='Duration' height="auto" width="25px"></Image>
                         </Box>
                         <Text textStyle={'profileSubContent'} style={{cursor: 'pointer'}} w={'100%'}>
                             {props.duration}
                         </Text>
-                    </HStack>
-                                   
+                    </HStack>                                 
                     
                 </Wrap>               
           </Wrap>

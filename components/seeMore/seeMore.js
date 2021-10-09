@@ -37,15 +37,15 @@ export default function SeeMoreWindow(props){
                     onClick={onOpen}
                     style={{textDecoration: 'underline', textAlign: 'right', cursor: 'pointer'}}>See More</Text>
             
-            <Modal isOpen={isOpen} onClose={onClose} size='5xl'>
+            <Modal isOpen={isOpen} onClose={onClose} size='5xl' /*h={["80vh", "70vh", "60vh", "50vh"]}*/>
                 <ModalOverlay />
                 <ModalContent >
                     <ModalHeader bg='kalooteBlue.100' color='white'><Text isTruncated w={"85%"} fontSize={["sm", "md", "md", "lg" ]}>{props.title} ({children.length} found)</Text></ModalHeader>
                     <ModalCloseButton color='white'/>
                     <ModalBody>
-                        <Text textStyle="profileSubContent" m={3}>
+                        {/* <Text textStyle="profileSubContent" m={3}>
                             {currentTableData.length} displayed on this page
-                        </Text>
+                        </Text> */}
                         <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} spacing={5}
                              h="auto"
                              //minH = {["62vh", "60vh", "55vh", "55vh"]} 

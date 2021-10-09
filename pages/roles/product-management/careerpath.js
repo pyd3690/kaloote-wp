@@ -126,7 +126,17 @@ export default function Role() {
                 <Card cw="100%" ch="100%" /*{["auto", "auto", "100%", "100%"]}*/
                 >
                   <Text textStyle='h3' mb={'10px'}>Training</Text>
-                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[2,2, 4,6]} align={'strech'}>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                          width: '80%'
+                      }}
+                  />
+                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[5,5, 5,7]} align={'strech'}>
                     {roleData["trainings"].slice(0, 3).map((training, index) => 
                         <TrainingSuggestion key={index}
                           name={training.name}
@@ -170,6 +180,7 @@ export default function Role() {
                   />
                   <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
+                    spacing={4}
                   >
                     {
                       roleData["becoming_suggestions"].slice(0, 3).map((suggestion, i)=>
@@ -207,6 +218,16 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 10, 3, 3]} >
                 <Card cw="100%" ch={["auto", "auto", "100%", "100%"]}>
                   <Text textStyle='h3' mb={'10px'}>Similar Jobs</Text>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                          width: '80%'
+                      }}
+                  />
                   <Box h={["auto", "auto", "75%", "75%"]} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <VStack align="stretch" justify="left" w={'90%'} spacing={[3,3, 6,6]} >
                         {
@@ -251,12 +272,13 @@ export default function Role() {
                           height: 0.5,
                           marginTop: "10px",
                           marginBottom: "10px",
-                          width: "60%",
+                          //width: "60%",
                       }}
                   />                              
                   <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                     w={["100%", "100%", "90%", "90%"]}
+                    spacing={4}
                   >
                     {
                       roleData["transition_suggestions"].slice(0, 3).map((suggestion, i)=>
@@ -320,9 +342,19 @@ export default function Role() {
               <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 10, 7, 7]}>
                 <Card cw="100%" ch="auto">
                   <Text textStyle='h3' mt={3}>What do you do with PM experience?</Text>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                      }}
+                  />
                   <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
                     align={'stretch'}
                     w={["100%", "100%", "90%", "90%"]}
+                    spacing={4}
                   >
                     {
                       roleData["experience_suggestions"].slice(0, 3).map((suggestion, i)=>

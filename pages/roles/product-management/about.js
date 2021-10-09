@@ -9,6 +9,7 @@ import PeopleProfileSM from '../../../components/profile/peopleProfileSeeMore.js
 import CompanyProfile from '../../../components/profile/companyProfile.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
+import BlogSuggestion from '../../../components/suggestions/blog.js'
 import {Avatar,
         Text, 
         Image, 
@@ -28,7 +29,8 @@ const roleData = {
   industry: productManagementData["industry"],
   summary: productManagementData["summary"],
   description_suggestions: productManagementData["about"]["description_suggestions"],
-  top_profiles: productManagementData["about"]["top_profiles"]
+  top_profiles: productManagementData["about"]["top_profiles"],
+  top_employers: productManagementData["about"]["top_employers"]
 }
 
 export default function Role() {
@@ -158,70 +160,84 @@ export default function Role() {
                       }}
                   />
                   <Text textStyle='h3' mt={3}>What does a Product Manager do?</Text>
-                  <Text textStyle='subContent' mt={3}>
+                 {/*  <Text textStyle='subContent' mt={3}>
                     As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation.
-                  </Text>
-                  <br/>                  
-                  <br/>
-                  <Text fontSize = {["4vw", "2.5vw", '1.5vw', "1.25vw"]}
-                        fontWeight = "620"
-                        lineHeight = "120%"
-                        letterSpacing = "1.5px"
-                        style={{cursor: 'pointer'}} w={'100%'}>
-                      New Card title thickness <br/> <br/>
-                  </Text>
-                  <Text fontSize = {["4vw", "2.5vw", '1.5vw', "1.25vw"]}
-                        fontWeight = "620"
-                        lineHeight = "120%"
-                        letterSpacing = "0.5px"
-                        style={{cursor: 'pointer'}} w={'100%'}>
-                      New Card title thickness #2 <br/> <br/>
-                  </Text>
-                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
-                        fontWeight = "380"
-                        lineHeight = "110%"
-                        letterSpacing = "1px"
-                        style={{cursor: 'pointer'}} w={'100%'}>
-                      #1 <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                  </Text><br/>
-                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
-                        fontWeight = "470"
-                        lineHeight = "110%"
-                        letterSpacing = "1px"
-                        style={{cursor: 'pointer'}} w={'100%'}>
-                      #2 <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                  </Text><br/>
-                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
-                        fontWeight = "500"
-                        lineHeight = "110%"
-                        letterSpacing = "1px"
-                        style={{cursor: 'pointer'}} w={'100%'}>
-                      #3 <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                  </Text><br/>
-                  <Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
-                        fontWeight = "500"
-                        lineHeight = "110%"
-                        letterSpacing = "-1px"
-                        style={{cursor: 'pointer'}} w={'100%'}>
-                      #4 <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                      This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
-                  </Text>
+                  </Text> */}
+                  <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                    spacing={4}
+                  >
+                    {
+                      roleData["description_suggestions"].slice(0, 10).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
+                  </VStack>
+                                        
+                  <SeeMoreWindow title='What does a Product Manager do?'>        
+                      {
+                        roleData["description_suggestions"].map((suggestion, i)=>
+                          <BlogSuggestion key={i} 
+                              name={suggestion.name} 
+                              title={suggestion.title}
+                              likes = {suggestion.likes}
+                              views = {suggestion.views}
+                              link = {suggestion.link}
+                              author = {suggestion.author}
+                              type ={suggestion.type}
+                          />
+                        )
+                      }             
+                  </SeeMoreWindow >
                 </Card>
               </GridItem>
               
               <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 10, 3, 3]} >
                 <Card cw="100%" ch="auto">
                   <Text textStyle='h3' mb={'10px'}>Top Employers</Text>
-                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                          width: '80%'
+                      }}
+                  />
+                  <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[5,5, 5,7]} align={'strech'}>
+                    {roleData["top_employers"].slice(0, 3).map((employer, index) => 
+                      <CompanyProfile key={index}
+                        avatar={employer.avatar}
+                        source={employer.source}
+                        jobs={employer.jobs}
+                        name={employer.name}
+                      />
+                    )}                    
+                  </VStack>                        
+                  <SeeMoreWindow title='Top Employers'>     
+                    {roleData["top_employers"].map((employer, index) => 
+                        <CompanyProfile key={index}
+                          avatar={employer.avatar}
+                          source={employer.source}
+                          jobs={employer.jobs}
+                          name={employer.name}
+                        />
+                      )}                                       
+                  </SeeMoreWindow >
+
+
+                  {/* <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
                       <CompanyProfile 
-                        avatar="https://media-exp1.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1612205615891?e=2159024400&v=beta&t=J9qbDyzP2uv1lE1Xb_ieBaWwgeT-u52Mf-4ACuHP_p8"
+                        avatar="https://cdn.iconscout.com/icon/free/png-128/amazon-65-675861.png"
                         source="https://logos-world.net/wp-content/uploads/2021/02/Indeed-Logo.png"
                         jobs="1,000+"
                         name="Amazon"
@@ -241,7 +257,7 @@ export default function Role() {
                   </div>                        
                   <SeeMoreWindow title='Longer Listing'>              
                       <Center>Longer List of Elements</Center>                
-                  </SeeMoreWindow >
+                  </SeeMoreWindow > */}
                   {/* <Text color='kalooteBlue.100' 
                     //onClick={onOpen}
                     style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
@@ -266,13 +282,13 @@ export default function Role() {
                   <SeeMoreWindow title='Top Profiles'>     
                     {roleData["top_profiles"].map((profile, index) => 
                         <PeopleProfileSM key={index}
-                        avatar={icons.avatar} // to update the avatar
-                        name={profile.name}
-                        title={profile.title}
-                        likes = {profile.likes}
-                        twitter = {profile.twitter}
-                        linkedIn = {profile.linkedIn}
-                      />
+                          avatar={icons.avatar} // to update the avatar
+                          name={profile.name}
+                          title={profile.title}
+                          likes = {profile.likes}
+                          twitter = {profile.twitter}
+                          linkedIn = {profile.linkedIn}
+                        />
                         /* <PeopleProfile key={index}
                           avatar={icons.avatar} // to update the avatar
                           name={profile.name}
@@ -299,3 +315,58 @@ export default function Role() {
     </div>
   )
 }
+
+
+/* 
+<br/>                  
+<br/>
+<Text fontSize = {["4vw", "2.5vw", '1.5vw', "1.25vw"]}
+      fontWeight = "620"
+      lineHeight = "120%"
+      letterSpacing = "1.5px"
+      style={{cursor: 'pointer'}} w={'100%'}>
+    New Card title thickness <br/> <br/>
+</Text>
+<Text fontSize = {["4vw", "2.5vw", '1.5vw', "1.25vw"]}
+      fontWeight = "620"
+      lineHeight = "120%"
+      letterSpacing = "0.5px"
+      style={{cursor: 'pointer'}} w={'100%'}>
+    New Card title thickness #2 <br/> <br/>
+</Text>
+<Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+      fontWeight = "380"
+      lineHeight = "110%"
+      letterSpacing = "1px"
+      style={{cursor: 'pointer'}} w={'100%'}>
+    #1 <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+</Text><br/>
+<Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+      fontWeight = "470"
+      lineHeight = "110%"
+      letterSpacing = "1px"
+      style={{cursor: 'pointer'}} w={'100%'}>
+    #2 <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+</Text><br/>
+<Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+      fontWeight = "500"
+      lineHeight = "110%"
+      letterSpacing = "1px"
+      style={{cursor: 'pointer'}} w={'100%'}>
+    #3 <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+</Text><br/>
+<Text fontSize = {["3vw", "2.1vw", '1.2vw', "1vw"]}
+      fontWeight = "500"
+      lineHeight = "110%"
+      letterSpacing = "-1px"
+      style={{cursor: 'pointer'}} w={'100%'}>
+    #4 <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+    This is the text that I am using to test the new thickness of the font. So thicker of less? <br/>
+</Text> */

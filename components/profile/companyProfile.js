@@ -11,7 +11,7 @@ import {
 
 export default function CompanyProfile(props){
     return (        
-        <HStack mb={3}>
+        <Wrap >
         <Box>
           <Avatar
             style={{marginRight: '10px', marginLeft: '10px'}}
@@ -37,7 +37,7 @@ export default function CompanyProfile(props){
           </Wrap>
           
         </VStack>
-      </HStack>
+      </Wrap>
     )
 
 }
