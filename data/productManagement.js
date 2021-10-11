@@ -1198,6 +1198,125 @@ export const productManagementData = {
               "views": "0"
           }
         ]
+      },
+      recruit: {
+        "top_employers": [
+              {
+                  "name": "Amazon.com services",
+                  "jobs": "1293",
+                  "source": "Indeed\n",
+                  "avatar": "https://cdn.iconscout.com/icon/free/png-128/amazon-65-675861.png"
+              },
+              {
+                  "name": "Vmware",
+                  "jobs": "754",
+                  "source": "Indeed\n",
+                  "avatar": "https://pic.clubic.com/v1/images/1501430/raw"
+              },
+              {
+                  "name": "Change Healthcare",
+                  "jobs": "420",
+                  "source": "Indeed\n",
+                  "avatar": "https://hashedhealth.com/wp-content/uploads/2017/07/HH_News_change-healthcare-15.png"
+              },
+              {
+                  "name": "Salesforce",
+                  "jobs": "275",
+                  "source": "Indeed\n",
+                  "avatar": "https://logos-world.net/wp-content/uploads/2020/10/Salesforce-Logo-700x394.png"
+              },
+              {
+                  "name": "Splunk",
+                  "jobs": "198",
+                  "source": "Indeed\n",
+                  "avatar": "https://companiesmarketcap.com/img/company-logos/256/SPLK.png"
+              },
+              {
+                  "name": "Facebook",
+                  "jobs": "170",
+                  "source": "Indeed\n",
+                  "avatar": "https://res.cloudinary.com/ignitouch/image/upload/v1633811224/Kaloote/facebook_txodjo.png"
+              },
+              {
+                  "name": "Oracle",
+                  "jobs": "146",
+                  "source": "Indeed\n",
+                  "avatar": "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Symbol.png"
+              },
+              {
+                  "name": "Siemens",
+                  "jobs": "121",
+                  "source": "Indeed",
+                  "avatar": "https://logos-world.net/wp-content/uploads/2020/11/Siemens-Logo-1991-present.jpg"
+              }
+          ],
+          "internship": [
+            {
+                "link": "https://roadmunk.com/blog/product-management-internship/",
+                "title": "How to Land a Product Management Internship with no Experience",
+                "author": "",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://productmanagerhq.com/product-manager-internship/#Becoming_a_Product_Management_Intern",
+                "title": "Becoming a Product Management Intern",
+                "author": "",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://airfocus.com/blog/how-to-land-internship-product-management/",
+                "title": "How to Land an Internship in Product Management - A Complete Guide",
+                "author": "",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://markuphero.com/blog/how-to-get-a-product-management-internship-ultimate-guide/",
+                "title": "How to Get a Product Management Internship in 2020",
+                "author": "",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            }
+          ],
+          "fulltime": [            
+            {
+                "link": "https://www.productplan.com/learn/looking-for-a-product-management-job/",
+                "title": "Looking for a Product Management Job? Start Here",
+                "author": "",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://productgym.io/blogs/product-management-blog/how-to-get-an-interview/",
+                "title": "How to Get an Interview For More Product Manager Jobs?",
+                "author": "",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://productcoalition.com/a-guide-to-finding-your-next-pm-job-4d0ca04bf039",
+                "title": "A guide to finding your next PM Job",
+                "author": "",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            }
+          ],
       }
 }
   

@@ -71,7 +71,7 @@ export default function BlogSuggestion(props){
                 <Wrap justify="space-between" mb={1}>
                     <HStack justify="left"   >
                         {(props.type !== undefined && props.type !== null && props.type !== '') && <Box mr={2}>
-                            <Tooltip hasArrow label={icon.alt} placement="top" bg="KalooteGray.100" color="black">
+                            <Tooltip hasArrow label={icon.alt} placement="top" bg="white" color="black">
                                 <Image src={icon.link} alt={icon.alt} h="15px" w="15px"></Image>
                             </Tooltip>
                         </Box>}

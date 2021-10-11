@@ -5,11 +5,35 @@ import {
     HStack,
     Image,
     VStack,
+    Tooltip,
     Text,
     Wrap,
   } from '@chakra-ui/react';
+import {icons} from '../../data/iconLinks.js'
+
 
 export default function CompanyProfile(props){
+
+    var source = {
+      link: icons.indeed,  
+      alt: "Indeed", 
+  }
+
+    if(props.source !== undefined && props.source !== null )
+        {switch (props.source.trim().toLowerCase()) {
+            case 'indeed':
+                source = {
+                    link: icons.indeed,  
+                    alt: "Indeed", 
+                }
+                break;
+            case 'linkedin':
+                  source = {
+                    link: icons.linkedin,   
+                    alt: "LinkedIn", 
+                }
+        }
+    }
     return (        
         <Wrap >
         <Box>
@@ -31,7 +55,9 @@ export default function CompanyProfile(props){
             <HStack align='center' mt={'2px'}>
               <Text textStyle={'profileContent'}>More jobs on </Text>
               <Box >
-                <Image src={props.source} h="15px" w="auto"></Image>
+                <Tooltip hasArrow label={source.alt} placement="top" bg="white" color="black">
+                  <Image src={source.link} h="15px" w="auto"></Image>
+                </Tooltip>
               </Box>
             </HStack>
           </Wrap>

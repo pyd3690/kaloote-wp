@@ -18,6 +18,7 @@ export const icons = {
     resource: "https://res.cloudinary.com/ignitouch/image/upload/v1633950534/Kaloote/resource2_t1y0ii.png",
     report: "https://res.cloudinary.com/ignitouch/image/upload/v1632447275/Kaloote/flag_gk19r2.png",
     clock: "https://res.cloudinary.com/ignitouch/image/upload/v1632849606/Kaloote/clock2_cewrvm.png",
+    indeed: "https://logos-world.net/wp-content/uploads/2021/02/Indeed-Logo.png",
 }
   
   export default {
