@@ -4,8 +4,13 @@ import styles from '../../../styles/Home.module.css'
 import Card from '../../../components/card/card.js'
 import PeopleProfile from '../../../components/profile/peopleProfile.js'
 import CompanyProfile from '../../../components/profile/companyProfile.js'
+import {icons} from '../../../data/iconLinks.js'
+import {productManagementData} from '../../../data/productManagement.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
+import BlogSuggestion from '../../../components/suggestions/blog.js'
+import BlogSuggestionSM from '../../../components/suggestions/blogSM.js'
+//import BestBlogsuggestion from '../../../components/suggestions/training.js'
 import {Avatar,
         Text, 
         Image, 
@@ -20,15 +25,23 @@ import {Avatar,
         HStack, VStack} from '@chakra-ui/react';
 
 const skills = ['Empathy', 'Leadership', 'Curiosity', 'Problem Solving', 'Communication']
-
+const roleData = {
+  name: productManagementData["name"],
+  industry: productManagementData["industry"],
+  summary: productManagementData["summary"],
+  bestblogs: productManagementData["onTheJob"]["bestblogs"],
+  daytoday: productManagementData["onTheJob"]["daytoday"], 
+  survivalguide: productManagementData["onTheJob"]["survivalguide"],
+  challenges: productManagementData["onTheJob"]["challenges"],
+  comparison: productManagementData["onTheJob"]["comparison"],
+}
 
 export default function Role() {
-  //console.log(skills)
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Kaloote - Product Management Role</title>
+        <title>Kaloote - Product Management Career Path</title>
         <meta name="description" content="As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -52,70 +65,103 @@ export default function Role() {
                       }}>
             
             <Flex  w={['95%', "67%", "67%"]} alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
-              <Text textStyle="h2">Product Management</Text>
-              <Text textStyle="h2">Tech</Text>
+              <Text textStyle="h2">{roleData["name"]}</Text>
+              <Text textStyle="h2">{roleData['industry']}</Text>
             </Flex>
             
             <Grid
               h="100%"
-              templateRows="repeat(6, 1fr)"
+              templateRows="repeat(1, 1fr)"
               templateColumns="repeat(10, 1fr)"
               gap={4}
             >
-              <GridItem rowSpan={[1,1, 1,2]} colSpan={[10, 6, 7, 7]} /* colSpan={7} */ >
-                <Card cw="100%" ch="100%" >
-                  <VStack h={'100%'} align="stretch" justify="space-between">
-                    <HStack h={['60%', '60%', '50%', '80%']}  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
+              <GridItem rowSpan={[1,1,1,1]} colSpan={[10, 10, 7, 7]} /* colSpan={7} */ >
+                <Card cw="100%" ch="auto" >
+                  <VStack h={'auto'} align="stretch" justify="space-between">
+                    <HStack h='auto'  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
                       <Box w={'45%'} h={'auto'} justify="center" align="center">
                         <Image 
                           id="roleImage"
-                          src='https://res.cloudinary.com/ignitouch/image/upload/v1629728940/Kaloote/product_manager_oha9rv.png' 
+                          src={icons.pmrole} 
                           objectFit="cover"
                         />
                       </Box>
   
-                      <VStack h='100%' spacing={5} align="stretch" justify="center" p={["15px", "15px", "10px", "10px"]}
+                      <VStack h='auto' spacing={5} align="stretch" justify="center" p={["15px", "15px", "10px", "10px"]}
                         id="roleSummarydata">
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629730987/Kaloote/salary_rm7u5c.jpg' h="25px" w="25px"></Image>
+                            <Image src={icons.salary} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleSalary" textStyle="subContent">$50k - 100k</Text>
+                          <Text id="roleSalary" textStyle="subContent">${roleData["summary"]["salary"][0] + " - " + roleData["summary"]["salary"][1]}</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731070/Kaloote/employee-workplace-5-486228_jhbe44.png' h="25px" w="25px"></Image>
+                            <Image src={icons.workload} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleWorkload" textStyle="subContent">60 Hrs/Week</Text>
+                          <Text id="roleWorkload" textStyle="subContent">{roleData["summary"]["workload"]} Hrs/Week</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731031/Kaloote/travel_qsatbn.png' h="25px" w="25px"></Image>
+                            <Image src={icons.travel} h="25px" w="25px"></Image>
                           </Box> 
-                          <Text id="roleTravel" textStyle="subContent">Low Travel Requirements</Text>
+                          <Text id="roleTravel" textStyle="subContent">{roleData["summary"]["travel"]} Travel Requirements</Text>
                         </HStack>
                         <HStack spacing={4} > 
                           <Box>
-                            <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1629731157/Kaloote/log_mlt2xs.png' h="25px" w="25px"></Image>
+                            <Image src={icons.steps} h="25px" w="25px"></Image>
                           </Box> 
                           <Text id="roleSteps"  textStyle="subContent" color='kalooteBlue.100' style={{textDecoration: 'underline'}}>Steps to become a PM</Text>
                         </HStack>
                       </VStack>
                     </HStack>
   
-                    <Box h={'30%'} mt={'5px'}>
+                    <Box mt={'5px'}>
                       <TabsMenu selection={2} isIndex={false} />
                     </Box> 
                   </VStack>
                 </Card>
               </GridItem>
 
-              <GridItem rowSpan={[1,1, 1,2]}  /* colSpan={3} */ colSpan={[10, 4, 3, 3]}  >
-                <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'10px'}>Events</Text>
-                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >List</div>                        
-                  <SeeMoreWindow title='Longer Listing'>              
-                      <Center>Longer List of Elements</Center>                
+              <GridItem rowSpan={[2,2, 2,2]}  /* colSpan={3} */ colSpan={[10, 10, 3, 3]}  >
+                <Card cw="100%" ch="100%" /*{["auto", "auto", "100%", "100%"]}*/
+                >
+                  <Text textStyle='h3' mb={'10px'}>Most Read PM Blogs</Text>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                          width: '80%'
+                      }}
+                  />
+                  <VStack style={{height: '85%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[5,5, 5,7]} align={'strech'}>
+                    {roleData["bestblogs"].slice(0, 9).map((suggestion, i) => 
+                        <BlogSuggestionSM key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                    )}                    
+                  </VStack>                        
+                  <SeeMoreWindow title='Most Read PM Blogs'>     
+                    {roleData["bestblogs"].map((suggestion, i) => 
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )}                                       
                   </SeeMoreWindow >
                   {/* <Text color='kalooteBlue.100' 
                     //onClick={onOpen}
@@ -123,22 +169,9 @@ export default function Role() {
                 </Card>
               </GridItem>
               
-              <GridItem rowSpan={[1,1, 2,4]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 6, 7, 7]}>
-                <Card cw="100%" ch="100%">
-                  <Wrap my={'4'}>
-                    <WrapItem>
-                      <Text textStyle='skills' color="gray" mr={2}>
-                        Skills:
-                      </Text>
-                    </WrapItem>
-                    {skills.map((skill) => 
-                        <WrapItem key={skill}>
-                          <Text textStyle='skills' color="kalooteBlue.100" mr={2}>
-                            {skill} &bull;
-                          </Text>
-                      </WrapItem> 
-                    )}                                       
-                  </Wrap>
+              <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 10, 7, 7]}>
+                <Card cw="100%" ch="auto">                  
+                  <Text textStyle='h3' my={3}>Day-to-Day on the job</Text>
                   <hr
                       style={{
                           color: "lightgray",
@@ -148,76 +181,204 @@ export default function Role() {
                           marginBottom: "10px",
                       }}
                   />
-                  <Text textStyle='h3' mt={3}>What does a Product Manager do?</Text>
-                  <Text textStyle='subContent' mt={3}>
-                    As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation.
-                  </Text>
-                </Card>
-              </GridItem>
-              
-              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
-                <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'10px'}>Top Employers</Text>
-                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <CompanyProfile 
-                        avatar="https://media-exp1.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1612205615891?e=2159024400&v=beta&t=J9qbDyzP2uv1lE1Xb_ieBaWwgeT-u52Mf-4ACuHP_p8"
-                        source="https://logos-world.net/wp-content/uploads/2021/02/Indeed-Logo.png"
-                        jobs="1,000+"
-                        name="Amazon"
-                      />
-                      <CompanyProfile 
-                        avatar="https://pic.clubic.com/v1/images/1501430/raw"
-                        source="https://logos-world.net/wp-content/uploads/2021/02/Indeed-Logo.png"
-                        jobs="900+"
-                        name="VMWare"
-                      />
-                      <CompanyProfile 
-                        avatar="https://hashedhealth.com/wp-content/uploads/2017/07/HH_News_change-healthcare-15.png"
-                        source="https://res.cloudinary.com/ignitouch/image/upload/v1629761865/Kaloote/linkedin_yzu9nm.png"
-                        jobs="900+"
-                        name="Change Healthcare"
-                      />                    
-                  </div>                        
-                  <SeeMoreWindow title='Longer Listing'>              
-                      <Center>Longer List of Elements</Center>                
+                  <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                    spacing={4}
+                  >
+                    {
+                      roleData["daytoday"].slice(0, 3).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
+                  </VStack>
+                                        
+                  <SeeMoreWindow title='Day-to-Day on the job'>        
+                      {
+                        roleData["daytoday"].map((suggestion, i)=>
+                          <BlogSuggestion key={i} 
+                              name={suggestion.name} 
+                              title={suggestion.title}
+                              likes = {suggestion.likes}
+                              views = {suggestion.views}
+                              link = {suggestion.link}
+                              author = {suggestion.author}
+                              type ={suggestion.type}
+                          />
+                        )
+                      }             
                   </SeeMoreWindow >
-                  {/* <Text color='kalooteBlue.100' 
-                    //onClick={onOpen}
-                    style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
                 </Card>
               </GridItem>
-              
-              <GridItem rowSpan={[1,1, 1,2]} /* colSpan={3} */ colSpan={[10, 4, 3, 3]} >
-                <Card cw="100%" ch="100%">
-                  <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
-                  <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <PeopleProfile 
-                        avatar="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"
-                        name="Eddie Blue"
-                        title="Co-Founder @ Sundial, Author of THE MAKING OF A MANAGER"
-                        likes = "10K"
-                      />
-                      <PeopleProfile 
-                        avatar="https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg"
-                        name="Lola Bay"
-                        title="Product Management Trainer, Consultant, and Author"
-                        likes="9K"
-                      />
-                      <PeopleProfile 
-                        avatar="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/83221961/original/425127947f0688643bcefba40b83c767b13e2a6a/illustrate-your-cartoon-avatar.jpg"
-                        name="John Doe"
-                        title="Product Management Trainer, Consultant, and Author"
-                        likes="8K"
-                      />
-                  </div>                        
-                  <SeeMoreWindow title='Longer Listing'>              
-                      <Center>Longer List of Elements</Center>                
+
+              <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 10, 7, 7]}>
+                <Card cw="100%" ch="auto">                  
+                  <Text textStyle='h3' mt={3}>The PM Survival Guide</Text>                       
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                          //width: "60%",
+                      }}
+                  />                              
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                    w={["100%", "100%", "90%", "90%"]}
+                    spacing={4}
+                  >
+                    {
+                      roleData["challenges"].slice(0, 3).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
+                    <HStack justify="left" w={'75%'}>
+                    <Text as="sup" color="kalooteBlue.100">AD</Text>
+                      <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={['100%','100%','70%','70%']}>
+                          Transitioning to Product from a functional role?
+                      </Text>
+                    </HStack>
+
+                  </VStack>
+                                        
+                  <SeeMoreWindow title='The PM Survival Guide'>              
+                  {
+                      roleData["challenges"].map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
                   </SeeMoreWindow >
-                  {/* <Text color='kalooteBlue.100' 
-                    //onClick={onOpen}
-                    style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
                 </Card>
               </GridItem>
+
+              <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 10, 7, 7]}>
+                <Card cw="100%" ch="auto">
+                  <Text textStyle='h3' mt={3}>Things that could ruin your PM career</Text>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                      }}
+                  />
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                    w={["100%", "100%", "90%", "90%"]}
+                    spacing={4}
+                  >
+                    {
+                      roleData["challenges"].slice(0, 3).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
+                  </VStack>
+                                        
+                  <SeeMoreWindow title='Things that could ruin your PM career'>              
+                  {
+                      roleData["challenges"].map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }                
+                  </SeeMoreWindow >
+                </Card>
+                  
+              </GridItem>
+
+              <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 10, 7, 7]}>
+                <Card cw="100%" ch="auto">
+                  <Text textStyle='h3' mt={3}>Difference between PM and project management</Text>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                      }}
+                  />
+                  <VStack style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                    align={'stretch'}
+                    w={["100%", "100%", "90%", "90%"]}
+                    spacing={4}
+                  >
+                    {
+                      roleData["comparison"].slice(0, 3).map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }
+                  </VStack>
+                                        
+                  <SeeMoreWindow title='Difference between PM and project management'>              
+                  {
+                      roleData["comparison"].map((suggestion, i)=>
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )
+                    }                
+                  </SeeMoreWindow >
+                </Card>
+                  
+              </GridItem>
+
+              
             </Grid>
           </div>
         </Box>

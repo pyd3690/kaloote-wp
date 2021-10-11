@@ -42,7 +42,7 @@ const podcastIcon = {
     alt: "Podcast", 
 }
 
-export default function BlogSuggestion(props){
+export default function BlogSuggestionSM(props){
     const { isOpen, onOpen, onClose } = useDisclosure()
     //const [editorState, setEditorState] = useState(()=> EditorState.createEmpty())
     var icon = {
@@ -69,7 +69,7 @@ export default function BlogSuggestion(props){
     return (        
           <VStack align="stretch" justify="left" spacing={0}>
                 <Wrap justify="space-between" mb={1}>
-                    <HStack justify="left"   >
+                    <HStack justify="left"  w={['100%','100%','80%','70%']} >
                         {(props.type !== undefined && props.type !== null && props.type !== '') && <Box mr={2}>
                             <Tooltip hasArrow label={icon.alt} placement="top" bg="KalooteGray.100" color="black">
                                 <Image src={icon.link} alt={icon.alt} h="15px" w="15px"></Image>
@@ -79,7 +79,7 @@ export default function BlogSuggestion(props){
                             <Link href={"#" + props.title.replace(/\s/g, '-')}>{props.title}</Link>
                         </Text>
                     </HStack>
-                    <HStack justify='left'>
+                    <HStack justify='left' w={['100%','100%','15%','25%']}>
                         <HStack /* w={'50%'} */ mr={1}>
                             <Box>
                                 <Image src={icons.view} h="15px" w="15px"></Image>

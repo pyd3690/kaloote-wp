@@ -228,8 +228,8 @@ export default function Role() {
                           width: '80%'
                       }}
                   />
-                  <Box h={["auto", "auto", "75%", "75%"]} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
-                      <VStack align="stretch" justify="left" w={'90%'} spacing={[3,3, 6,6]} >
+                  <Box h={["auto", "auto", "70%", "65%"]} style={{padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
+                      <VStack align="stretch" justify="left" w={'90%'} spacing={[3,3, 5,5]} >
                         {
                           roleData["similar_jobs"].slice(0, 3).map((job, i) => 
                           <Wrap key={i} >

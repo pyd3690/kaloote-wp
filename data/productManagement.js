@@ -611,6 +611,594 @@ export const productManagementData = {
 
         ],
       },
+      onTheJob: {
+          "daytoday": [
+            {
+                "link": "https://www.productplan.com/learn/day-in-the-life-product-manager/",
+                "title": "A Day in the Life of a Product Manager",
+                "author": "Product Plan",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://productmanagerhq.com/what-does-a-product-manager-do/",
+                "title": "What Does a Product Manager Do? [A Day in the Life]",
+                "author": "Poduct Manager HQ",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.rocketblocks.me/guide/pm/product-manager-day-in-the-life.php",
+                "title": "A day in the life of a product manager",
+                "author": "Rocket Blocks",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://medium.com/open-product-management/a-day-in-the-life-of-a-product-manager-1052bc9071dd",
+                "title": "A day in the life of a product manager",
+                "author": "Product Hired",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://miro.com/blog/product-managers-guide/#2",
+                "title": "A Product Manger's Daily Schedule",
+                "author": "Miro",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.mbacrystalball.com/blog/2020/07/13/product-manager-day-in-life/",
+                "title": "A day in the life of a product manager",
+                "author": "MBA Crystal Ball",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.wrike.com/blog/software-product-manager/",
+                "title": "A Day in the Life of a Software Product Manager",
+                "author": "Emily Bonnie",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.upgrad.com/blog/a-day-in-the-life-of-a-product-manager-making-it-all-work/",
+                "title": "A Day In The Life Of A Product Manager",
+                "author": "Upgrad",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.businessinsider.in/slideshows/miscellaneous/a-day-in-the-life-of-a-product-manager-at-facebook/slidelist/64369131.cms#slideid=64369141",
+                "title": "A day in the life of a product manager at Facebook",
+                "author": "Business Insider",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://tanzu.vmware.com/content/blog/a-day-in-the-life-of-a-product-manager-at-pivotal-cloud-foundry",
+                "title": "A Day in the Life of a Product Manager at Pivotal Cloud Foundry",
+                "author": "Zoe Vance",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://eng.lyft.com/day-in-the-life-of-a-lyft-pm-meet-lily-pm-of-airports-venues-71ee44078004",
+                "title": "Day in the Life of a Lyft PM: Meet Lily, PM of Airports & Venues!",
+                "author": "Lily Sierra",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://goodgamestudios.com/blog/a-day-in-the-life-of-a-junior-product-manager/2016/07/01/",
+                "title": "A Day in the Life of a Junior Product Manager",
+                "author": "Good Game",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.aha.io/roadmapping/guide/product-management/what-does-a-product-manager-do-each-day",
+                "title": "What does a product manager do each day?",
+                "author": "Aha",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            }
+        ],
+        "survivalguide": [
+            {
+                "link": "https://productstride.substack.com/p/7-tips-to-a-successful-product-management",
+                "title": "7 Tips to a Successful Product Management Career",
+                "author": "Product Stride",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://rationality.in/2020/04/02/what-it-takes-to-succeed-as-a-product-manager/",
+                "title": "What it takes to succeed as a Product Manager?",
+                "author": "Rationality",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.process.st/how-to-be-a-good-product-manager/",
+                "title": "How to Be a Good Product Manager & Crush Your Workload (Free Tips, Tricks, & Examples!)",
+                "author": "Process Street",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://podcasts.apple.com/us/podcast/how-to-succeed-in-product-management-jeffrey-shulman/id1569224781",
+                "title": "How To Succeed In Product Management",
+                "author": "Jeff Shulman, Red Russak & Soumeya Benghanem",
+                "type": "podcast",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://medium.com/innovation-machine/the-successful-product-manager-5f3cb3aacb51",
+                "title": "How to become a Great Product Manager",
+                "author": "Innovation Mode",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://svpg.com/why-women-make-the-best-product-managers/",
+                "title": "Why Women Make The Best Product Managers",
+                "author": "SVPG",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://airfocus.com/blog/skills-to-be-successful-product-manager/",
+                "title": "8 Skills You Need to Be a Successful Product Manager",
+                "author": "Airfocus",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://280group.com/product-management-blog/five-strategies-to-gain-massive-success-in-product-management/",
+                "title": "Five Strategies to Gain Massive Success in Product Management",
+                "author": "280 Group",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://a16z.com/2012/06/15/good-product-managerbad-product-manager/",
+                "title": "Good Product Manager/Bad Product Manager",
+                "author": "Ben Horowitz",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.aha.io/roadmapping/guide/product-management/are-you-a-new-product-manager",
+                "title": "What are some tips for new product managers?",
+                "author": "Aha",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://arkenea.com/blog/successful-product-managers/",
+                "title": "The Top 10 Skills Successful Product Managers Have Mastered",
+                "author": "Nidhi Shah",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://spartez.com/blog/2019/07/31/9-tips-on-how-to-be-a-successful-product-manager",
+                "title": "9 tips on how to be a successful Product Manager",
+                "author": "Spartez",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://craft.io/blog/succeed-new-product-manager-9-effective-lessons.html",
+                "title": "How to Succeed as a New Product Manager: 9 Effective Lessons",
+                "author": "Craft.io",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "link": "https://www.appcues.com/blog/great-product-manager",
+                "title": "What does it mean to be a great product manager?",
+                "author": "Appcues",
+                "type": "Blog",
+                "name": "Abla",
+                "likes": "0",
+                "views": "0"
+            }
+        ],
+        "challenges": [
+          {
+              "link": "https://medium.com/agileinsider/why-do-product-managers-fail-17d61906762a",
+              "title": "Why Do Product Managers Fail?",
+              "author": "Agile Insider",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.linkedin.com/pulse/5-ways-i-failed-product-manager-lessons-learnt-zainab-zaki",
+              "title": "5 ways I failed as a product manager and the lessons I learnt",
+              "author": "Zainab Zaki",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://280group.com/product-management-blog/7-reasons-products-fail/",
+              "title": "7 Reasons Why Products Fail",
+              "author": "280 Group",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.universalclass.com/articles/business/common-mistakes-product-managers-make-and-how-to-avoid-them.htm",
+              "title": "Common Mistakes Product Managers Make and How to Avoid Them",
+              "author": "Universal Class",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.dummies.com/careers/project-management/10-ways-product-managers-fail/",
+              "title": "10 Ways Product Managers Fail",
+              "author": "Dummies",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://280group.com/product-management-blog/top-ten-ways-to-fail-as-a-product-manager/",
+              "title": "Top Ten Ways to Fail as a Product Manager",
+              "author": "280 Group",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.productplan.com/learn/product-management-career-mistakes/",
+              "title": "5 Product Management Career Mistakes to Avoid",
+              "author": "Product Plan",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://blog.getenjoyhq.com/how-to-handle-failure-as-a-product-manager/",
+              "title": "How to Handle Failure as a Product Manager",
+              "author": "Enjoy HQ",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.bizjournals.com/bizjournals/how-to/growth-strategies/2019/06/how-product-managers-can-help-save-failing.html",
+              "title": "How product managers can help save failing projects",
+              "author": "Biz Journals",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          }
+        ],
+        "comparison": [
+          {
+              "link": "https://www.northeastern.edu/graduate/blog/project-manager-vs-product-manager/",
+              "title": "Project Manager vs. Product Manager: What's the Difference?",
+              "author": "North Esater School",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://markuphero.com/blog/product-manager-vs-project-manager/",
+              "title": "Product Manager vs Project Manager - Why You Need to Know the Differences",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://airfocus.com/blog/product-manager-vs-project-manager/",
+              "title": "Product Manager vs Project Manager. Key Differences Between the Two Jobs",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.toptal.com/insights/future-of-work/product-manager-vs-project-manager-understanding-core-similarities-and-differences",
+              "title": "Product Managers vs. Project Managers: Understanding Core Similarities and Differences",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.upgrad.com/blog/product-management-vs-project-management/#Role_of_product_managers_and_project_managers",
+              "title": "Product Management vs Project Management: Which Should You Choose?",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://productmanagerhq.com/product-manager-vs-project-manager/",
+              "title": "Product Manager vs Project Manager: What's the Difference?",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.thinkful.com/blog/product-manager-vs-project-manager/",
+              "title": "Product Manager vs Project Manager",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://tms-outsource.com/blog/posts/product-manager-vs-project-manager/",
+              "title": "Product manager vs project manager: The difference between them",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          }
+        ],
+        "bestblogs": [
+          {
+              "title": "Product Coalition",
+              "link": "https://productcoalition.com/@jaystansell",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Product Talk",
+              "link": "https://www.producttalk.org/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Mind the Product",
+              "link": "http://www.mindtheproduct.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Roman Pichler",
+              "link": "https://www.romanpichler.com/blog/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Silicon Valley Product Group (SVPG)",
+              "link": "https://svpg.com/articles/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Product Manager HQ",
+              "link": "https://productmanagerhq.com/blog/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Inside Intercom",
+              "link": "https://blog.intercom.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "The Clever PM",
+              "link": "http://www.cleverpm.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "The Art of Product Management",
+              "link": "https://blackboxofpm.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "The Product Guy",
+              "link": "https://tpgblog.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Sachin Rekhi",
+              "link": "https://www.sachinrekhi.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Ken Norton",
+              "link": "https://www.kennorton.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Bringing the Donuts",
+              "link": "https://www.kennorton.com/newsletter/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Aha! Blog",
+              "link": "http://blog.aha.io/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "ProductPlan",
+              "link": "https://www.productplan.com/blog/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "First Round's The Review",
+              "link": "http://firstround.com/review/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Hacker Noon",
+              "link": "https://hackernoon.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Elezea",
+              "link": "https://elezea.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "Hunter Walk",
+              "link": "https://hunterwalk.com/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "title": "The Department of Product",
+              "link": "https://www.departmentofproduct.com/blog/",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          }
+        ]
+      }
 }
   
   export default {

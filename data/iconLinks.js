@@ -14,6 +14,8 @@ export const icons = {
     video: "https://res.cloudinary.com/ignitouch/image/upload/v1633804202/Kaloote/video2_kqn3s3.png",
     blog: "https://res.cloudinary.com/ignitouch/image/upload/v1633804645/Kaloote/blog2_ezyr0x.png",
     wikihow: "https://res.cloudinary.com/ignitouch/image/upload/v1633804906/Kaloote/how2_jwgofz.png",
+    podcast: "https://res.cloudinary.com/ignitouch/image/upload/v1633950534/Kaloote/podcast_g0ssfb.png",
+    resource: "https://res.cloudinary.com/ignitouch/image/upload/v1633950534/Kaloote/resource2_t1y0ii.png",
     report: "https://res.cloudinary.com/ignitouch/image/upload/v1632447275/Kaloote/flag_gk19r2.png",
     clock: "https://res.cloudinary.com/ignitouch/image/upload/v1632849606/Kaloote/clock2_cewrvm.png",
 }
