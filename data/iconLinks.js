@@ -19,6 +19,11 @@ export const icons = {
     report: "https://res.cloudinary.com/ignitouch/image/upload/v1632447275/Kaloote/flag_gk19r2.png",
     clock: "https://res.cloudinary.com/ignitouch/image/upload/v1632849606/Kaloote/clock2_cewrvm.png",
     indeed: "https://logos-world.net/wp-content/uploads/2021/02/Indeed-Logo.png",
+    book: "https://res.cloudinary.com/ignitouch/image/upload/v1633974124/Kaloote/book_qtsut0.png",
+    studyGuide: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/info_vajoic.png",
+    process: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/progress_qsynki.png",
+    questions: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/question_w6wkmo.png",
+    tips: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/tip_y8cgod.png",
 }
   
   export default {

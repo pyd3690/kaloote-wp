@@ -1561,7 +1561,147 @@ export const productManagementData = {
         ], 
         "resume": [], 
         "cv": [],
-      }
+      },
+      interview: {
+        "coaching": [     
+            {
+              "name": "Exponent",
+              "link": "https://www.tryexponent.com/",
+              "pricem": "$79 per m",
+              "pricey": "$349 per y",
+              "avatar": "https://www.tryexponent.com/_next/static/image/assets/images/logo.8a52f214a3b103157efdde784b3919cf.svg",
+              "likes": "0"
+          },
+          {
+              "name": "RocketBlocks",
+              "link": "https://www.rocketblocks.me/",
+              "pricem": "$35 per m",
+              "pricey": "$155 per y",
+              "avatar": "https://www.rocketblocks.me/images/homepage/rocketblocks.svg",
+              "likes": "0"
+          },
+          {
+              "name": "Product Alliance",
+              "link": "https://www.productalliance.com/",
+              "pricem": "$389 (lifetime)",
+              "pricey": "",
+              "avatar": "https://uploads-ssl.webflow.com/5ea4a389088154f012b2dee8/5f1e1cfcb5a619928b8d47e7_Wordmark%20with%20Text%20(Light).svg",
+              "likes": "0"
+          },
+          {
+              "name": "PM Exercice",
+              "link": "https://www.productmanagementexercises.com/",
+              "pricem": "$49 per m",
+              "pricey": "$299 per y",
+              "avatar": "https://www.productmanagementexercises.com/social-logo.png?v1",
+              "likes": "0"
+          },
+          {
+              "name": "I Got an Offer",
+              "link": "https://igotanoffer.com/",
+              "pricem": "less than $150/hr",
+              "pricey": "",
+              "avatar": "https://cdn.shopify.com/s/files/1/0417/7869/t/32/assets/logo-plain.svg?v=16529549736647918889",
+              "likes": "0"
+          },
+          {
+              "name": "Pramp",
+              "link": "https://www.pramp.com/",
+              "pricem": "Free",
+              "pricey": "",
+              "avatar": "https://www.pramp.com/img/HeaderLogo.png",
+              "likes": "0"
+          },
+          {
+              "name": "The PM Interview",
+              "link": "https://thepminterview.com/",
+              "pricem": "Free",
+              "pricey": "",
+              "avatar": "https://res.cloudinary.com/ignitouch/image/upload/v1633972092/Kaloote/pmi_vgaqqu.png",
+              "likes": "0"
+          },
+          {
+              "name": "Stellar Peers",
+              "link": "https://stellarpeers.com/",
+              "pricem": "$250 per session",
+              "pricey": "",
+              "avatar": "https://stellarpeers.com/wp-content/themes/stellarpeers-theme/images/logo-stellarpeers-horizontal.svg",
+              "likes": "0"
+          }
+        ],
+        "books": [  
+            {
+              "title": "Cracking the PM Interview: How to Land a Product Manager Job ...",
+              "author": "Gayle McDowell, Jackie Bavaro",
+              "link": "https://www.amazon.com/Cracking-PM-Interview-Product-Technology/dp/0984782818/ref=sr_1_6?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-6",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "Cracking the PM Career: The Skills, Frameworks, and Practices To Become a Great Product Manager (Cracking the Interview & Career)",
+              "author": "Jackie Bavaro, Gayle McDowell",
+              "link": "https://www.amazon.com/Cracking-Career-Frameworks-Practices-Interview-ebook/dp/B08TQ89LKB/ref=sr_1_16?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-16",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "Product Management's Sacred Seven: The Skills Required to Crush Product Manager Interviews and be a World-Class PM",
+              "author": "Parth Detroja, Neel Mehta, Aditya Agashe",
+              "link": "https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_stripbooks_sr_pg1_1?ie=UTF8&adId=A0073966KI2ACHYXEZ4Z&url=%2FProduct-Managements-Sacred-Seven-World-Class%2Fdp%2F0578740583%2Fref%3Dsr_1_1_sspa%3Fdchild%3D1%26keywords%3Dproduct%2Bmanagement%2Binterview%26qid%3D1619286054%26s%3Dbooks%26sr%3D1-1-spons%26psc%3D1&qualifier=1619286054&id=7512161410275431&widgetName=sp_atf",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "Decode and Conquer: Answers to Product Management Interviews",
+              "author": "Lewis C. Lin",
+              "link": "https://www.amazon.com/Decode-Conquer-Answers-Management-Interviews-ebook/dp/B07ZV8BM2S/ref=sr_1_1?crid=2TOMO88F70ZGM&dchild=1&keywords=decode+and+conquer&qid=1629591671&s=books&sprefix=deco%2Cstripbooks%2C889&sr=1-1",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "The Product Manager Interview: 164 Actual Questions and Answers",
+              "author": "Lewis C. Lin",
+              "link": "https://www.amazon.com/Product-Manager-Interview-Questions-Answers/dp/0998120448/ref=sr_1_13?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-13",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "The Product Management Interview: How to Find the Right Job as a Product Manager and Crush the PM Interview Process",
+              "author": "Alex Willen",
+              "link": "https://www.amazon.com/Product-Management-Interview-Manager-Process-ebook/dp/B07TCRCG69/ref=sr_1_8?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-8",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "Secrets of the Product Manager Interview: Former Google Interviewer Reveals How to Get Multiple Job Offers",
+              "author": "Lewis C. Lin",
+              "link": "https://www.amazon.com/Secrets-Product-Manager-Interview-Interviewer-ebook/dp/B06XFK4686/ref=sr_1_19?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-19",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "Get Hired as a Product Manager without an MBA, Bootcamp, or Product Experience",
+              "author": "Paul Bendor-Samuel",
+              "link": "https://www.amazon.com/Product-Manager-without-Bootcamp-Experience-ebook/dp/B08V1ZN89V/ref=sr_1_15?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-15",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "Principles of Product Management: How to Land a PM Job and Launch Your Product Career",
+              "author": "Peter Yang",
+              "link": "https://www.amazon.com/Principles-Product-Management-Launch-Career-ebook/dp/B083D667N2/ref=sr_1_21?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-21",
+              "avatar": "",
+              "likes": "0"
+          },
+          {
+              "title": "Product Management Interview Study Guide: Get your dream product job",
+              "author": "Pete Kay",
+              "link": "https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_mtf_stripbooks_sr_pg2_1?ie=UTF8&adId=A02585923IZG21CY0XNFB&url=%2FProduct-Management-Interview-Study-Guide%2Fdp%2FB08C94RNCF%2Fref%3Dsr_1_28_sspa%3Fdchild%3D1%26keywords%3Dproduct%2Bmanagement%2Binterview%26qid%3D1619286066%26s%3Dbooks%26sr%3D1-28-spons%26psc%3D1&qualifier=1619286066&id=3835635552042991&widgetName=sp_mtf",
+              "avatar": "",
+              "likes": "0"
+          }
+        ],
+      },
 }
   
   export default {
