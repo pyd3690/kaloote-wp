@@ -71,12 +71,13 @@ export default function Role() {
             
             <Grid
               h="100%"
-              templateRows="repeat(1, 1fr)"
+              templateRows="repeat(5, auto)"
               templateColumns="repeat(10, 1fr)"
               gap={4}
+              autoFlow={['row', 'row', 'column', 'column']}
             >
               <GridItem rowSpan={[1,1,1,1]} colSpan={[10, 10, 7, 7]} /* colSpan={7} */ >
-                <Card cw="100%" ch="auto" >
+                <Card cw="100%" ch="100%" >
                   <VStack h={'auto'} align="stretch" justify="space-between">
                     <HStack h='auto'  align="center" fontSize={["3vw", "2.5vw", '2vw', "0.75vw"]} id="roleSummarySection">
                       <Box w={'45%'} h={'auto'} justify="center" align="center">
@@ -121,56 +122,10 @@ export default function Role() {
                     </Box> 
                   </VStack>
                 </Card>
-              </GridItem>
-
-              <GridItem rowSpan={[2,2, 2,2]}  /* colSpan={3} */ colSpan={[10, 10, 3, 3]}  >
-                <Card cw="100%" ch="100%" /*{["auto", "auto", "100%", "100%"]}*/
-                >
-                  <Text textStyle='h3' mb={'10px'}>Most Read PM Blogs</Text>
-                  <hr
-                      style={{
-                          color: "lightgray",
-                          backgroundColor: "lightgray",
-                          height: 0.5,
-                          marginTop: "10px",
-                          marginBottom: "10px",
-                          width: '80%'
-                      }}
-                  />
-                  <VStack style={{height: '85%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[5,5, 5,7]} align={'strech'}>
-                    {roleData["bestblogs"].slice(0, 9).map((suggestion, i) => 
-                        <BlogSuggestionSM key={i} 
-                            name={suggestion.name} 
-                            title={suggestion.title}
-                            likes = {suggestion.likes}
-                            views = {suggestion.views}
-                            link = {suggestion.link}
-                            author = {suggestion.author}
-                            type ={suggestion.type}
-                        />
-                    )}                    
-                  </VStack>                        
-                  <SeeMoreWindow title='Most Read PM Blogs'>     
-                    {roleData["bestblogs"].map((suggestion, i) => 
-                        <BlogSuggestion key={i} 
-                            name={suggestion.name} 
-                            title={suggestion.title}
-                            likes = {suggestion.likes}
-                            views = {suggestion.views}
-                            link = {suggestion.link}
-                            author = {suggestion.author}
-                            type ={suggestion.type}
-                        />
-                      )}                                       
-                  </SeeMoreWindow >
-                  {/* <Text color='kalooteBlue.100' 
-                    //onClick={onOpen}
-                    style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
-                </Card>
-              </GridItem>
+              </GridItem>             
               
               <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 10, 7, 7]}>
-                <Card cw="100%" ch="auto">                  
+                <Card cw="100%" ch="100%">                  
                   <Text textStyle='h3' my={3}>Day-to-Day on the job</Text>
                   <hr
                       style={{
@@ -181,12 +136,12 @@ export default function Role() {
                           marginBottom: "10px",
                       }}
                   />
-                  <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                  <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "70%"]} mt={4}
                     align={'stretch'}
                     spacing={4}
                   >
                     {
-                      roleData["daytoday"].slice(0, 3).map((suggestion, i)=>
+                      roleData["daytoday"].slice(0, 5).map((suggestion, i)=>
                         <BlogSuggestion key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}
@@ -378,6 +333,51 @@ export default function Role() {
                   
               </GridItem>
 
+              <GridItem rowSpan={[2,2, 2,2]}  /* colSpan={3} */ colSpan={[10, 10, 3, 3]}  >
+                <Card cw="100%" ch="auto" /*{["auto", "auto", "100%", "100%"]}*/
+                >
+                  <Text textStyle='h3' mb={'10px'}>Most Read PM Blogs</Text>
+                  <hr
+                      style={{
+                          color: "lightgray",
+                          backgroundColor: "lightgray",
+                          height: 0.5,
+                          marginTop: "10px",
+                          marginBottom: "10px",
+                          width: '80%'
+                      }}
+                  />
+                  <VStack style={{height: '85%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[5,5, 5,7]} align={'strech'}>
+                    {roleData["bestblogs"].slice(0, 9).map((suggestion, i) => 
+                        <BlogSuggestionSM key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                    )}                    
+                  </VStack>                        
+                  <SeeMoreWindow title='Most Read PM Blogs'>     
+                    {roleData["bestblogs"].map((suggestion, i) => 
+                        <BlogSuggestion key={i} 
+                            name={suggestion.name} 
+                            title={suggestion.title}
+                            likes = {suggestion.likes}
+                            views = {suggestion.views}
+                            link = {suggestion.link}
+                            author = {suggestion.author}
+                            type ={suggestion.type}
+                        />
+                      )}                                       
+                  </SeeMoreWindow >
+                  {/* <Text color='kalooteBlue.100' 
+                    //onClick={onOpen}
+                    style={{textDecoration: 'underline', textAlign: 'right'}}>See More</Text> */}
+                </Card>
+              </GridItem>
               
             </Grid>
           </div>
