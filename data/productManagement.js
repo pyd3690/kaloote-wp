@@ -1317,6 +1317,250 @@ export const productManagementData = {
                 "views": "0"
             }
           ],
+      },
+      resumecv: {
+        "outstanding": [  
+            {
+              "link": "https://medium.com/product-manager-hq/the-ultimate-product-manager-resume-guide-c8ea3530ed82",
+              "title": "Design your PM resume",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.rocketblocks.me/blog/pm-resumes.php",
+              "title": "Purpose and audience | Writing and design tips | Examples and critiques",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://productgym.io/blogs/product-management-blog/how-to-write-the-best-product-manager-resume/",
+              "title": "Get the format and the content of your PM right",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.productplan.com/blog/product-manager-resume/",
+              "title": "3 Tips to Make Your Product Manager Resume Stand Out From the Rest",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://igotanoffer.com/blogs/product-manager/product-manager-resume",
+              "title": "Strategy, tips and examples for your PM resume",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://shawnrazek.com/resume-crafting/",
+              "title": "Engineer to Prodcut Management",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://builtin.com/product/product-manager-resume",
+              "title": "14 TIPS FOR WRITING A STELLAR PRODUCT MANAGER RESUME",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.mindtheproduct.com/why-you-should-treat-your-resume-as-your-professional-product/",
+              "title": "Recruiter Insights on the PM resume",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.ziprecruiter.com/Career/Product-Manager/Resume-Keywords-and-Skills",
+              "title": "PM Resume key words and skills",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://productcoalition.com/5-tips-to-writing-a-pm-resume-that-lands-you-jobs-offers-b82db3d1ea39",
+              "title": "Step by Step resume creation",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.youtube.com/watch?v=Qok3dYJjdWM",
+              "title": "Craft your PM resume with this video",
+              "author": "",
+              "type": "Video",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.wearefutureheads.com/news-and-views/top-5-words-you-must-include-in-your-digital-product-management-cv/",
+              "title": "Top 5 words to include in your product management resume",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.mironov.com/pmresume/",
+              "title": "What Do Recruiters Look For in a Product Management Resume",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.hiration.com/blog/product-manager-resume-examples/",
+              "title": "PM Resume examples",
+              "author": "",
+              "type": "Blog",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          }
+        ],
+        "standout": [  
+            {
+              "link": "https://productmanagerhq.com/product-manager-cover-letter-examples/",
+              "title": "All what you need to write your PM cover letter",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://productgym.io/blogs/product-management-blog/product-manager-cover-letters/",
+              "title": "Understanding the value of a well crafted cover letter",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.thinkful.com/blog/product-manager-cover-letter/",
+              "title": "Product Manager Cover Letter",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://keithoncareers.com/blog/2015/04/how-to-write-the-perfect-cover-letter-for-a-product-manager-job/",
+              "title": "Write the perfect PM cover letter",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://cowrite.com/en/cover-letter/cover-letter-examples/product-manager-cover-letter/",
+              "title": "A PM cover letter different from the others",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://medium.com/nicetohave/cover-letter-by-a-product-manager-who-is-unsure-that-product-management-is-a-real-job-69721e00ff35",
+              "title": "Be creative with your PM cover letter",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.zippia.com/product-manager-jobs/cover-letter/",
+              "title": "Product management cover letters and templates",
+              "author": "",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          }
+        ], 
+        "attract": [   
+            {
+              "link": "https://medium.com/product-manager-hq/how-to-craft-a-solid-product-manager-linkedin-profile-c0fd6346539a",
+              "title": "How to Craft a Solid Product Manager LinkedIn Profile",
+              "author": "Blog",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://dailyproductprep.com/blog/how-to-optimize-your-linked-profile-for-product-manager-recruiters",
+              "title": "How To Optimize Your LinkedIn Profile for Product Manager Recruiters",
+              "author": "Video",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://www.forbes.com/sites/robinryan/2021/01/19/17-linkedin-profile-writing-tips-to-make-you-standout/?sh=41e157726c89",
+              "title": "17 LinkedIn Profile Writing Tips To Make You Standout",
+              "author": "Blog",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://cv-nation.com/blogs/news/15-great-linkedin-headline-examples-with-writing-guide",
+              "title": "15 Great LinkedIn Headline Examples (Optimise Your Profile)",
+              "author": "Blog",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          },
+          {
+              "link": "https://influencermarketinghub.com/linkedin-headline-examples/",
+              "title": "How to Write a Great LinkedIn Headline (With 15 Examples)",
+              "author": "Blog",
+              "type": "",
+              "name": "Abla",
+              "likes": "0",
+              "views": "0"
+          }
+        ], 
+        "resume": [], 
+        "cv": [],
       }
 }
   

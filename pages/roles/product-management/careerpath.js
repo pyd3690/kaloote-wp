@@ -10,6 +10,7 @@ import TabsMenu from '../../../components/tabbar/tabbar.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
 import BlogSuggestion from '../../../components/suggestions/blog.js'
 import TrainingSuggestion from '../../../components/suggestions/training.js'
+import TrainingSuggestionSM from '../../../components/suggestions/trainingSM.js'
 import {Avatar,
         Text, 
         Image, 
@@ -150,7 +151,7 @@ export default function Role() {
                   </VStack>                        
                   <SeeMoreWindow title='Training'>     
                     {roleData["trainings"].map((training, index) => 
-                          <TrainingSuggestion key={index}
+                          <TrainingSuggestionSM key={index}
                             name={training.name}
                             title={training.title}
                             price={training.price}
