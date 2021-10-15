@@ -1634,28 +1634,28 @@ export const productManagementData = {
               "title": "Cracking the PM Interview: How to Land a Product Manager Job ...",
               "author": "Gayle McDowell, Jackie Bavaro",
               "link": "https://www.amazon.com/Cracking-PM-Interview-Product-Technology/dp/0984782818/ref=sr_1_6?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-6",
-              "avatar": "",
+              "avatar": "https://images-na.ssl-images-amazon.com/images/I/41QgO7VU5fL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
               "likes": "0"
           },
           {
               "title": "Cracking the PM Career: The Skills, Frameworks, and Practices To Become a Great Product Manager (Cracking the Interview & Career)",
               "author": "Jackie Bavaro, Gayle McDowell",
               "link": "https://www.amazon.com/Cracking-Career-Frameworks-Practices-Interview-ebook/dp/B08TQ89LKB/ref=sr_1_16?dchild=1&keywords=product+management+interview&qid=1619286054&s=books&sr=1-16",
-              "avatar": "",
+              "avatar": "https://m.media-amazon.com/images/I/51QTgiOKkKL._SY346_.jpg",
               "likes": "0"
           },
           {
               "title": "Product Management's Sacred Seven: The Skills Required to Crush Product Manager Interviews and be a World-Class PM",
               "author": "Parth Detroja, Neel Mehta, Aditya Agashe",
               "link": "https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_stripbooks_sr_pg1_1?ie=UTF8&adId=A0073966KI2ACHYXEZ4Z&url=%2FProduct-Managements-Sacred-Seven-World-Class%2Fdp%2F0578740583%2Fref%3Dsr_1_1_sspa%3Fdchild%3D1%26keywords%3Dproduct%2Bmanagement%2Binterview%26qid%3D1619286054%26s%3Dbooks%26sr%3D1-1-spons%26psc%3D1&qualifier=1619286054&id=7512161410275431&widgetName=sp_atf",
-              "avatar": "",
+              "avatar": "https://images-na.ssl-images-amazon.com/images/I/419O92+qb7S._SY344_BO1,204,203,200_.jpg",
               "likes": "0"
           },
           {
               "title": "Decode and Conquer: Answers to Product Management Interviews",
               "author": "Lewis C. Lin",
               "link": "https://www.amazon.com/Decode-Conquer-Answers-Management-Interviews-ebook/dp/B07ZV8BM2S/ref=sr_1_1?crid=2TOMO88F70ZGM&dchild=1&keywords=decode+and+conquer&qid=1629591671&s=books&sprefix=deco%2Cstripbooks%2C889&sr=1-1",
-              "avatar": "",
+              "avatar": "https://m.media-amazon.com/images/I/41qKpbg5AgL._SY346_.jpg",
               "likes": "0"
           },
           {

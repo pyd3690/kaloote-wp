@@ -125,7 +125,7 @@ export default function Role() {
               </GridItem>             
               
               <GridItem rowSpan={[1,1, 1,1]} /* rowSpan={2} */ /* colSpan={7} */ colSpan={[10, 10, 7, 7]}>
-                <Card cw="100%" ch="100%">                  
+                <Card cw="100%" ch="auto">                  
                   <Text textStyle='h3' my={3}>Day-to-Day on the job</Text>
                   <hr
                       style={{
@@ -141,7 +141,7 @@ export default function Role() {
                     spacing={4}
                   >
                     {
-                      roleData["daytoday"].slice(0, 5).map((suggestion, i)=>
+                      roleData["daytoday"].slice(0, 3).map((suggestion, i)=>
                         <BlogSuggestion key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}
@@ -333,7 +333,7 @@ export default function Role() {
                   
               </GridItem>
 
-              <GridItem rowSpan={[2,2, 2,2]}  /* colSpan={3} */ colSpan={[10, 10, 3, 3]}  >
+              <GridItem rowSpan={[1,1, 1,1]}  /* colSpan={3} */ colSpan={[10, 10, 3, 3]}  >
                 <Card cw="100%" ch="auto" /*{["auto", "auto", "100%", "100%"]}*/
                 >
                   <Text textStyle='h3' mb={'10px'}>Most Read PM Blogs</Text>
@@ -348,7 +348,7 @@ export default function Role() {
                       }}
                   />
                   <VStack style={{height: '85%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[5,5, 5,7]} align={'strech'}>
-                    {roleData["bestblogs"].slice(0, 9).map((suggestion, i) => 
+                    {roleData["bestblogs"].slice(0, 4).map((suggestion, i) => 
                         <BlogSuggestionSM key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}

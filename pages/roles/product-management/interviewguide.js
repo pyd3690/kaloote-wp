@@ -72,7 +72,7 @@ export default function Role() {
             
             <Grid
               h="100%"
-              templateRows="repeat(2, 1fr)"
+              templateRows="repeat(2, 0.75fr)"
               templateColumns="repeat(10, 1fr)"
               gap={4}
               autoFlow={['row', 'row', 'column', 'column']}
@@ -137,9 +137,9 @@ export default function Role() {
                           marginBottom: "10px",
                       }}
                   />
-                  <Wrap spacing={5} align="center" w="100%" justify="center" id="interviewMenu" h="70%" mt="10%">
+                  <Wrap spacing={5} align="center" w={["100%","100%","50%","50%"]} justify="center" id="interviewMenu" h={["auto","auto","70%","70%"]} mt="10%" mx="auto">
                       
-                      <VStack w={"20%"} justify="center" spacing={2}>
+                      <VStack w={"40%"} justify="center" spacing={2}>
                         <HStack justify="left" w="100%">
                             <Tooltip hasArrow label={"Interview Tips"} placement="top" bg="white" color="black">
                                 <Image src={icons.tips} alt={"Interview Tips"} h="20px" w="20px"></Image>
@@ -151,7 +151,7 @@ export default function Role() {
                         </Text>
                       </VStack>
                       
-                      <VStack w={"20%"} justify="center" spacing={2}>
+                      <VStack w={"40%"} justify="center" spacing={2}>
                         <HStack justify="left" w="100%">
                             <Tooltip hasArrow label={"Interview Process"} placement="top" bg="white" color="black">
                                 <Image src={icons.process} alt={"Interview Process"} h="20px" w="20px"></Image>
@@ -163,7 +163,7 @@ export default function Role() {
                         </Text>
                       </VStack>
                       
-                      <VStack w={"20%"} justify="center" spacing={2}>
+                      <VStack w={"40%"} justify="center" spacing={2}>
                         <HStack justify="left" w="100%">
                             <Tooltip hasArrow label={"Interview Study Guide"} placement="top" bg="white" color="black">
                                 <Image src={icons.studyGuide} alt={"Interview Study Guide"} h="20px" w="20px"></Image>
@@ -175,7 +175,7 @@ export default function Role() {
                         </Text>
                       </VStack>
                       
-                      <VStack w={"20%"} justify="center" spacing={2}>
+                      <VStack w={"40%"} justify="center" spacing={2}>
                         <HStack justify="left" w="100%">
                             <Tooltip hasArrow label={"Interview Questions"} placement="top" bg="white" color="black">
                                 <Image src={icons.questions} alt={"Interview Question"} h="20px" w="20px"></Image>

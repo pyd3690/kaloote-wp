@@ -15,7 +15,7 @@ import {
     ModalBody,
     ModalCloseButton } from "@chakra-ui/react"
 
-export default function SeeMoreWindow(props){
+export default function SeeMoreWindowC(props){
     const { isOpen, onOpen, onClose } = useDisclosure()
     let PageSize = (props.pageSize !== undefined && props.pageSize !== null && props.pageSize !== '')?props.pageSize:8
     //var pageNumbers = [ "2", "3"]
@@ -54,7 +54,18 @@ export default function SeeMoreWindow(props){
                              
                              //justify={'center'}
                              >
-                            { currentTableData /*props.children*/ }
+                            <HStack justify="space-between" align="flex-start" >
+                                {
+                                    (Array.from(Array(3).keys())).map((i, k) => 
+                                        <VStack key={k} align="flex-start" spacing={3} >
+                                            {
+                                                (i==0)?(currentTableData.slice(i*5, (i+1)*5)):(currentTableData.slice(i*5 + 1, (i+1)*5))
+                                            }
+                                        </VStack>
+                                    )
+                                }   
+                            </HStack>  
+                            { /*currentTableData props.children*/ }
                         </VStack>
                     </ModalBody>
             

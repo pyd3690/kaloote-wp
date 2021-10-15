@@ -37,12 +37,13 @@ export default function CompanyProfile(props){
     return (        
         <Wrap >
         <Box>
-          <Avatar
+          <Image src={props.avatar} objectFit="fit" borderRadius="full" h="50px" w="50px"></Image>
+         {/*  <Avatar
             style={{marginRight: '10px', marginLeft: '10px'}}
             size={'md'}
             //src={'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'}
             src={props.avatar}
-          />
+          /> */}
         </Box>
         <VStack h='100%' spacing={0} align="stretch" justify="center">
         <Text textStyle={'profileTitle'}>{props.name}</Text>

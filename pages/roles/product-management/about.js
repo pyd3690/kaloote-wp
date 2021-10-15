@@ -9,6 +9,7 @@ import PeopleProfileSM from '../../../components/profile/peopleProfileSeeMore.js
 import CompanyProfile from '../../../components/profile/companyProfile.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
+import SeeMoreWindowC from '../../../components/seeMore/seeMoreCol.js'
 import BlogSuggestion from '../../../components/suggestions/blog.js'
 import {Avatar,
         Text, 
@@ -163,7 +164,7 @@ export default function Role() {
                  {/*  <Text textStyle='subContent' mt={3}>
                     As a Product Manager you will be tasked with creating products or features and sheperding them from inception to implementation.
                   </Text> */}
-                  <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["70%", "70%", "75%", "75%"]} mt={4}
+                  <VStack w={["100%", "100%", "90%", "90%"]} p='10px' style={{overflowX: 'hidden', overflowY: 'auto'}} h={["80%", "70%", "90%", "90%"]} mt={4}
                     align={'stretch'}
                     spacing={4}
                   >
@@ -180,9 +181,20 @@ export default function Role() {
                         />
                       )
                     }
+
+                      <HStack justify="space-between" align="stretch" h={["auto", "auto", "20%", "20%"]} mt={5}>
+                        <Box >
+                          <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1632446597/Kaloote/Ads_zzwmnd.png' h={"auto"} w={'100%'}></Image>
+                        </Box>
+                        
+                        <Box >
+                          <Image src='https://res.cloudinary.com/ignitouch/image/upload/v1632446597/Kaloote/Ads_zzwmnd.png' h={"auto"} w={'100%'}></Image>
+                        </Box>
+                        
+                      </HStack>
                   </VStack>
                                         
-                  <SeeMoreWindow title='What does a Product Manager do?'>        
+                  {/* <SeeMoreWindow title='What does a Product Manager do?'>        
                       {
                         roleData["description_suggestions"].map((suggestion, i)=>
                           <BlogSuggestion key={i} 
@@ -196,12 +208,12 @@ export default function Role() {
                           />
                         )
                       }             
-                  </SeeMoreWindow >
+                  </SeeMoreWindow > */}
                 </Card>
               </GridItem>
               
               <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 10, 3, 3]} >
-                <Card cw="100%" ch="auto">
+                <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Top Employers</Text>
                   <hr
                       style={{
@@ -223,7 +235,7 @@ export default function Role() {
                       />
                     )}                    
                   </VStack>                        
-                  <SeeMoreWindow title='Top Employers'>     
+                  <SeeMoreWindowC title='Top Employers'>     
                     {roleData["top_employers"].map((employer, index) => 
                         <CompanyProfile key={index}
                           avatar={employer.avatar}
@@ -232,7 +244,7 @@ export default function Role() {
                           name={employer.name}
                         />
                       )}                                       
-                  </SeeMoreWindow >
+                  </SeeMoreWindowC >
 
 
                   {/* <div style={{height: '82%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} >
@@ -265,7 +277,7 @@ export default function Role() {
               </GridItem>
               
               <GridItem rowSpan={[1,1, 1,1]} /* colSpan={3} */ colSpan={[10, 10, 3, 3]} >
-                <Card cw="100%" ch="auto">
+                <Card cw="100%" ch="100%">
                   <Text textStyle='h3' mb={'10px'}>Top Profiles</Text>
                   <VStack style={{height: '75%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[2,2, 3,3]} align={'strech'}>
                     {roleData["top_profiles"].slice(0, 3).map((profile, index) => 
@@ -279,7 +291,7 @@ export default function Role() {
                         />
                     )}                    
                   </VStack>                        
-                  <SeeMoreWindow title='Top Profiles'>     
+                  <SeeMoreWindow title='Top Profiles' pageSize="8">     
                     {roleData["top_profiles"].map((profile, index) => 
                         <PeopleProfileSM key={index}
                           avatar={icons.avatar} // to update the avatar

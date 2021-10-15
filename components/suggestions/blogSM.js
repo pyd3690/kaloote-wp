@@ -69,7 +69,7 @@ export default function BlogSuggestionSM(props){
     return (        
           <VStack align="stretch" justify="left" spacing={0}>
                 <Wrap justify="space-between" mb={1}>
-                    <HStack justify="left"  w={['100%','100%','80%','70%']} >
+                    <HStack justify="left"  w={['100%','100%','70%','60%']} >
                         {(props.type !== undefined && props.type !== null && props.type !== '') && <Box mr={2}>
                             <Tooltip hasArrow label={icon.alt} placement="top" bg="white" color="black">
                                 <Image src={icon.link} alt={icon.alt} h="15px" w="15px"></Image>
@@ -150,7 +150,7 @@ export default function BlogSuggestionSM(props){
                                             </HStack>
                                         </VStack>
                                         <a target="_blank" href={props.link} rel="noopener noreferrer">
-                                            <Wrap borderRadius={'md'} p={2} bg="kalooteBlue.100" color='white' justify="center" fontSize={["10px", "md", "md", "md" ]} ><Text >View</Text> <Text>Content</Text></Wrap>
+                                            <Wrap borderRadius={'md'} p={2} bg="kalooteBlue.100" color='white' justify="center" fontSize={["10px", "md", "md", "md" ]} ><Text >Visit</Text> <Text>Website</Text></Wrap>
                                         </a>
                                     </HStack>
                                     <hr

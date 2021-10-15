@@ -294,7 +294,7 @@ export default function Role() {
                         />
                       )
                     }
-                    <HStack justify="left" w={'75%'}>
+                    <HStack justify="left" w={'75%'} style={{cursor: 'pointer'}}>
                     <Text as="sup" color="kalooteBlue.100">AD</Text>
                       <Text textStyle={'subContentBold'} style={{cursor: 'pointer'}} w={['100%','100%','70%','70%']}>
                           Transitioning to Product from a functional role?

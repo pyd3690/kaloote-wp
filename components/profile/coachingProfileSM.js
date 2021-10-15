@@ -16,18 +16,21 @@ export default function CoachingProfileSM(props){
 
    
     return (        
-        <HStack  >
-        <Box>
-          <Avatar
+        <HStack  jusify="space-between">
+        <Box w="10%">         
+          <Image src={(props.avatar !== undefined && props.avatar !== null && props.avatar !== '')?props.avatar:icons.book} 
+              objectFit="fit" 
+              borderRadius="2xl" h="50px" w="50px" ></Image>
+          {/* <Avatar
             style={{marginRight: '10px', marginLeft: '10px'}}
             size={'md'}
             //src={'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'}
             src={props.avatar}
-          />
+          /> */}
         </Box>
-        <Wrap justify="left" spacing={1} >
+        <Wrap justify="left" spacing={1} w="80%">
               <a target="_blank" href={props.link} rel="noopener noreferrer">
-                <Text textStyle={'profileTitle'} color="black" mr={5} >{props.name} </Text>
+                <Text textStyle={'profileTitle'} color="black" mr={5} >{props.name}  </Text>
               </a>
               <HStack justify="right" ml={5}>
                 {(props.pricem !== undefined && props.pricem !== null && props.pricem !== '') && <Text textStyle={'profileContent'} >{props.pricem} </Text>}
