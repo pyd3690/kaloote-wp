@@ -18,9 +18,9 @@ export default function TrainingSuggestionSM(props){
                 <Text textStyle={'subContentBold'} fontWeight='450' style={{cursor: 'pointer'}} noOfLines={2}>
                     <a target="_blank" href={props.link} rel="noopener noreferrer">{props.title}</a>
                 </Text>
-                <Wrap justify="space-between" align="flex-end" w={'45%'} color='KalooteGray.200'>
+                <Wrap justify="space-between" align="flex-end" w={["100%","100%",'50%','45%']} color='KalooteGray.200' spacing={0}>
                     
-                    <HStack spacing={0} w={'20%'}>
+                    <HStack spacing={0} w={["40%","40%",'20%','20%']}>
                         <Box mr={1}>
                             <Image src={icons.like} alt='Likes' height="auto" width="15px"></Image>
                         </Box>
@@ -28,15 +28,15 @@ export default function TrainingSuggestionSM(props){
                             {props.likes}
                         </Text> 
                     </HStack>   
-                    <Text textStyle={'profileSubContent'} w={'20%'}>
+                    <Text textStyle={'profileSubContent'} w={["40%","40%",'20%','20%']}>
                         <Text as="i" fontWeight="300" style={{cursor: 'pointer'}}>
                             {props.name}
                         </Text>                    
                     </Text>   
-                    <Text textStyle={'profileSubContent'} fontWeight='300' w={'20%'}>
+                    <Text textStyle={'profileSubContent'} fontWeight='300' w={["40%","40%",'20%','20%']}>
                         ${props.price}
                     </Text> 
-                    <HStack justify="center" spacing={0} w={'20%'}>
+                    <HStack justify="center" spacing={0} w={["40%","40%",'20%','20%']}>
                         <Box >
                             <Image src={icons.clock} alt='Duration' height="auto" width="25px"></Image>
                         </Box>

@@ -348,7 +348,7 @@ export default function Role() {
                       }}
                   />
                   <VStack style={{height: '85%', padding: '10px', overflowX: 'hidden', overflowY: 'auto'}} mt={'10px'} spacing={[5,5, 5,7]} align={'strech'}>
-                    {roleData["bestblogs"].slice(0, 4).map((suggestion, i) => 
+                    {roleData["bestblogs"].slice(0, 3).map((suggestion, i) => 
                         <BlogSuggestionSM key={i} 
                             name={suggestion.name} 
                             title={suggestion.title}
