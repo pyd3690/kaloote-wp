@@ -1701,7 +1701,189 @@ export const productManagementData = {
               "likes": "0"
           }
         ],
-      },
+        "guides": [    
+            {
+                "category": "process",
+                "company": "Facebook",
+                "link": "https://www.ravi-mehta.com/facebook-product-manager-interview/",
+                "title": "An Insider's Guide to the Facebook Product Interview",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "process",
+                "company": "Facebook",
+                "link": "https://igotanoffer.com/blogs/product-manager/facebook-product-manager-interview",
+                "title": "Facebook PM interview: the only post you'll need to read",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "tips",
+                "company": "Facebook",
+                "link": "https://www.rocketblocks.me/blog/facebook-pm-interview.php",
+                "title": "How to prepare for a Facebook product manager interview",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Process",
+                "company": "Facebook",
+                "link": "https://productgym.io/blogs/product-management-blog/how-to-win-the-facebook-product-manager-interview/#part2",
+                "title": "What Is the Interview Process and Timeline?",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Process",
+                "company": "Facebook",
+                "link": "https://www.tryexponent.com/guides/facebook/pm-interview/interview-stages",
+                "title": "Facebook Product Manager (PM) Interview Guide",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "Facebook",
+                "link": "https://www.tryexponent.com/guides/facebook/pm-interview/tips-tricks",
+                "title": "Facebook Product Manager (PM) Interview Tips",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "Facebook",
+                "link": "https://interviewsteps.com/blogs/news/facebook-product-manager-interview-what-to-expect-and-how-to-prepare",
+                "title": "Facebook Product Manager Interview: What to expect and how to prepare",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Question",
+                "company": "Facebook",
+                "link": "https://www.youtube.com/watch?v=se6Soyi2k0U",
+                "title": "Facebook Product Manager Mock Interview: Facebook Movies",
+                "type": "Video",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Question",
+                "company": "Facebook",
+                "link": "https://www.youtube.com/watch?v=dt7OrazE6SQ",
+                "title": "Flawless Execution Interview Response by FB PM: Picking Metrics",
+                "type": "Video",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "Facebook",
+                "link": "https://ayanh.medium.com/facebook-product-sense-interview-what-is-it-and-how-to-prepare-bda3c5197f3c",
+                "title": "Facebook Product Sense Interview: What Is It and How to Prepare",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "process",
+                "company": "Facebook",
+                "link": "https://www.productalliance.com/guides/facebook-pm-interview-cheat-sheet",
+                "title": "Facebook PM Interview Cheat Sheet",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Guide",
+                "company": "Facebook",
+                "link": "https://producthired.com/guides/facebook-product-manager-interview-study-guide",
+                "title": "Facebook Product Manager Guide",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Process",
+                "company": "Amazon",
+                "link": "https://igotanoffer.com/blogs/product-manager/amazon-product-manager-interview#process",
+                "title": "Amazon Interview process and timeline",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "Amazon",
+                "link": "https://igotanoffer.com/blogs/product-manager/amazon-product-manager-interview#preparation",
+                "title": "Amazon Interview Preparation Tips",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "All",
+                "link": "https://igotanoffer.com/blogs/product-manager/behavioral-interview-questions-tech-companies",
+                "title": "How to ace behavioral interviews at Amazon, Facebook, Google, etc.",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "All",
+                "link": "https://igotanoffer.com/blogs/product-manager/product-design-questions",
+                "title": "How to crack product design questions in PM interviews",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "All",
+                "link": "https://igotanoffer.com/blogs/product-manager/product-improvement-questions",
+                "title": "How to crack product improvement questions in PM interviews",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "All",
+                "link": "https://igotanoffer.com/blogs/product-manager/favorite-product-interview-question",
+                "title": "How to crack the \"Favorite product\" question in PM interviews",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "All",
+                "link": "https://igotanoffer.com/blogs/product-manager/product-strategy-interview-questions",
+                "title": "How to crack product strategy interview questions",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            },
+            {
+                "category": "Tips",
+                "company": "All",
+                "link": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions",
+                "title": "How to crack product metric questions in PM interviews",
+                "type": "Blog",
+                "likes": "0",
+                "views": "0"
+            }
+        ]
+    },
 }
   
   export default {

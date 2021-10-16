@@ -25,6 +25,13 @@ export const icons = {
     questions: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/question_w6wkmo.png",
     tips: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/tip_y8cgod.png",
     interviewGuide: "https://res.cloudinary.com/ignitouch/image/upload/v1634393930/Kaloote/Virtual_interviews_erkxlr.png",
+    company: {
+        facebook: "https://res.cloudinary.com/ignitouch/image/upload/v1634406432/Kaloote/facebook_ziasrt.png",
+        amazon: "https://res.cloudinary.com/ignitouch/image/upload/v1634406432/Kaloote/amazon_aginqh.png",
+        google: "https://res.cloudinary.com/ignitouch/image/upload/v1634406432/Kaloote/google_wfyviw.png",
+        all: "https://res.cloudinary.com/ignitouch/image/upload/v1634406432/Kaloote/allcompany_evn41s.png",
+    },
+    star: "https://res.cloudinary.com/ignitouch/image/upload/v1634410237/Kaloote/star_novgvk.png"
 }
   
   export default {

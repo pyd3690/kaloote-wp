@@ -10,14 +10,26 @@ import CompanyProfile from '../../../components/profile/companyProfile.js'
 import TabsMenu from '../../../components/tabbar/tabbar.js'
 import TabsMenuIG from '../../../components/tabbar/tabbarIG.js'
 import SeeMoreWindow from '../../../components/seeMore/seeMore.js'
+import SeeMoreWindowR from '../../../components/seeMore/seeMoreR.js'
 import BlogSuggestion from '../../../components/suggestions/blog.js'
+import Resource from '../../../components/suggestions/resourcesIG.js'
+import React, {useState} from 'react'
 import {Avatar,
         Text, 
-        Image, 
+        Image, Button,
         Box, 
         //Tabs, TabList, TabPanels, Tab, TabPanel,
         Flex, 
+        Menu,
+        MenuButton,
+        MenuList,
+        MenuItem,
+        MenuGroup,
+        MenuDivider,
+        MenuOptionGroup,
+        MenuItemOption,
         Stack,
+        Checkbox,
         Center,
         Grid, GridItem, 
         Input, InputGroup, InputLeftAddon, InputRightAddon,
@@ -32,13 +44,16 @@ const roleData = {
   summary: productManagementData["summary"],
   description_suggestions: productManagementData["about"]["description_suggestions"],
   top_profiles: productManagementData["about"]["top_profiles"],
-  top_employers: productManagementData["about"]["top_employers"]
+  top_employers: productManagementData["about"]["top_employers"],
+  interviewGuide: productManagementData["interview"]["guides"]
 }
 var role = "Product Management"
-
+const questions = roleData["interviewGuide"].filter(resource => resource.category.toLowerCase() === "question");
+const videos = questions.filter(resource => (resource.type.toLowerCase() === "video" && resource.category.toLowerCase() === "question"))
 export default function InterviewGuide() {
   //console.log(skills)
 
+  const [resources, setResources] = useState(questions);
   return (
     <div className={styles.container}>
       <Head>
@@ -64,7 +79,7 @@ export default function InterviewGuide() {
                       }}>
                 <Text textStyle="h2" color="kalooteBlue.100" align="center" mb={7}>Interview Guide</Text>
                 <Card >
-                    <Stack justify="center" spacing={5}>
+                    <Stack justify="center" spacing={5} >
                         <InputGroup p={0} 
                                     w={["100%", "100%", "70%", "70%"]} 
                                     m={"auto"} mt={["20px", "20px", "50px", "50px"]}>                      
@@ -74,6 +89,7 @@ export default function InterviewGuide() {
                                 w={["100%", "100%", "60%", "60%"]}                        
                                 style={{border: "0.5px solid lightgray", borderTopRightRadius: "0px", borderBottomRightRadius: "0px"}} 
                                 value = {role}
+                                
                             />      
                             <Input 
                                 placeholder="Company" 
@@ -83,17 +99,81 @@ export default function InterviewGuide() {
                             />
                         </InputGroup>
                         <Wrap justify="center">
-                            <TabsMenuIG selection={0} isIndex={false} ></TabsMenuIG>
+                          <TabsMenuIG selection={0}  search='product-management' ></TabsMenuIG>
                         </Wrap>
                         <Center>
-                            <Image w={["100%", "100%", "50%", "50%"]} src={icons.interviewGuide}></Image>
+                          <Text textStyle={'subContent'} color="gray" mr="10px">Product Management - Interviews Questions</Text>
+                          <Text textStyle={'profileContent'} color="gray">({resources.length} found)</Text>
                         </Center>
-                        <Wrap color="gray" justify="center" mb="20px">
-                            <Wrap w={["100%", "100%", "60%", "60%"]} justify="center">
-                              <Text>Search for a company and/or a role and learn everything about the</Text> <Text color="kalooteBlue.100" as='b'>interview process</Text>, 
-                              <Text>follow an</Text> <Text  color="kalooteBlue.100" as='b'>interview study guide</Text><Text > to better prepare, explore hundred of </Text><Text  color="kalooteBlue.100" as='b'>interview questions</Text> <Text>and get relevant</Text> <Text  color="kalooteBlue.100" as='b'>interview tips</Text>
-                            </Wrap>
-                        </Wrap>
+                        <Center w={["100%", "100%", "100%", "100%"]} mx='auto'>
+                          <HStack justify="space-around" w={["100%", "100%", "100%", "100%"]}>
+                            
+                            <Checkbox 
+                              onChange={
+                                (e)=> {                                  
+                                  if(e.target.checked)
+                                  {
+                                    setResources(videos);
+                                  }
+                                  else
+                                  {
+                                    setResources(questions);
+                                  }
+                                }
+                              }
+                            >
+                              <Text textStyle={'profileContent'} color="gray">Videos Only</Text>
+                            </Checkbox>
+                            <Menu>
+                              <MenuButton as={Button}  bg="kalooteBlue.100" color="white" w={["30%","30%","10%","10%"]}>
+                                <Wrap justify="space-between">
+                                  <Text textStyle={'profileContent'}>All </Text>
+                                  <Text textStyle={'profileContent'} as="b">&#8964;</Text>
+                                </Wrap>
+                              </MenuButton>
+                              <MenuList>
+                                <MenuItem>Technical</MenuItem>
+                                <MenuItem>Behavioral</MenuItem>
+                              </MenuList>
+                            </Menu>
+                          </HStack>
+                        </Center>
+                        <Center >
+                          <VStack id="rcontent" w={["100%", "100%", "70%", "70%"]} spacing={4} mt='50px' mb='30px'>
+                              {
+                                (resources.length !== 0)?resources.slice(0,3).map((resource, i) => 
+                                <Resource key={i} 
+                                  title = {resource.title}
+                                  category = {resource.category}
+                                  type = {resource.type}
+                                  link={resource.link}
+                                  company = {resource.company}
+                                  likes = {resource.likes}
+                                  views = {resource.views}
+                                />
+                              ):
+                              <Text>Nothing to display</Text>
+                              }
+                          </VStack> 
+                        </Center>
+                                                               
+                        <Center >
+                            <SeeMoreWindowR title='Product Management - Interviews Questions'  pageSize={5}>              
+                            {
+                                  resources.map((resource, i) => 
+                                    <Resource key={i} 
+                                      title = {resource.title}
+                                      category = {resource.category}
+                                      type = {resource.type}
+                                      link={resource.link}
+                                      company = {resource.company}
+                                      likes = {resource.likes}
+                                      views = {resource.views}
+                                    />
+                                  )
+                                }
+                            </SeeMoreWindowR >
+                          </Center>
                     </Stack>
                 </Card>
             

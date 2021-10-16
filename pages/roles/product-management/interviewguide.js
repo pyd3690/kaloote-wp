@@ -142,7 +142,7 @@ export default function Role() {
                   <Wrap spacing={5} align="center" w={["100%","100%","50%","50%"]} justify="center" id="interviewMenu" h={["auto","auto","70%","70%"]} mt="10%" mx="auto">
                       
                       <Link href={"/interview-guide/tips/" + roleSlug}>
-                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                        <VStack w={"40%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
                           <HStack justify="left" w="100%">
                               <Tooltip hasArrow label={"Interview Tips"} placement="top" bg="white" color="black">
                                   <Image src={icons.tips} alt={"Interview Tips"} h="20px" w="20px"></Image>
@@ -156,7 +156,7 @@ export default function Role() {
                       </Link>
                       
                       <Link  href={"/interview-guide/process/" + roleSlug}>
-                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                        <VStack w={"40%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
                           <HStack justify="left" w="100%">
                               <Tooltip hasArrow label={"Interview Process"} placement="top" bg="white" color="black">
                                   <Image src={icons.process} alt={"Interview Process"} h="20px" w="20px"></Image>
@@ -170,7 +170,7 @@ export default function Role() {
                       </Link>
                       
                       <Link href={"/interview-guide/studyguides/" + roleSlug}>
-                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                        <VStack w={"40%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
                           <HStack justify="left" w="100%">
                               <Tooltip hasArrow label={"Interview Study Guide"} placement="top" bg="white" color="black">
                                   <Image src={icons.studyGuide} alt={"Interview Study Guide"} h="20px" w="20px"></Image>
@@ -184,7 +184,7 @@ export default function Role() {
                       </Link>
                       
                       <Link href={"/interview-guide/questions/" + roleSlug}>
-                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                        <VStack w={"40%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
                           <HStack justify="left" w="100%">
                               <Tooltip hasArrow label={"Interview Questions"} placement="top" bg="white" color="black">
                                   <Image src={icons.questions} alt={"Interview Question"} h="20px" w="20px"></Image>
