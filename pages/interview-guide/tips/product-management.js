@@ -49,7 +49,7 @@ const roleData = {
   interviewGuide: productManagementData["interview"]["guides"]
 }
 var role = "Product Management"
-const tips = roleData["interviewGuide"].filter(resource => resource.category.toLowerCase() === "tips");
+const tips = roleData["interviewGuide"].filter(resource => resource.category.toLowerCase().includes("tips"));
 const videos = tips.filter(resource => (resource.type.toLowerCase() === "video"))
 export default function InterviewGuide() {
   //console.log(skills)
@@ -89,7 +89,7 @@ export default function InterviewGuide() {
                                 size="lg"        
                                 w={["100%", "100%", "60%", "60%"]}                        
                                 style={{border: "0.5px solid lightgray", borderTopRightRadius: "0px", borderBottomRightRadius: "0px"}} 
-                                value = {role}
+                                defaultValue = {role}
                                 
                             />      
                             <Input 

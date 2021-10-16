@@ -1802,7 +1802,7 @@ export const productManagementData = {
                 "views": "0"
             },
             {
-                "category": "Guide",
+                "category": "Guide/process",
                 "company": "Facebook",
                 "link": "https://producthired.com/guides/facebook-product-manager-interview-study-guide",
                 "title": "Facebook Product Manager Guide",
