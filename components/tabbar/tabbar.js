@@ -14,7 +14,7 @@ export default function TabsMenu(props){
             {
                 tabsNames.map((tabName) => 
                     <Link key={"link-" + tabName} href={base + tabName.replace(/\s/g, '').replace(/&/g, '').toLowerCase()} passHref>
-                        <Tab key={tabName} /* textStyle={'tabs'} */ fontWeight={"bold"} textAlign={'center'} fontSize={["3.5vw", "3vw", '1.5vw', "0.95vw"]} >{tabName}</Tab>
+                        <Tab key={tabName} /* textStyle={'tabs'} */ fontWeight={"bold"} textAlign={'center'} fontSize={["3.5vw", "3vw", '1.3vw', "0.92vw"]} >{tabName}</Tab>
                     </Link>
                 )
             }
