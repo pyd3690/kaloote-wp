@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 //import Image from 'next/image'
 import styles from '../../../styles/Home.module.css'
 import Card from '../../../components/card/card.js'
@@ -102,8 +103,8 @@ export default function InterviewGuide() {
                           <TabsMenuIG selection={1} search='product-management' ></TabsMenuIG>
                         </Wrap>
                         <Center>
-                          <Text textStyle={'subContent'} color="gray" mr="10px">Product Management - Interviews Processes</Text>
-                          <Text textStyle={'profileContent'} color="gray">({resources.length} found)</Text>
+                          <Text textStyle={'subContentBold'} color="kalooteBlue.100" mr="10px"><Link href="/roles/product-management">Product Management</Link></Text>
+                          <Text textStyle={'profileContent'} color="gray"> - Interviews Processes ({resources.length} found)</Text>
                         </Center>
                         <Center w={["100%", "100%", "100%", "100%"]} mx='auto'>
                           <HStack justify="left" w={["100%", "100%", "70%", "70%"]}>
