@@ -7,7 +7,7 @@ import styles from './tabbar.module.css'
 export default function TabsMenu(props){
     var base = (props.isIndex) ?"product-management/":"";
     return (
-    <Tabs p={["15px", "15px", "10px", "10px"]}  defaultIndex={props.selection}
+    <Tabs p={["15px", "15px", "5px", "5px"]}  defaultIndex={props.selection}
             
             className={styles.tabbar}>
         <TabList>

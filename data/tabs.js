@@ -6,7 +6,14 @@ export const tabsNames = [
     "Resume & Cover Letter",
     "Interview Guide"
 ]
+
+export const IGTabsNames = [
+  "Questions",
+  "Process",
+  "Tips",
+  "Study Guides"
+]
   
   export default {
-    tabsNames,
+    tabsNames, IGTabsNames
   }

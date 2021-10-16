@@ -24,6 +24,7 @@ export const icons = {
     process: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/progress_qsynki.png",
     questions: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/question_w6wkmo.png",
     tips: "https://res.cloudinary.com/ignitouch/image/upload/v1633976842/Kaloote/tip_y8cgod.png",
+    interviewGuide: "https://res.cloudinary.com/ignitouch/image/upload/v1634393930/Kaloote/Virtual_interviews_erkxlr.png",
 }
   
   export default {

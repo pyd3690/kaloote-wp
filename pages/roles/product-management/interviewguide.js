@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 //import Image from 'next/image'
 import styles from '../../../styles/Home.module.css'
 import Card from '../../../components/card/card.js'
@@ -36,6 +37,7 @@ const roleData = {
   coaching: productManagementData["interview"]["coaching"],
   books: productManagementData["interview"]["books"], 
 }
+var roleSlug = "product-management"
 
 export default function Role() {
 
@@ -139,53 +141,61 @@ export default function Role() {
                   />
                   <Wrap spacing={5} align="center" w={["100%","100%","50%","50%"]} justify="center" id="interviewMenu" h={["auto","auto","70%","70%"]} mt="10%" mx="auto">
                       
-                      <VStack w={"40%"} justify="center" spacing={2}>
-                        <HStack justify="left" w="100%">
-                            <Tooltip hasArrow label={"Interview Tips"} placement="top" bg="white" color="black">
-                                <Image src={icons.tips} alt={"Interview Tips"} h="20px" w="20px"></Image>
-                            </Tooltip>
-                            <Text textStyle="profileTitle">Tips</Text>
-                        </HStack>
-                        <Text textStyle="profileSubContent">
-                        Explore thousands of real interview questions asked by companies
-                        </Text>
-                      </VStack>
+                      <Link href={"/interview-guide/tips/" + roleSlug}>
+                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                          <HStack justify="left" w="100%">
+                              <Tooltip hasArrow label={"Interview Tips"} placement="top" bg="white" color="black">
+                                  <Image src={icons.tips} alt={"Interview Tips"} h="20px" w="20px"></Image>
+                              </Tooltip>
+                              <Text textStyle="profileTitle">Tips</Text>
+                          </HStack>
+                          <Text textStyle="profileSubContent">
+                          Explore thousands of real interview questions asked by companies
+                          </Text>
+                        </VStack>
+                      </Link>
                       
-                      <VStack w={"40%"} justify="center" spacing={2}>
-                        <HStack justify="left" w="100%">
-                            <Tooltip hasArrow label={"Interview Process"} placement="top" bg="white" color="black">
-                                <Image src={icons.process} alt={"Interview Process"} h="20px" w="20px"></Image>
-                            </Tooltip>
-                            <Text textStyle="profileTitle">Process</Text>
-                        </HStack>
-                        <Text textStyle="profileSubContent">
-                        Explore thousands of real interview questions asked by companies
-                        </Text>
-                      </VStack>
+                      <Link  href={"/interview-guide/process/" + roleSlug}>
+                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                          <HStack justify="left" w="100%">
+                              <Tooltip hasArrow label={"Interview Process"} placement="top" bg="white" color="black">
+                                  <Image src={icons.process} alt={"Interview Process"} h="20px" w="20px"></Image>
+                              </Tooltip>
+                              <Text textStyle="profileTitle">Process</Text>
+                          </HStack>
+                          <Text textStyle="profileSubContent">
+                          Explore thousands of real interview questions asked by companies
+                          </Text>
+                        </VStack>
+                      </Link>
                       
-                      <VStack w={"40%"} justify="center" spacing={2}>
-                        <HStack justify="left" w="100%">
-                            <Tooltip hasArrow label={"Interview Study Guide"} placement="top" bg="white" color="black">
-                                <Image src={icons.studyGuide} alt={"Interview Study Guide"} h="20px" w="20px"></Image>
-                            </Tooltip>
-                            <Text textStyle="profileTitle">Study Guide</Text>
-                        </HStack>
-                        <Text textStyle="profileSubContent">
-                        Explore thousands of real interview questions asked by companies
-                        </Text>
-                      </VStack>
+                      <Link href={"/interview-guide/studyguides/" + roleSlug}>
+                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                          <HStack justify="left" w="100%">
+                              <Tooltip hasArrow label={"Interview Study Guide"} placement="top" bg="white" color="black">
+                                  <Image src={icons.studyGuide} alt={"Interview Study Guide"} h="20px" w="20px"></Image>
+                              </Tooltip>
+                              <Text textStyle="profileTitle">Study Guide</Text>
+                          </HStack>
+                          <Text textStyle="profileSubContent">
+                          Explore thousands of real interview questions asked by companies
+                          </Text>
+                        </VStack>
+                      </Link>
                       
-                      <VStack w={"40%"} justify="center" spacing={2}>
-                        <HStack justify="left" w="100%">
-                            <Tooltip hasArrow label={"Interview Questions"} placement="top" bg="white" color="black">
-                                <Image src={icons.questions} alt={"Interview Question"} h="20px" w="20px"></Image>
-                            </Tooltip>
-                            <Text textStyle="profileTitle">Questions</Text>
-                        </HStack>
-                        <Text textStyle="profileSubContent">
-                        Explore thousands of real interview questions asked by companies
-                        </Text>
-                      </VStack>
+                      <Link href={"/interview-guide/questions/" + roleSlug}>
+                        <VStack w={"45%"} justify="center" spacing={2} style={{cursor: 'pointer'}}>
+                          <HStack justify="left" w="100%">
+                              <Tooltip hasArrow label={"Interview Questions"} placement="top" bg="white" color="black">
+                                  <Image src={icons.questions} alt={"Interview Question"} h="20px" w="20px"></Image>
+                              </Tooltip>
+                              <Text textStyle="profileTitle">Questions</Text>
+                          </HStack>
+                          <Text textStyle="profileSubContent">
+                          Explore thousands of real interview questions asked by companies
+                          </Text>
+                        </VStack>
+                      </Link>
                   </Wrap>
                 </Card>
               </GridItem>           

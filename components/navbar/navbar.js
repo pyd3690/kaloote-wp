@@ -21,11 +21,11 @@ import {
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import styles from './navbar.module.css'
 
-const Links = [{'name': 'Career Guide', 'icon': 'https://res.cloudinary.com/ignitouch/image/upload/v1629655730/Kaloote/bagt_ccsdub.png'},
-               {'name': 'Interview Guide', 'icon': 'https://res.cloudinary.com/ignitouch/image/upload/v1629655730/Kaloote/interview_tazg0t.png'}
+const Links = [{'name': 'Career Guide', 'icon': 'https://res.cloudinary.com/ignitouch/image/upload/v1629655730/Kaloote/bagt_ccsdub.png', 'href': '#'},
+               {'name': 'Interview Guide', 'icon': 'https://res.cloudinary.com/ignitouch/image/upload/v1629655730/Kaloote/interview_tazg0t.png', 'href': '/interview-guide'}
 ];
 
-const NavLink = ({ children }) => (
+const NavLink = (props) => (
   <Link
     px={2}
     py={1}
@@ -34,8 +34,8 @@ const NavLink = ({ children }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}>
-    {children}
+    href={props.link}>
+    {props.children}
   </Link>
 );
 
@@ -70,8 +70,9 @@ export default function Navbar() {
                   <Box>
                     <Image src={link.icon} h="25px" w="25px"></Image>
                   </Box> 
-                  <NavLink > 
-                  {link.name}</NavLink>
+                  <NavLink link={link.href}>  
+                    {link.name}
+                  </NavLink>
                 </HStack>
               ))}
             </HStack>            
@@ -109,7 +110,7 @@ export default function Navbar() {
                   <Box>
                     <Image src={link.icon} h="25px" w="25px"></Image>
                   </Box> 
-                  <NavLink> 
+                  <NavLink link={link.href}> 
                   {link.name}</NavLink>
                 </HStack>
               ))}
